@@ -9,9 +9,10 @@ import { NavbarComponent } from '../../shared/components/navbar/navbar.component
     imports: [CommonModule, NavbarComponent],
     template: `
         <section>
-            <div><app-navbar></app-navbar></div>
-            <h1 class="fontRaleway">SAKURA RAMEN</h1>
-            <h2 class="fontRaleway">BEST RAMEN IN TOWN</h2>
+            <h2>Fronted Developer</h2>
+            <div>
+            <h1>Alexander Schöfer</h1>
+            </div>
         </section>
         `
     ,
