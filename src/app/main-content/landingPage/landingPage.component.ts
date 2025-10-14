@@ -9,11 +9,16 @@ import { NavbarComponent } from '../../shared/components/navbar/navbar.component
     imports: [CommonModule, NavbarComponent],
     template: `
         <section>
+        <div class="title-container">
             <h2>Fronted Developer</h2>
-            <div>
             <h1>Alexander Schöfer</h1>
+            <div class="btn-title-container">
+            <button class="btn-check-work"><span>Check my work</span></button>
+            <button class="btn-contact"><span>Contact me</span></button>
             </div>
+        </div>
         </section>
+
         `
     ,
     styleUrls: ['./landingPage.component.scss']

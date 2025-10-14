@@ -7,6 +7,8 @@
 
 :root {
     --color-standard: #D9D9D9;
+    --color-main-green: #3DCFB6;
+    --color-main-white: #FFFFFF;
 }
 
 /** Variablen Fonts **/
@@ -16,6 +18,19 @@
     --font-karla: 'Karla';
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-main-green);
+  border-radius: 6px;
+  border: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #021814;
+}
 
 
 /* karla-200 - latin */
@@ -115,4 +130,3 @@
     font-weight: 700;
     src: url('./assets/fonts/fira-code-v27-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
-
