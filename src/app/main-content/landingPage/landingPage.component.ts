@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
+import { MarqueeComponent } from './marquee/marquee.component';
 
 
 @Component({
     selector: 'app-landingPage',
     standalone: true,
-    imports: [CommonModule, NavbarComponent],
+    imports: [CommonModule, NavbarComponent, MarqueeComponent],
     template: `
         <section>
             <div class="title-container">
