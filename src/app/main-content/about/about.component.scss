@@ -1,0 +1,26 @@
+section {
+    height: 708px;
+    width: 100vw;
+    max-width: 100%;
+    background: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-me-wrapper {
+        display: flex;
+    }
+    img {
+        width: 568px;
+        height: 569px;
+    }
+
+    h3 {
+        font-family: var(--font-karla);
+        font-weight: 500;
+        font-size: 24px;
+        font-style: medium;
+        line-height: 100%;
+        color: var(--color-main-green)
+    }
+}
