@@ -1,5 +1,5 @@
 section {
-    height: 100vh;
+    height: 900px;
     width: 100vw;
     max-width: 100%;
     background: linear-gradient(50.22deg, #1c1c1c 36.26%, #08463b 93.28%);
@@ -7,7 +7,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .title-container{
+
+    .title-container {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -15,7 +16,7 @@ section {
         position: absolute;
         top: 380px;
         gap: 12px;
-        left: 343px;
+
         h2 {
             font-family: var(--font-fira);
             font-size: 40px;
@@ -23,6 +24,7 @@ section {
             line-height: 100%;
             color: var(--color-standard);
         }
+
         h1 {
             font-family: var(--font-karla);
             font-weight: 700;
@@ -33,6 +35,7 @@ section {
             color: var(--color-standard);
         }
     }
+
     .btn-title-container {
         display: flex;
         justify-content: center;
@@ -41,10 +44,11 @@ section {
         max-width: 363px;
         height: 48px;
         margin-top: 40px;
+
         button {
-            padding: 0 24px 0 24px;
-            overflow: hidden; 
-            border: 1px solid #FFFFFF;
+            padding: 0 24px;
+            overflow: hidden;
+            border: 1px solid #fff;
             background: transparent;
             border-radius: 100px;
             height: 48px;
@@ -52,21 +56,151 @@ section {
             font-weight: 400;
             font-size: 18px;
             line-height: 120%;
-            color: #FFFFFF;
+            color: #fff;
             white-space: nowrap;
             cursor: pointer;
             transition: border 100ms ease-out, color 100ms ease-out;
-            &:hover{
+
+            span {
+                display: inline-block;
+                position: relative;
+                animation: none;
+            }
+
+            &:hover {
                 border: 1px solid var(--color-main-green);
                 color: var(--color-main-green);
             }
+
+            &:hover span {
+                animation: slideLoop 3000ms linear infinite;
+            }
         }
+
         .btn-check-work {
             width: 172px;
         }
     }
 
+    @keyframes slideLoop {
+        0% {
+            transform: translateX(0);
+        }
+
+        49% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
 }
+
+.side-content {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    .left-content-container {
+        position: absolute;
+        left: 96px;
+        top: 588px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        pointer-events: auto;
+
+        .line-left {
+            width: 1px;
+            height: 240px;
+            background-color: var(--color-main-green);
+        }
+        
+        .navigation-arrow {
+            height: 48px;
+            width: 30px;
+            border-radius: 32px;
+            border: 1px solid var(--color-main-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-main-green);
+            font-family: var(--font-karla);
+            
+            .arrow {
+                color: #fff;
+                animation: arrowBounce 1s ease-in-out infinite;
+            }
+        }
+    }
+
+    .right-content-container {
+        position: absolute;
+        right: 96px;
+        top: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        pointer-events: auto;
+
+        .mail-contact {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-family: var(--font-karla);
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+            line-height: 120%;
+        
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        .contact-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .line-right {
+            width: 1px;
+            height: 186px;
+            background-color: #ffffff;
+        }
+    }
+}
+
+/* Animation: sanftes Auf- und Abbewegen */
+@keyframes arrowBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+
+
 
 
 
