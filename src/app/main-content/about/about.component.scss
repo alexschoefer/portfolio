@@ -1,6 +1,6 @@
 section {
-    height: 708px;
-    width: 100vw;
+    width: 1920px;
+    height: 100vh;
     max-width: 100%;
     background: #1c1c1c;
     display: flex;
@@ -49,7 +49,8 @@ section {
         align-items: flex-start;
         gap: 40px;
         border: 1px solid var(--color-main-green);
-        
+        background: radial-gradient(circle, #08463B4D 30%, #1C1C1C 100%);
+
         span {
             font-family: var(--font-karla);
             font-weight: 400;
@@ -66,7 +67,6 @@ section {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        margin-top: 100px;
     }
 
     .photo-container {

@@ -2,7 +2,8 @@
     position: absolute;
     bottom: 60px;
     left: 0;
-    width: 100vw;
+    width: 100%;
+    max-width: 1920px;
     height: 62px;
     background: #363c3b;
     display: flex;
