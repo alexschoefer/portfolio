@@ -1,15 +1,16 @@
 .marquee-content-wrapper {
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
     left: 0;
     width: 100%;
-    max-width: 1920px;
     height: 62px;
     background: #363c3b;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
-    rotate: -3deg;
+    transform: rotate(-3deg);
+    transform-origin: bottom left;
     z-index: 10;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
     opacity: 0.65;

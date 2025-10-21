@@ -1,5 +1,5 @@
 section {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: linear-gradient(50.22deg, #1c1c1c 36.26%, #08463b 93.28%);
     display: flex;
@@ -21,8 +21,12 @@ section {
             flex-direction: column;
             align-items: center;
             position: absolute;
+            white-space: nowrap;
             top: 380px;
-            gap: 12px;
+            width: 755px;
+            height: 216px;
+            gap: 40px;
+
 
             h2 {
                 font-family: var(--font-fira);
@@ -114,16 +118,18 @@ section {
 }
 
 .side-content {
-    position: absolute;
-    width: 100%;
     max-width: 1440px;
-    height: 100vh;
-    pointer-events: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    margin-inline: 0;
+    padding-inline: 6rem;
+    gap: 0;
 
     .left-content-container {
-        position: absolute;
-        left: 96px;
-        top: 588px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -155,14 +161,13 @@ section {
     }
 
     .right-content-container {
-        position: absolute;
-        right: 96px;
-        top: 450px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 24px;
+        height: 480px;
         pointer-events: auto;
+        margin-bottom: 70px;
 
         .mail-contact {
             writing-mode: vertical-rl;
