@@ -1,0 +1,104 @@
+section {
+    height: 100%;
+    width: 100%;
+    background: #1c1c1c;
+    padding-top: 9rem;
+
+    .main-content-wrapper {
+        margin-inline: auto;
+        padding-inline: 96px;
+        max-width: 1440px;
+        width: 100%;
+
+        .portfolio-projects-wrapper {
+            max-width: 880px;
+            width: 100%;
+            // height: 565px;
+            display: flex;
+            gap: 41px;
+            flex-direction: column;
+
+            .portfolio-headline-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 622px;
+                // height: 112px;
+                white-space: nowrap;
+    
+                h3 {
+                    font-family: var(--font-karla);
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: var(--color-main-green);
+                }
+        
+                h2 {
+                    font-family: var(--font-fira);
+                    font-weight: 700;
+                    font-size: 64px;
+                    color: var(--color-main-green);
+                }
+    
+                span {
+                    width: 456px;
+                    height: 44px;
+                    font-family: var(--font-karla);
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 120%;
+                    text-align: justify;
+                    color: #FFFFFF;
+                }
+            }
+
+            .portfolio-menu-container {
+                display: flex;
+                flex-direction: column;
+                max-width: 880px;
+
+                .project {
+                    width: 100%;
+                    height: 109px;
+                    padding: 40px 32px 40px 32px;
+                    border-top: 1px solid var(--color-main-green);
+                    border-bottom: 1px solid var(--color-main-green);
+                    display: flex;
+                    justify-content: space-between;
+
+                    .project-technologies {
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 8px;
+                        width: 354px;
+                        height: 22px;
+                        display: flex;
+                        font-family: var(--font-karla);
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 120%;
+                        color: #FFFFFF;
+
+                        span {
+                            font-family: var(--font-karla);
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 120%;
+                            color: var(--color-main-green)
+                        }
+                    }
+
+                    .project-name {
+                        font-family: var(--font-karla);
+                        font-weight: 700;
+                        font-style: bold;
+                        font-size: 24px;
+                        line-height: 120%;
+                        color: #FFFFFF;
+                    }
+                }
+
+            }
+        }
+    }
+}
