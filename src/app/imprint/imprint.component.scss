@@ -1,0 +1,87 @@
+section {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(60.22deg, #1c1c1c 15.26%, #08463b 75.28%);
+    padding-top: 9rem;
+    position: relative;
+
+    .main-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-inline: auto;
+        padding-inline: 96px;
+        max-width: 1440px;
+        width: 100%;
+        gap: 64px;
+
+        .headline-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-family: var(--font-fira);
+                font-weight: 700;
+                font-size: 64px;
+                line-height: 120%;
+                color: var(--color-main-green);
+            }
+        }
+
+        .legal-notice-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 24px;
+
+            ul {
+                padding-left: 30px;
+
+                li {
+                    font-family: var(--font-karla);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 120%;
+                    color: var(--color-main-green);
+                }
+            }
+
+            .legal-notice-point {
+                width: 1050px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                h2 {
+                    font-family: var(--font-karla);
+                    font-weight: 700;
+                    font-size: 19px;
+                    line-height: 120%;
+                    color: #FFFFFF;
+                }
+
+                span {
+                    font-family: var(--font-karla);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 120%;
+                    color: var(--color-main-green);
+                    width: 968px;
+                }
+
+                .highlight-word {
+                    font-family: var(--font-karla);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 120%;
+                    color: #FFFFFF;
+                }
+            }
+
+
+        }
+    }
+}
