@@ -83,6 +83,36 @@ section {
     }
 }
 
+.menu-navigation a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-main-white);
+    padding-bottom: 4px;
+}
+
+.menu-navigation a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-main-green);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-navigation a:hover {
+    color: var(--color-main-green); /* Text grün */
+  }
+
+.menu-navigation a:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.2);
+}
+
 .menu-navigation {
     display: flex;
     gap: 24px;
