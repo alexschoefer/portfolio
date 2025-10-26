@@ -226,3 +226,58 @@ section {
         }
     }
 }
+
+.name-form,
+.email-form,
+.message-form {
+  position: relative;
+
+  div {
+    position: relative;
+  }
+
+  input {
+    width: 350px;
+    height: 40px;
+    background: none;
+    border: none;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: border-color 150ms ease-in;
+  }
+
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    transition: opacity 150ms ease-in;
+  }
+
+  .input-valdiation-message {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    font-family: var(--font-karla);
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(236, 123, 123, 0.8);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+  }
+
+  
+  &.error {
+    input {
+      border-color: rgba(236, 123, 123, 0.8);
+    }
+
+    input::placeholder {
+      opacity: 0;
+    }
+
+    .input-valdiation-message {
+      opacity: 1;
+    }
+  }
+}

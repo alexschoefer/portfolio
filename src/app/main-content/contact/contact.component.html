@@ -15,28 +15,28 @@
             <div class="contact-form">
                 <form>
                     <div class="contact-form-container">
-                        <div class="name-form">
+                        <div class="name-form" [class.error]="showNameError">
                             <span class="question-span">What´s your name?</span>
                             <div>
-                                <input type="text" placeholder="Your name goes here" autocomplete="off">
+                                <input type="text" placeholder="Your name goes here" autocomplete="off" (blur)="validateField('name')" (focus)="clearErrorMessage('name')">
                                 <span class="input-valdiation-message">Oops! It seems your name is missing.</span>
                             </div>
                         </div>
                     </div>
                     <div class="contact-form-container">
-                        <div class="email-form">
+                        <div class="email-form" [class.error]="showEmailError">
                             <span class="question-span">What´s your email?</span>
                             <div>
-                                <input type="text" placeholder="youremail@emial.com" autocomplete="off">
+                                <input type="text" placeholder="youremail@emial.com" autocomplete="off" (blur)="validateField('email')" (focus)="clearErrorMessage('email')">
                                 <span class="input-valdiation-message">Hoopla! Your email is required.</span>
                             </div>
                         </div>
                     </div>
                     <div class="contact-form-container">
-                        <div class="message-form">
+                        <div class="message-form" [class.error]="showMessageError">
                             <span class="question-span">How can I help you?</span>
                             <div>
-                                <input type="text" placeholder="Hello Alex, I am interested in..." autocomplete="off">
+                                <input type="text" placeholder="Hello Alex, I am interested in..." autocomplete="off" (blur)="validateField('message')" (focus)="clearErrorMessage('message')">
                                 <span class="input-valdiation-message">What do you need to develop?</span>
                             </div>
                         </div>
