@@ -8,7 +8,8 @@
                 </div>
                 <div class="get-contact-container">
                     <span class="problem-solver">Got a problem to solve?</span>
-                    <span>Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.</span>
+                    <span>Encourage people to contact you and describe what role you are interested in. Show that you
+                        will add value to their projects through your work.</span>
                     <span>Need a Frontend developer? <span class="hightlight-span">Let’s talk!</span></span>
                 </div>
             </div>
@@ -18,7 +19,8 @@
                         <div class="name-form" [class.error]="showNameError">
                             <span class="question-span">What´s your name?</span>
                             <div>
-                                <input type="text" placeholder="Your name goes here" autocomplete="off" (blur)="validateField('name')" (focus)="clearErrorMessage('name')">
+                                <input type="text" placeholder="Your name goes here" autocomplete="off"
+                                    (blur)="validateField('name')" (focus)="clearErrorMessage('name')">
                                 <span class="input-valdiation-message">Oops! It seems your name is missing.</span>
                             </div>
                         </div>
@@ -27,7 +29,8 @@
                         <div class="email-form" [class.error]="showEmailError">
                             <span class="question-span">What´s your email?</span>
                             <div>
-                                <input type="text" placeholder="youremail@emial.com" autocomplete="off" (blur)="validateField('email')" (focus)="clearErrorMessage('email')">
+                                <input type="text" placeholder="youremail@emial.com" autocomplete="off"
+                                    (blur)="validateField('email')" (focus)="clearErrorMessage('email')">
                                 <span class="input-valdiation-message">Hoopla! Your email is required.</span>
                             </div>
                         </div>
@@ -36,18 +39,30 @@
                         <div class="message-form" [class.error]="showMessageError">
                             <span class="question-span">How can I help you?</span>
                             <div>
-                                <input type="text" placeholder="Hello Alex, I am interested in..." autocomplete="off" (blur)="validateField('message')" (focus)="clearErrorMessage('message')">
+                                <input type="text" placeholder="Hello Alex, I am interested in..." autocomplete="off"
+                                    (blur)="validateField('message')" (focus)="clearErrorMessage('message')">
                                 <span class="input-valdiation-message">What do you need to develop?</span>
                             </div>
                         </div>
                     </div>
                     <div class="privacy-police-container">
                         <div class="privacy-police-checkbox-content">
-                            <input class="checkbox" type="checkbox" name="accept-privacy-police">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" class="checkbox" name="acceptPrivacy"
+                                    [(ngModel)]="privacyAccepted" (change)="onPrivacyToggle()">
+                                <img [src]="privacyAccepted 
+                                    ? '../../../assets/icons/check_box.png' 
+                                    : '../../../assets/icons/check_box_outline_blank.png'" alt="Privacy Checkbox">
+                            </label>
                             <span>I've read the <a href="">privacy-police</a>and agree to the processing of my data as outlined.</span>
                         </div>
+                        <div class="error-message-privacy-police-container">
+                            <span class="error-message-privacy-police" [class.show]="showPrivacyError">
+                              Please accept the privacy policy.
+                            </span>
+                          </div>
                         <div class="send-btn-container">
-                            <button>Say Hello</button>
+                            <button [disabled]="!privacyAccepted">Say Hello</button>
                         </div>
                     </div>
                 </form>

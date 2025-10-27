@@ -14,6 +14,10 @@ export class ContactComponent {
   email = '';
   message = '';
 
+  privacyAccepted: boolean = false;
+  privacyTouched: boolean = false;
+  showPrivacyError: boolean = false;
+
   showNameError = false;
   showEmailError = false;
   showMessageError = false;
@@ -41,5 +45,22 @@ export class ContactComponent {
     if (field === 'name') this.showNameError = false;
     if (field === 'email') this.showEmailError = false;
     if (field === 'message') this.showMessageError = false;
+  }
+
+  togglePrivacy() {
+    this.privacyAccepted = !this.privacyAccepted;
+  }
+
+  onPrivacyToggle() {
+
+    if (!this.privacyTouched) {
+      this.privacyTouched = true;
+    }
+
+    if (!this.privacyAccepted && this.privacyTouched) {
+      this.showPrivacyError = true;
+    } else {
+      this.showPrivacyError = false;
+    }
   }
 }
