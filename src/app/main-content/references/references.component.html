@@ -4,36 +4,31 @@
             <div class="references-headline-container">
                 <h3>What my colleagues say about me</h3>
             </div>
-
+            <!-- Comment-Box -->
             <div class="comment-wrapper">
-                <div class="comment-container">
-                    <div class="comment">
-                        <span>Comment left</span>
-                    </div>
-                    <div class="comment-current">
-                        <div class="quotes">
+                <div class="comment-container" [style.transform]="'translateX(' + getTranslateX() + 'px)'">
+                    <div *ngFor="let comment of comments; let i = index" class="comment"
+                        [ngClass]="{'comment-current': isCurrent(i)}">
+                        <div *ngIf="isCurrent(i)" class="quotes">
                             <img src="../../../assets/icons/quotes.png" alt="quotes">
                         </div>
-                        <span>Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.</span>
-                        <div class="comment-author-container">
+                        <span>{{ comment.text }}</span>
+                        <div *ngIf="isCurrent(i)" class="comment-author-container">
                             <div class="comment-line"></div>
-                            <span>H.Janisch - Team Partner</span>
+                            <span>{{ comment.author }}</span>
                         </div>
-                    </div>
-                    <div class="comment">
-                        <span>Comment right</span>
                     </div>
                 </div>
             </div>
-
+            <!-- Arrow-Box -->
             <div class="arrow-container">
-                <button>
+                <button class="arrow-btn back" (click)="preComment()">
                     <img class="arrow-img" src="../../../assets/icons/arrow_back.png" alt="arrow-back" />
                 </button>
-                <div class="point"></div>
-                <div class="point"></div>
-                <div class="point"></div>
-                <button>
+                <div *ngFor="let comment of comments; let i = index" class="point"
+                    [ngClass]="{'active-point': currentActiveComment === i}">
+                </div>
+                <button class="arrow-btn forward" (click)="nextComment()">
                     <img class="arrow-img" src="../../../assets/icons/arrow_forward.png" alt="arrow-forward" />
                 </button>
             </div>
