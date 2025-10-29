@@ -129,12 +129,24 @@ section {
                             line-height: 120%;
                             color: #FFFFFF;
                         }
+
+                        &:hover span {
+                            color: var(--color-main-green);
+                        }
+
+                        &:hover {
+                            border: 1px solid var(--color-main-green);
+                        }
+
+                        &:hover img {
+                            transform: translateY(-3px); 
+                        }
                     }
 
                     img {
                         width: 24px;
                         height: 24px;
-                        transition: transform 0.3s ease; // sorgt für sanfte Bewegung
+                        transition: transform 0.3s ease;
                     }
                 }
             }
