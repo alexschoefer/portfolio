@@ -1,32 +1,35 @@
 <section>
     <div class="project-overlay">
         <div class="project-close-btn-container">
-            <img src="../../assets/icons/close_icon_small.png" alt="">
+            <img src="../../assets/icons/close_icon_small.png" alt="" (click)="onClose()">
         </div>
         <div class="project-overlay-content">
             <div class="project-container">
                 <div>
-                    <h1>01</h1>
+                    <h1>{{ project.projectID }}</h1>
                 </div>
                 <div>
-                    <h2>Join</h2>
+                    <h2>{{ project.projectName }}</h2>
                 </div>
                 <div class="project-description">
                     <span>What is this project about?</span>
-                    <span class="project-description-content">Task manager inspired by the Kanban System. Create and
-                        organize tasks using drag and drop functions, assign users and categories.</span>
+                    <span class="project-description-content">{{ project.description }}</span>
                 </div>
                 <div class="project-technologies-container">
                     <div class="project-technologies">
-                        <img src="../../assets/icons/css-icon.png" alt="">
-                        <span>CSS</span>
+                        <ng-container *ngFor="let tech of project.technologies; let last = last">
+                            <img [src]="tech.icon" [alt]="tech.name">
+                            <span>{{ tech.name }}</span>
+                        </ng-container>
                     </div>
                 </div>
                 <div class="project-overlay-btn-container">
-                    <button>
-                        <span>GitHub</span>
-                        <img src="../../assets/icons/arrow_outward_project-overlay.png" alt="">
-                    </button>
+                    <a [href]="project.gitHublink" target="_blank">
+                        <button>
+                          <span>GitHub</span>
+                          <img src="../../assets/icons/arrow_outward_project-overlay.png" alt="">
+                        </button>
+                      </a>
                     <button>
                         <span>Live Test</span>
                         <img src="../../assets/icons/arrow_outward_project-overlay.png" alt="">
@@ -34,7 +37,7 @@
                 </div>
             </div>
             <div class="project-screen-container">
-                <img src="../../assets/img/join_mainscreen.png" alt="">
+                <img [src]="project.imageOverlay" alt="">
             </div>
         </div>
         <div class="next-project">

@@ -3,16 +3,28 @@ section {
     justify-content: center;
     align-items: center;
 
+    &.overlay-active::before {
+        content: "";
+        position: fixed;
+        inset: 0; // Deckt gesamten Viewport ab
+        background: rgba(0, 0, 0, 0.6); // Verdunkelung
+        z-index: 900; // Unterhalb deines Overlay (das hat z-index: 1000)
+        backdrop-filter: blur(2px); // optional, für leicht verschwommenen Effekt
+      }
+
     .project-overlay {
-        position: relative; 
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        height: 660px;
         width: 1248px;
-        height: 656px;
         border-radius: 30px;
         border: 1px solid var(--color-main-green);
         background: linear-gradient(50.22deg, #1c1c1c 36.26%, #08463b 93.28%);
         z-index: 1000;
-        padding-top: 6rem;
-        padding-left: 4rem;
+        padding: 6rem 4rem 4rem 4rem;
+        overflow-y: auto;
 
         .project-overlay-content {
             display: grid;
@@ -44,6 +56,7 @@ section {
                     line-height: 80px;
                     letter-spacing: -2%;
                     color: #fff;
+                    white-space: nowrap;
                 }
 
                 .project-description {
