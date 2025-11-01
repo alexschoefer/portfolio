@@ -8,7 +8,7 @@
                     action.</span>
             </div>
             <div class="portfolio-menu-container">
-                <div class="project" *ngFor="let project of projects" (click)="openProject(project)">
+                <div class="project" *ngFor="let project of projects; let i = index" (click)="openProject(project, i)">
                     <span class="project-name">{{ project.projectName }}</span>
                     <span class="project-technologies">
                         <ng-container *ngFor="let tech of project.technologies; let last = last">
@@ -26,7 +26,9 @@
             </div>
         </div>
     </div>
+
+    <div class="overlay-backdrop" *ngIf="selectedProject" (click)="closeProject()"></div>
     <!-- Project-Overlay-Componente -->
     <app-project-detail *ngIf="selectedProject" [project]="selectedProject"
-        (close)="selectedProject = null"></app-project-detail>
+    (close)="closeProject()" (next)="nextProject()"></app-project-detail>
 </section>

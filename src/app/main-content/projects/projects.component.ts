@@ -12,13 +12,23 @@ import { CommonModule } from '@angular/common';
 export class ProjectsComponent {
 
   selectedProject: any = null;
+  currentIndex: number = -1;
 
-  openProject(project: any) {
+  openProject(project: any, index: number) {
     this.selectedProject = project;
+    this.currentIndex = index;
+    document.body.classList.add('no-scroll');
   }
 
   closeProject() {
     this.selectedProject = null;
+    document.body.classList.remove('no-scroll');
+  }
+
+  nextProject() {
+    if (this.projects.length === 0) return;
+    this.currentIndex = (this.currentIndex + 1) % this.projects.length;
+    this.selectedProject = this.projects[this.currentIndex];
   }
 
   projects = [

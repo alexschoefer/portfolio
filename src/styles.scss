@@ -131,3 +131,28 @@
     font-weight: 700;
     src: url('./assets/fonts/fira-code-v27-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+  /* Hintergrund blockieren, wenn Overlay aktiv */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Halbtransparente Verdunkelung */
+.overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 900;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Sanfte Einblendung */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

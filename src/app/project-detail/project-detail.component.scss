@@ -97,7 +97,7 @@ section {
 
                     .project-technologies {
                         display: flex;
-                        gap: 4px;
+                        gap: 10px;
                         align-items: center;
 
                         img {
@@ -161,6 +161,10 @@ section {
                         height: 24px;
                         transition: transform 0.3s ease;
                     }
+
+                    a {
+                        text-decoration: none;
+                    }
                 }
             }
 
@@ -168,7 +172,7 @@ section {
                 margin: 40px 48px 32px 48px;
                 display: flex;
                 justify-content: center;
-                width: 320px;
+                width: 350px;
                 height: 320px;
 
                 img {
