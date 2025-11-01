@@ -1,25 +1,34 @@
-<section>
+<section id="projects" [class.overlay-active]="selectedProject">
     <div class="main-content-wrapper">
         <div class="portfolio-projects-wrapper">
             <div class="portfolio-headline-container">
                 <h3>Portfolio</h3>
                 <h2>Featured Projects</h2>
-                <span>Explore a selection of my work here - Interact with <br> projects to see my skills in action.</span>
+                <span>Explore a selection of my work here - Interact with <br> projects to see my skills in
+                    action.</span>
             </div>
             <div class="portfolio-menu-container">
-                <div class="project">
-                    <span class="project-name">Join</span>
-                    <span class="project-technologies">HTML<span>|</span>CSS<span>|</span>JavaScript<span>|</span>Firebase</span>
-                </div>
-                <div class="project">
-                    <span class="project-name">El Pollo Loco</span>
-                    <span class="project-technologies">HTML<span>|</span>CSS<span>|</span>JavaScript</span>
-                </div>
-                <div class="project">
-                    <span class="project-name">Pokedex</span>
-                    <span class="project-technologies">HTML<span>|</span>CSS<span>|</span>JavaScript</span>
+                <div class="project" *ngFor="let project of projects; let i = index" (click)="openProject(project, i)">
+                    <span class="project-name">{{ project.projectName }}</span>
+                    <span class="project-technologies">
+                        <ng-container *ngFor="let tech of project.technologies; let last = last">
+                            {{ tech.name }}
+                            <span *ngIf="!last">|</span>
+                        </ng-container>
+                    </span>
+                    <div class="project-screenshot">
+                        <img [src]="project.image" alt="Join project screenshot">
+                    </div>
+                    <div class="project-screenshot-background">
+                        <img src="../../../assets/img/project-screenshot-background.png" alt="Join project screenshot">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="overlay-backdrop" *ngIf="selectedProject" (click)="closeProject()"></div>
+    <!-- Project-Overlay-Componente -->
+    <app-project-detail *ngIf="selectedProject" [project]="selectedProject"
+    (close)="closeProject()" (next)="nextProject()"></app-project-detail>
 </section>

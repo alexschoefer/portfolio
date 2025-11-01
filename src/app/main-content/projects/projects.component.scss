@@ -13,7 +13,6 @@ section {
         .portfolio-projects-wrapper {
             max-width: 880px;
             width: 100%;
-            // height: 565px;
             display: flex;
             gap: 41px;
             flex-direction: column;
@@ -23,23 +22,22 @@ section {
                 flex-direction: column;
                 gap: 20px;
                 width: 622px;
-                // height: 112px;
                 white-space: nowrap;
-    
+
                 h3 {
                     font-family: var(--font-karla);
                     font-weight: 500;
                     font-size: 24px;
                     color: var(--color-main-green);
                 }
-        
+
                 h2 {
                     font-family: var(--font-fira);
                     font-weight: 700;
                     font-size: 64px;
                     color: var(--color-main-green);
                 }
-    
+
                 span {
                     width: 456px;
                     height: 44px;
@@ -56,13 +54,14 @@ section {
                 display: flex;
                 flex-direction: column;
                 max-width: 880px;
+                height: 450px;
 
                 .project {
-                    width: 100%;
-                    height: 109px;
-                    padding: 40px 32px 40px 32px;
+                    position: relative; // Damit das absolute Bild relativ dazu positioniert wird
+                    padding: 40px 32px;
                     border-top: 1px solid var(--color-main-green);
                     border-bottom: 1px solid var(--color-main-green);
+                    cursor: pointer;
                     display: flex;
                     justify-content: space-between;
 
@@ -84,7 +83,7 @@ section {
                             font-weight: 400;
                             font-size: 18px;
                             line-height: 120%;
-                            color: var(--color-main-green)
+                            color: var(--color-main-green);
                         }
                     }
 
@@ -96,9 +95,81 @@ section {
                         line-height: 120%;
                         color: #FFFFFF;
                     }
+
+                    .project-info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                    }
+
+                    .project-screenshot {
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        margin-left: 60px; 
+                        margin-top: 15px;
+                        opacity: 0; 
+                        pointer-events: none;
+                        transition: opacity 0.3s ease, transform 0.3s ease;
+
+                        img {
+                            width: 300px; 
+                            height: auto;
+                            border-radius: 16px;
+                            object-fit: cover;
+                            z-index: 10;
+                        }
+                    }
+
+                    &:hover .project-screenshot {
+                        opacity: 1;
+                        transform: translateX(0); 
+                        z-index: 10;
+                    }
+
+                    .project-screenshot-background {
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        margin-left: 100px; 
+                        margin-top: 20px;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: opacity 0.3s ease, transform 0.3s ease;
+
+                        img {
+                            width: 290px;
+                            height: 175px;
+                            border-radius: 16px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &:hover .project-screenshot-background {
+                        opacity: 1;
+                        transform: translateX(0); // optional Animation
+                    }
                 }
 
             }
         }
     }
+}
+
+.project:hover {
+    background-color: #3dcfb64d;
+}
+
+.project .project-name::after {
+    content: url(../../../assets/icons/arrow_outward.png);
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+}
+
+.project:hover .project-name::after {
+    opacity: 1;
 }

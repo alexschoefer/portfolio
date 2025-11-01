@@ -10,7 +10,6 @@ section {
   .skills-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* linke & rechte Spalte */
     align-items: start;
     max-width: 1440px;
     width: 100%;
@@ -84,12 +83,6 @@ section {
           background: transparent;
           border-radius: 100px;
           height: 48px;
-          font-family: var(--font-karla);
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 120%;
-          color: #fff;
-          white-space: nowrap;
           cursor: pointer;
           transition: border 100ms ease-out, color 100ms ease-out;
 
@@ -99,10 +92,17 @@ section {
           }
         }
 
-        span {
+        a {
           display: inline-block;
           position: relative;
           animation: none;
+          font-family: var(--font-karla);
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 120%;
+          color: #fff;
+          white-space: nowrap;
+          text-decoration: none;
         }
 
 
@@ -128,11 +128,13 @@ section {
       align-items: center;
       text-align: center;
       gap: 8px;
+      position: relative;
 
       img {
         width: 60px;
         height: 60px;
         object-fit: contain;
+        transition: transform 150ms ease-in, opacity 150ms ease-in;
       }
 
       span {
@@ -145,6 +147,12 @@ section {
     }
   }
 }
+
+.skills img:hover {
+  transform: scale(1.2); 
+  opacity: 0.9;
+}
+
 
 @keyframes slideLoop {
   0% {

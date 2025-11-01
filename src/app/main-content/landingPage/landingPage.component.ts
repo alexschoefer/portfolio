@@ -15,8 +15,8 @@ import { MarqueeComponent } from './marquee/marquee.component';
                     <h2>Fronted Developer</h2>
                     <h1>Alexander Schöfer</h1>
                     <div class="btn-title-container">
-                        <button class="btn-check-work"><span>Check my work</span></button>
-                        <button class="btn-contact"><span>Contact me</span></button>
+                        <button class="btn-check-work"><a href="#projects">Check my work</a></button>
+                        <button class="btn-contact"><a href="#contact">Contact me</a></button>
                     </div>
                 </div>
                 <div class="side-content">
@@ -31,10 +31,10 @@ import { MarqueeComponent } from './marquee/marquee.component';
                                 <a href="mailto:alex.schoefer@gmx.net">alex.schoefer&#64;gmx.net</a>
                             </div>
                             <div class="contact-icons">
-                                <a href="">
+                                <a href="https://github.com/alexschoefer">
                                     <img class="github-icon" src="../../assets/icons/Github.png" alt="github">
                                 </a>
-                                <a href="">
+                                <a href="https://www.linkedin.com/in/alexander-schöfer-379352161/">
                                     <img class="linkedin-icon" src="../../assets/icons/Linkedin.png" alt="linkedin">
                                 </a>
                             </div>

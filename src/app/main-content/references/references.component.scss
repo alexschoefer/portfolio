@@ -42,16 +42,25 @@ section {
     align-items: center;
     gap: 20px;
 
-    button {
+    .arrow-btn {
         background: none;
         border: none;
+
+        &.back:hover img {
+            content: url("../../../assets/icons/arrow_back_hover.png");
+        }
+
+        &.forward:hover img {
+            content: url("../../../assets/icons/arrow_forward_hover.png");
+        }
     }
-    
+
     .arrow-img {
         width: 36px;
         height: 36px;
         background-image: none;
         cursor: pointer;
+        transition: all 0.2s ease;
     }
 
     .point {
@@ -64,6 +73,22 @@ section {
         background-color: #FFFFFF;
         border-radius: 50%;
     }
+
+    .active-point {
+        background-color: var(--color-main-green);
+    }
+}
+
+.comment {
+    flex-shrink: 0;
+    width: 632px;
+    height: 248px;
+    border-radius: 32px;
+    border: 1px solid var(--color-main-green);
+    padding: 48px 40px;
+    background-color: #3dcfb61a;
+    opacity: 0.6;
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .comment-current {
@@ -76,6 +101,9 @@ section {
     padding: 48px 40px;
     background-color: #3dcfb64d;
     z-index: 2;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.4s ease, opacity 0.4s ease;
 
     span {
         font-family: var(--font-karla);
@@ -84,18 +112,7 @@ section {
         line-height: 120%;
         color: #FFFFFF;
     }
-  }
-
-.comment {
-    flex-shrink: 0;
-    width: 632px;
-    height: 248px;
-    border-radius: 32px;
-    border: 1px solid var(--color-main-green);
-    padding: 48px 40px;
-    background-color: #3dcfb61a;
-    opacity: 0.6;
-  }
+}
 
 .references-container {
     display: flex;
@@ -113,7 +130,7 @@ section {
     gap: 32px;
     transition: transform 0.5s ease;
     transform: translateX(0);
-  }
+}
 
 .comment-wrapper {
     width: 100%;
@@ -124,15 +141,15 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
-  }
+}
 
-  .comment:not(.comment-current) {
+.comment:not(.comment-current) {
     transform: scale(0.9);
     transition: transform 0.4s ease, opacity 0.4s ease;
-  }
+}
 
 
-  .quotes {
+.quotes {
     position: absolute;
     top: calc(50% - 105px);
     left: calc(50% - 365px);
@@ -146,10 +163,6 @@ section {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.comment-current {
-    position: relative;
 }
 
 .comment-author-container {

@@ -1,0 +1,242 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.overlay-active::before {
+        content: "";
+        position: fixed;
+        inset: 0; // Deckt gesamten Viewport ab
+        background: rgba(0, 0, 0, 0.6); // Verdunkelung
+        z-index: 900; // Unterhalb deines Overlay (das hat z-index: 1000)
+        backdrop-filter: blur(2px); // optional, für leicht verschwommenen Effekt
+      }
+
+    .project-overlay {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        height: 660px;
+        width: 1248px;
+        border-radius: 30px;
+        border: 1px solid var(--color-main-green);
+        background: linear-gradient(50.22deg, #1c1c1c 36.26%, #08463b 93.28%);
+        z-index: 1000;
+        padding: 6rem 4rem 4rem 4rem;
+        overflow-y: auto;
+
+        .project-overlay-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            align-items: start; 
+            column-gap: 70px;
+
+            .project-container {
+                width: 480px;
+                height: 171px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 32px;
+
+                h1 {
+                    font-family: var(--font-karla);
+                    font-size: 128px;
+                    font-weight: 700;
+                    line-height: 100px;
+                    letter-spacing: -2%;
+                    color: var(--color-main-green);
+                }
+
+                h2 {
+                    font-family: var(--font-fira);
+                    font-size: 64px;
+                    font-weight: 700;
+                    line-height: 80px;
+                    letter-spacing: -2%;
+                    color: #fff;
+                    white-space: nowrap;
+                }
+
+                .project-description {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    width: 480px;
+                    height: 115px;
+
+                    .project-description-content {
+                        font-family: var(--font-karla);
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 120%;
+                        letter-spacing: 0;
+                        color: #FFFFFF;
+                        width: 480px;
+                        height: 66px;
+                    }
+
+                    span {
+                        font-family: var(--font-fira);
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 120%;
+                        letter-spacing: 0;
+                        color: var(--color-main-green);
+                    }
+                }
+
+                .project-technologies-container {
+                    width: 480px;
+                    height: 24px;
+                    display: flex;
+                    gap: 16px;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .project-technologies {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+
+                        span {
+                            font-family: var(--font-karla);
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 120%;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+
+                .project-overlay-btn-container {
+                    display: flex;
+                    gap: 32px;
+                    width: 304px;
+                    height: 48px;
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        width: 130px;
+                        height: 48px;
+                        border-radius: 100px;
+                        border: 1px solid #FFFFFF;
+                        padding-left: 24px;
+                        padding-right: 24px;
+                        background: none;
+                        cursor: pointer;
+                        white-space: nowrap;
+
+                        span {
+                            font-family: var(--font-karla);
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 120%;
+                            color: #FFFFFF;
+                        }
+
+                        &:hover span {
+                            color: var(--color-main-green);
+                        }
+
+                        &:hover {
+                            border: 1px solid var(--color-main-green);
+                        }
+
+                        &:hover img {
+                            transform: translateY(-3px); 
+                        }
+                    }
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        transition: transform 0.3s ease;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .project-screen-container {
+                margin: 40px 48px 32px 48px;
+                display: flex;
+                justify-content: center;
+                width: 350px;
+                height: 320px;
+
+                img {
+                    border-radius: 30px;
+                }
+            }
+        }
+
+
+
+        .next-project {
+            position: absolute; 
+            bottom: 32px; 
+            right: 48px; 
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            width: fit-content; 
+            height: 40px;
+            transition: opacity 0.3s ease;
+
+            button {
+                width: 103px;
+                height: 22px;
+                background: none;
+                font-family: var(--font-karla);
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 120%;
+                color: var(--color-main-green);
+                white-space: nowrap;
+                border: none;
+                cursor: pointer;
+            }
+
+            &:hover button {
+                color: #FFFFFF;
+            }
+
+            &:hover img {
+                transform: translateX(6px); 
+            }
+        }
+
+        .project-close-btn-container {
+            position: relative;    
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+            cursor: pointer;
+            overflow: visible;          
+            z-index: 10;  
+
+            img {
+                width: 18px;
+                height: 18px;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover img {
+                transform: scale(1.3);
+                content:url(../../assets/icons/close_icon_overlay_hover.png);
+            }
+        }
+    }
+}

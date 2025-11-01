@@ -30,6 +30,7 @@ section {
             justify-content: flex-end;
             gap: 8px;
             height: 48px;
+            cursor: pointer;
 
             .letter-container {
                 display: flex;
@@ -79,8 +80,49 @@ section {
                     line-height: 120%;
                 }
             }
+
+            &:hover .firstNameLetter,
+            &:hover .lastNameLetter {
+                color: transparent;
+                -webkit-text-stroke: 1px var(--color-main-green); 
+            }
+
+            &:hover .fullname-container span {
+                color: transparent; 
+                -webkit-text-stroke: 1px #FFFFFF; 
+            }
         }
     }
+}
+
+.menu-navigation a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-main-white);
+    padding-bottom: 4px;
+}
+
+.menu-navigation a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-main-green);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-navigation a:hover {
+    color: var(--color-main-green);
+  }
+
+.menu-navigation a:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.2);
 }
 
 .menu-navigation {
