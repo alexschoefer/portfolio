@@ -27,6 +27,7 @@ section {
                 justify-content: center;
                 gap: 8px;
                 height: 48px;
+                cursor: pointer;
 
                 .letter-container {
                     display: flex;
@@ -36,7 +37,7 @@ section {
                     gap: 0;
                     line-height: 1;
                 }
-                
+
                 .firstNameLetter,
                 .lastNameLetter {
                     font-family: var(--font-fira);
@@ -48,15 +49,15 @@ section {
                     margin: 0;
                     display: block;
                 }
-                
+
                 .firstNameLetter {
                     transform: rotate(90deg);
                     display: block;
-                    margin-bottom: -10px; /* 👈 hier passiert die Magie */
+                    margin-bottom: -10px;
                 }
-                
+
                 .lastNameLetter {
-                    margin-top: -8px; /* optional – falls du zentrieren oder überlappen willst */
+                    margin-top: -8px;
                 }
 
                 .fullname-container {
@@ -77,6 +78,16 @@ section {
                     }
                 }
 
+                &:hover .firstNameLetter,
+                &:hover .lastNameLetter {
+                    color: transparent;
+                    -webkit-text-stroke: 1px var(--color-main-green); 
+                }
+
+                &:hover .fullname-container span {
+                    color: transparent; 
+                    -webkit-text-stroke: 1px #FFFFFF; 
+                }
             }
 
             .info-container {
@@ -104,7 +115,6 @@ section {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            /* exakte horizontale Mitte */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -124,7 +134,7 @@ section {
         .links {
             width: 88px;
             height: 100px;
-            
+
 
             nav {
                 display: flex;
@@ -134,6 +144,10 @@ section {
                 align-items: flex-start;
 
                 a {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px; 
                     text-decoration: none;
                     font-family: var(--font-karla);
                     font-weight: 400;
@@ -143,7 +157,29 @@ section {
                     white-space: nowrap;
                     cursor: pointer;
                 }
+
+                a:hover {
+                    color: var(--color-main-green);
+                }
+
+                a::before {
+                    content: "";
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: var(--color-main-green);
+                    opacity: 0; 
+                    transition: opacity 0.3s ease;
+                }
+                
+                a:hover::before {
+                    opacity: 1;
+                }
             }
+
+
         }
+
+
     }
 }

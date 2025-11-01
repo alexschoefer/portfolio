@@ -30,6 +30,7 @@ section {
             justify-content: flex-end;
             gap: 8px;
             height: 48px;
+            cursor: pointer;
 
             .letter-container {
                 display: flex;
@@ -79,6 +80,17 @@ section {
                     line-height: 120%;
                 }
             }
+
+            &:hover .firstNameLetter,
+            &:hover .lastNameLetter {
+                color: transparent;
+                -webkit-text-stroke: 1px var(--color-main-green); 
+            }
+
+            &:hover .fullname-container span {
+                color: transparent; 
+                -webkit-text-stroke: 1px #FFFFFF; 
+            }
         }
     }
 }
@@ -105,7 +117,7 @@ section {
 }
 
 .menu-navigation a:hover {
-    color: var(--color-main-green); /* Text grün */
+    color: var(--color-main-green);
   }
 
 .menu-navigation a:hover::after {
