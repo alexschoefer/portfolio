@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class ReferencesComponent {
   comments = [
     { text: 'Comment left', author: 'Author 1' },
-    { text: 'Lukas has proven to be a reliable group partner...', author: 'H. Janisch - Team Partner' },
+    { text: 'Alex is a dedicated, solution-oriented team player, and working with him on our web-based business app was always enjoyable and productive. I would gladly collaborate with him again anytime.', author: 'B. Bardon  - Team Partner' },
     { text: 'Comment right', author: 'Author 3' }
   ];
 
