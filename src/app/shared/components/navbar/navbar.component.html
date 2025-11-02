@@ -2,22 +2,16 @@
     <div class="menu-content">
         <div class="left-group">
             <div class="language-selection">
-                <button 
-                  class="btn-language-en" 
-                  [class.active]="isEnglish" 
-                  (click)="toggleLanguage('EN')">EN</button>
-                  
-                <button 
-                  class="btn-language-de" 
-                  [class.active]="!isEnglish" 
-                  (click)="toggleLanguage('DE')">DE</button>
-              </div>
-              
-              <nav class="menu-navigation">
+                <button class="btn-language-en" [class.active]="isEnglish" (click)="toggleLanguage('EN')">EN</button>
+
+                <button class="btn-language-de" [class.active]="!isEnglish" (click)="toggleLanguage('DE')">DE</button>
+            </div>
+
+            <nav class="menu-navigation">
                 <a href="#about">{{ isEnglish ? 'About me' : 'Über mich' }}</a>
-                <a href="#skills">{{ isEnglish ? 'Skills' : 'Skills' }}</a>
+                <a href="#skills">{{ isEnglish ? 'Skills' : 'Fähigkeiten' }}</a>
                 <a href="#projects">{{ isEnglish ? 'Projects' : 'Projekte' }}</a>
-              </nav>
+            </nav>
         </div>
 
         <div class="logo-container">
@@ -29,5 +23,22 @@
                 <span>Alexander Schöfer</span>
             </div>
         </div>
+        <!-- Burger-Menu -->
+        <div class="burger-menu" (click)="toggleMenu()" [class.active]="menuOpen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="menu-navigation-mobile" [class.active]="menuOpen">
+            <a href="#about" (click)="toggleMenu()">{{ isEnglish ? 'About me' : 'Über mich' }}</a>
+            <a href="#skills" (click)="toggleMenu()">{{ isEnglish ? 'Skills' : 'Fähigkeiten' }}</a>
+            <a href="#projects" (click)="toggleMenu()">{{ isEnglish ? 'Projects' : 'Projekte' }}</a>
+
+            <div class="language-selection-mobile">
+                <button [class.active]="isEnglish" (click)="toggleLanguage('EN'); toggleMenu()">EN</button>
+                <button [class.active]="!isEnglish" (click)="toggleLanguage('DE'); toggleMenu()">DE</button>
+            </div>
+        </nav>
     </div>
 </section>

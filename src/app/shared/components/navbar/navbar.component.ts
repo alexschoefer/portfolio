@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   isEnglish: boolean = true;
+  menuOpen: boolean = false;
 
   toggleLanguage(lang?: 'EN' | 'DE') {
     if (lang) {
@@ -17,5 +18,9 @@ export class NavbarComponent {
     } else {
       this.isEnglish = !this.isEnglish;
     }
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 }
