@@ -2,10 +2,9 @@
     <div class="main-content-wrapper">
         <div class="portfolio-projects-wrapper">
             <div class="portfolio-headline-container">
-                <h3>Portfolio</h3>
-                <h2>Featured Projects</h2>
-                <span>Explore a selection of my work here - Interact with <br> projects to see my skills in
-                    action.</span>
+                <h3>{{'PORTFOLIO.TITLE' | translate}}</h3>
+                <h2>{{'PORTFOLIO.HEADER' | translate}}</h2>
+                <span>{{'PORTFOLIO.DESCRIPTION_PART1' | translate}} <br> {{'PORTFOLIO.DESCRIPTION_PART2' | translate}} </span>
             </div>
             <div class="portfolio-menu-container">
                 <div class="project" *ngFor="let project of projects; let i = index" (click)="openProject(project, i)">

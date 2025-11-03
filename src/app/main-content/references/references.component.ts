@@ -1,30 +1,46 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './references.component.html',
-  styleUrl: './references.component.scss',
+  styleUrls: ['./references.component.scss']
 })
 export class ReferencesComponent {
-  comments = [
-    { text: 'Comment left', author: 'Author 1' },
-    { text: 'Alex is a dedicated, solution-oriented team player, and working with him on our web-based business app was always enjoyable and productive. I would gladly collaborate with him again anytime.', author: 'B. Bardon  - Team Partner' },
-    { text: 'Comment right', author: 'Author 3' }
-  ];
-
+  COMMENTS: Array<{ text: string; author: string }> = [];
+  commentsLoaded = false;
   currentActiveComment = 1; 
-  boxWidth = 632 + 32;     
-  startIndex = 1;       
+  boxWidth = 632 + 32;
+  startIndex = 1;
+
+  constructor(private translate: TranslateService) {
+    this.loadComments();
+    this.translate.onLangChange.subscribe(() => this.loadComments());
+  }
+
+  loadComments() {
+    this.translate.get('REFERENCES.COMMENTS').subscribe((res: any) => {
+      if (Array.isArray(res)) {
+        this.COMMENTS = res;
+        this.commentsLoaded = true;
+        this.currentActiveComment = this.startIndex;
+      } else {
+        console.error('Expected an array for REFERENCES.COMMENTS', res);
+        this.COMMENTS = [];
+        this.commentsLoaded = false;
+      }
+    });
+  }
 
   nextComment() {
-    this.currentActiveComment = (this.currentActiveComment + 1) % this.comments.length;
+    this.currentActiveComment = (this.currentActiveComment + 1) % this.COMMENTS.length;
   }
 
   preComment() {
-    this.currentActiveComment = (this.currentActiveComment - 1 + this.comments.length) % this.comments.length;
+    this.currentActiveComment = (this.currentActiveComment - 1 + this.COMMENTS.length) % this.COMMENTS.length;
   }
 
   isCurrent(index: number) {

@@ -1,10 +1,74 @@
 {
-    "ABOUT": {
-      "WHO_I_AM": "Wer ich bin",
-      "HEADER": "Über mich",
-      "DESCRIPTION": "Hey, ich bin Alex! Ich bin IT-Prozessspezialist mit Erfahrung im Projektmanagement und technischen Support. Ich liebe das Programmieren, weil es mir ermöglicht, Probleme effizient zu lösen und Prozesse zu automatisieren.",
-      "LOCATION": "Ich lebe in München und bin flexibel hinsichtlich des Arbeitsumfelds. Ich kann mobil oder remote arbeiten.",
-      "MOTIVATION": "Neugierig und anpassungsfähig zu bleiben, motiviert mich, meine IT- und Programmierkenntnisse ständig zu verbessern.",
-      "PROBLEM_SOLVING": "Mein Ansatz zur Problemlösung kombiniert analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit, um effiziente und elegante Lösungen für IT-Herausforderungen zu finden."
-    }
+  "NAVBAR": {
+    "ABOUT": "Über mich",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projekte"
+  },
+
+  "ABOUT": {
+    "WHO_I_AM": "Wer ich bin",
+    "HEADER": "Über mich",
+    "DESCRIPTION": "Hey, ich bin Alex! Ich bin IT-Prozessspezialist mit Erfahrung im Projektmanagement und technischen Support. Ich liebe das Programmieren, weil es mir ermöglicht, Probleme effizient zu lösen und Prozesse zu automatisieren.",
+    "LOCATION": "Ich lebe in München und bin flexibel hinsichtlich des Arbeitsumfelds. Ich kann mobil oder remote arbeiten.",
+    "MOTIVATION": "Neugierig und anpassungsfähig zu bleiben, motiviert mich, meine IT- und Programmierkenntnisse ständig zu verbessern.",
+    "PROBLEM_SOLVING": "Mein Ansatz zur Problemlösung kombiniert analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit, um effiziente und elegante Lösungen für IT-Herausforderungen zu finden."
+  },
+
+  "SKILLS": {
+    "TITLE": "Technologien",
+    "SUBTITLE": "Fähigkeiten",
+    "DESCRIPTION": "Ich habe praktische Erfahrung mit Frontend-Technologien wie HTML, CSS, JavaScript, Angular, Firebase, Git und der Arbeit mit REST-APIs. Ich entwickle gerne responsive und benutzerfreundliche Oberflächen und entdecke dabei ständig neue Tools und Frameworks. Die schnelllebige Welt der Webentwicklung motiviert mich, stets dazuzulernen und mich anzupassen.",
+    "ANOTHER_SKILL_PART1": "Du brauchst",
+    "ANOTHER_SKILL_PART2": "eine weitere Fähigkeit?",
+    "CONTACT_HINT": "Kontaktiere mich gerne. Ich freue mich darauf, mein Wissen zu erweitern.",
+    "BUTTON": "Lass uns reden"
+  },
+
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "HEADER": "Ausgewählte Projekte",
+    "DESCRIPTION_PART1": "Entdecke hier eine Auswahl meiner Arbeiten – interagiere mit Projekten,",
+    "DESCRIPTION_PART2": "um meine Fähigkeiten in Aktion zu sehen."
+  },
+
+  "REFERENCES": {
+    "HEADLINE": "Was meine Kollegen über mich sagen",
+    "COMMENTS": [
+      {
+        "text": "Die Arbeit mit Alex war durchweg positiv. Er ist zuverlässig, proaktiv und bereichert jedes Projekt mit wertvollen Ideen.",
+        "author": "C. Viorell - Team Partner"
+      },
+      {
+        "text": "Alex ist ein engagierter, lösungsorientierter Teamplayer, und die Arbeit mit ihm an unserer web-basierten Business-App war stets angenehm und produktiv. Ich würde jederzeit wieder mit ihm zusammenarbeiten.",
+        "author": "B. Bardon - Team Partner"
+      },
+      {
+        "text": "Ich hatte das Glück, mit Simon in einem Gruppenprojekt an der Developer Akademie zusammenzuarbeiten, das viel Aufwand erforderte. Er blieb immer ruhig, gelassen und konzentriert und sorgte dafür, dass unser Team auf Erfolgskurs war.",
+        "author": "N. Loukataris - Team Partner"
+      }
+    ]
+  },
+
+  "CONTACT": {
+    "HEADLINE": "Kontakt",
+    "TITLE": "Lass uns zusammenarbeiten",
+    "SUBTITLE": "Hast du ein Problem zu lösen?",
+    "DESCRIPTION": "Lass uns gemeinsam etwas Großartiges schaffen! Ich freue mich darauf, mein technologisches Fachwissen in deine Projekte einzubringen.",
+    "QUESTION_PART1": "Brauchst du einen Frontend-Entwickler?",
+    "QUESTION_PART2": "Lass uns reden!",
+    "CONTACT_FROM_NAME": "Wie heißt du?",
+    "CONTACT_FROM_NAME_PLACEHOLDER": "Dein Name hier?",
+    "CONTACT_FROM_NAME_ERROR_MESSAGE": "Ups! Es scheint, als fehle dein Name.",
+    "CONTACT_FROM_EMAIL": "Wie lautet deine E-Mail?",
+    "CONTACT_FROM_EMAIL_PLACEHOLDER": "deineemail@beispiel.com",
+    "CONTACT_FROM_EMAIL_ERROR_MESSAGE": "Hoppla! Deine E-Mail wird benötigt.",
+    "CONTACT_FROM_MESSAGE": "Wie kann ich dir helfen?",
+    "CONTACT_FROM_MESSAGE_PLACEHOLDER": "Hallo Alex, ich interessiere mich für...",
+    "CONTACT_FROM_MESSAGE_ERROR_MESSAGE": "Was möchtest du entwickeln lassen?",
+    "PRIVACY_POLICE_PART1": "Ich habe die",
+    "PRIVACY_POLICE_PART2": "Datenschutzerklärung",
+    "PRIVACY_POLICE_PART3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "PRIVACY_POLICE_ERROR_MESSAGE": "Bitte akzeptiere die Datenschutzerklärung.",
+    "BUTTON": "Sag Hallo ;)"
   }
+}

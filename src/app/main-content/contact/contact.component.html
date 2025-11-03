@@ -3,44 +3,44 @@
         <div class="contact-content">
             <div class="contact-box-container">
                 <div class="contact-headline-container">
-                    <h3>Contact me</h3>
-                    <h2>Let´s work together</h2>
+                    <h3>{{'CONTACT.HEADLINE' | translate}}</h3>
+                    <h2>{{'CONTACT.TITLE' | translate}}</h2>
                 </div>
                 <div class="get-contact-container">
-                    <span class="problem-solver">Got a problem to solve?</span>
-                    <span>Let’s create something great together! I’m eager to bring my expertise technology to your projects.</span>
-                    <span>Need a Frontend developer? <span class="hightlight-span">Let’s talk!</span></span>
+                    <span class="problem-solver">{{'CONTACT.SUBTITLE' | translate}}</span>
+                    <span>{{'CONTACT.DESCRIPTION' | translate}}</span>
+                    <span>{{'CONTACT.QUESTION_PART1' | translate}} <span class="hightlight-span">{{'CONTACT.QUESTION_PART2' | translate}}</span></span>
                 </div>
             </div>
             <div class="contact-form">
                 <form>
                     <div class="contact-form-container">
                         <div class="name-form" [class.error]="showNameError">
-                            <span class="question-span">What´s your name?</span>
+                            <span class="question-span">{{'CONTACT.CONTACT_FROM_NAME' | translate}}</span>
                             <div>
-                                <input type="text" placeholder="Your name goes here" autocomplete="off"
+                                <input type="text" placeholder="{{'CONTACT.CONTACT_FROM_NAME_PLACEHOLDER' | translate}}" autocomplete="off"
                                     (blur)="validateField('name')" (focus)="clearErrorMessage('name')">
-                                <span class="input-valdiation-message">Oops! It seems your name is missing.</span>
+                                <span class="input-valdiation-message">{{'CONTACT.CONTACT_FROM_NAME_ERROR_MESSAGE' | translate}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="contact-form-container">
                         <div class="email-form" [class.error]="showEmailError">
-                            <span class="question-span">What´s your email?</span>
+                            <span class="question-span">{{'CONTACT.CONTACT_FROM_EMAIL' | translate}}</span>
                             <div>
-                                <input type="text" placeholder="youremail@emial.com" autocomplete="off"
+                                <input type="text" placeholder="{{'CONTACT.CONTACT_FROM_EMAIL_PLACEHOLDER' | translate}}" autocomplete="off"
                                     (blur)="validateField('email')" (focus)="clearErrorMessage('email')">
-                                <span class="input-valdiation-message">Hoopla! Your email is required.</span>
+                                <span class="input-valdiation-message">{{'CONTACT.CONTACT_FROM_EMAIL_ERROR_MESSAGE' | translate}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="contact-form-container">
                         <div class="message-form" [class.error]="showMessageError">
-                            <span class="question-span">How can I help you?</span>
+                            <span class="question-span">{{'CONTACT.CONTACT_FROM_MESSAGE' | translate}}</span>
                             <div>
-                                <input type="text" placeholder="Hello Alex, I am interested in..." autocomplete="off"
+                                <input type="text" placeholder="{{'CONTACT.CONTACT_FROM_MESSAGE_PLACEHOLDER' | translate}}" autocomplete="off"
                                     (blur)="validateField('message')" (focus)="clearErrorMessage('message')">
-                                <span class="input-valdiation-message">What do you need to develop?</span>
+                                <span class="input-valdiation-message">{{'CONTACT.CONTACT_FROM_MESSAGE_ERROR_MESSAGE' | translate}}</span>
                             </div>
                         </div>
                     </div>
@@ -53,15 +53,15 @@
                                     ? '../../../assets/icons/check_box.png' 
                                     : '../../../assets/icons/check_box_outline_blank.png'" alt="Privacy Checkbox">
                             </label>
-                            <span>I've read the <a href="">privacy-police</a>and agree to the processing of my data as outlined.</span>
+                            <span>{{'CONTACT.PRIVACY_POLICE_PART1' | translate}} <a href="">{{'CONTACT.PRIVACY_POLICE_PART2' | translate}}</a>{{'CONTACT.PRIVACY_POLICE_PART3' | translate}}</span>
                         </div>
                         <div class="error-message-privacy-police-container">
                             <span class="error-message-privacy-police" [class.show]="showPrivacyError">
-                              Please accept the privacy policy.
+                                {{'CONTACT.PRIVACY_POLICE_ERROR_MESSAGE' | translate}}
                             </span>
                           </div>
                         <div class="send-btn-container">
-                            <button [disabled]="!privacyAccepted">Say Hello</button>
+                            <button [disabled]="!privacyAccepted">{{'CONTACT.BUTTON' | translate}}</button>
                         </div>
                     </div>
                 </form>

@@ -148,7 +148,7 @@ section {
 .contact-form-container .name-form input,
 .contact-form-container .email-form input,
 .contact-form-container .message-form input {
-  width: 250px;
+  width: auto;
   height: $input-height-small; 
   background: none;
   border: none;
@@ -247,7 +247,7 @@ section {
 }
 
 .send-btn-container button {
-  width: 139px;
+  width: auto;
   height: 48px;
   font-family: $font-karla;
   font-weight: 400;
@@ -302,6 +302,7 @@ section {
   font-size: 15px;
   line-height: 120%;
   color: #FFFFFF;
+  width: auto;
 }
 
 .privacy-police-checkbox-content span a {
