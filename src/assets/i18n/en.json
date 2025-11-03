@@ -1,0 +1,74 @@
+{
+  "NAVBAR": {
+    "ABOUT": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects"
+  },
+
+  "ABOUT": {
+    "WHO_I_AM": "Who I am",
+    "HEADER": "About me",
+    "DESCRIPTION": "Hey there, I'm Alex! I’m an IT Process Specialist with experience in project management and technical support. I’m passionate about coding because it allows me to solve problems efficiently for automate processes.",
+    "LOCATION": "I'm based in Munich. I am flexible regarding the work environment. I can work in a mobile office or remotely.",
+    "MOTIVATION": "Staying curious and adaptable keeps me motivated to constantly improve my coding and IT skills.",
+    "PROBLEM_SOLVING": "My problem-solving approach combines analytical thinking, creativity, persistence, and collaboration to find practical and elegant ways to make IT operations more efficient"
+  },
+
+  "SKILLS": {
+    "TITLE": "Technologies",
+    "SUBTITLE": "Skill Set",
+    "DESCRIPTION": "I have hands-on experience with frontend technologies including HTML, CSS, JavaScript, Angular, Firebase, Git, and working with REST APIs. I enjoy building responsive and user-friendly interfaces while continuously exploring new tools and frameworks. Staying up-to-date with the fast-evolving world of web development motivates me to learn and adapt quickly.",
+    "ANOTHER_SKILL_PART1": "You need",
+    "ANOTHER_SKILL_PART2": "another skill?",
+    "CONTACT_HINT": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "BUTTON": "Let’s Talk"
+  },
+
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "HEADER": "Featured Projects",
+    "DESCRIPTION_PART1": "Explore a selection of my work here - Interact with",
+    "DESCRIPTION_PART2": "projects to see my skills in action."
+  },
+
+  "REFERENCES": {
+    "HEADLINE": "What my colleagues say about me",
+    "COMMENTS": [
+      {
+        "text": "Working with Alex was a truly positive experience. He is reliable, proactive, and contributes valuable ideas that improve every project.",
+        "author": "C. Viorell - Team Partner"
+      },
+      {
+        "text": "Alex is a dedicated, solution-oriented team player, and working with him on our web-based business app was always enjoyable and productive. I would gladly collaborate with him again anytime.",
+        "author": "B. Bardon - Team Partner"
+      },
+      {
+        "text": "I had the good fortune of working with Alex in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success.",
+        "author": "N. Loukataris - Team Partner"
+      }
+    ]
+  },
+
+  "CONTACT": {
+    "HEADLINE": "Contact me",
+    "TITLE": "Let´s work together",
+    "SUBTITLE": "Got a problem to solve?",
+    "DESCRIPTION": "Let’s create something great together! I’m eager to bring my expertise technology to your projects.",
+    "QUESTION_PART1": "Need a Frontend delevoper?",
+    "QUESTION_PART2": "Let´s talk!",
+    "CONTACT_FROM_NAME": "What´s your name?",
+    "CONTACT_FROM_NAME_PLACEHOLDER": "Your name goes here?",
+    "CONTACT_FROM_NAME_ERROR_MESSAGE": "Oops! It seems your name is missing.",
+    "CONTACT_FROM_EMAIL": "What´s your email?",
+    "CONTACT_FROM_EMAIL_PLACEHOLDER": "youremail@emial.com",
+    "CONTACT_FROM_EMAIL_ERROR_MESSAGE": "Hoopla! Your email is required.",
+    "CONTACT_FROM_MESSAGE": "How can I help you?",
+    "CONTACT_FROM_MESSAGE_PLACEHOLDER": "Hello Alex, I am interested in...",
+    "CONTACT_FROM_MESSAGE_ERROR_MESSAGE": "What do you need to develop?",
+    "PRIVACY_POLICE_PART1": "I've read the",
+    "PRIVACY_POLICE_PART2": "privacy-police",
+    "PRIVACY_POLICE_PART3": "and agree to the processing of my data as outlined.",
+    "PRIVACY_POLICE_ERROR_MESSAGE": "Please accept the privacy policy.",
+    "BUTTON": "Say Hello ;)"
+  }
+}

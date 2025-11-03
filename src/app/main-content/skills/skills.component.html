@@ -2,18 +2,17 @@
     <div class="main-content-wrapper">
         <div class="skills-layout">
             <div class="skills-wrapper">
-                <h3>Technologies</h3>
+                <h3>{{'SKILLS.TITLE' | translate}}</h3>
                 <div class="skills-set-container">
-                    <h2>Skill Set</h2>
-                    <span>I have hands-on experience with frontend technologies including HTML, CSS, JavaScript,
-                        Angular, Firebase, Git, and working with REST APIs. <br> I enjoy building responsive and
-                        user-friendly interfaces while continuously exploring new tools and frameworks. Staying
-                        up-to-date with the fast-evolving world of web development motivates me to learn and adapt
-                        quickly</span>
-                    <span class="another-skill">You need <span>another skill?</span></span>
-                    <span>Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
+                    <h2>{{'SKILLS.SUBTITLE' | translate}}</h2>
+                    <span>{{'SKILLS.DESCRIPTION' | translate}}</span>
+                    <span class="another-skill">
+                        {{ 'SKILLS.ANOTHER_SKILL_PART1' | translate }}
+                        <span>{{ 'SKILLS.ANOTHER_SKILL_PART2' | translate }}</span>
+                    </span>
+                    <span>{{'SKILLS.CONTACT_HINT' | translate}}</span>
                     <div class="btn-contact-container">
-                        <button class="btn-contact"><a href="#contact">Let’s Talk</a></button>
+                        <button class="btn-contact"><a href="#contact">{{'SKILLS.BUTTON' | translate}}</a></button>
                     </div>
                 </div>
             </div>

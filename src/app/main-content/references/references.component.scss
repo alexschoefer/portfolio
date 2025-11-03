@@ -89,6 +89,14 @@ section {
     background-color: #3dcfb61a;
     opacity: 0.6;
     transition: transform 0.4s ease, opacity 0.4s ease;
+
+    span {
+        font-family: var(--font-karla);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        color: #FFFFFF;
+    }
 }
 
 .comment-current {

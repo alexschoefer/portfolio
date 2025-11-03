@@ -13,10 +13,19 @@ import { ContactComponent } from './contact/contact.component';
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule, LandingPageComponent, NavbarComponent, MarqueeComponent, AboutComponent,SkillsComponent, ProjectsComponent, ReferencesComponent,FooterComponent,ContactComponent],
+  imports: [
+    CommonModule,
+    LandingPageComponent,
+    NavbarComponent,
+    MarqueeComponent,
+    AboutComponent,
+    SkillsComponent,
+    ProjectsComponent,
+    ReferencesComponent,
+    FooterComponent,
+    ContactComponent
+  ],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+  styleUrls: ['./main-content.component.scss']
 })
-export class MainContentComponent {
-
-}
+export class MainContentComponent {}
