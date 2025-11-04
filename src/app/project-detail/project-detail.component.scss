@@ -6,10 +6,10 @@ section {
     &.overlay-active::before {
         content: "";
         position: fixed;
-        inset: 0; // Deckt gesamten Viewport ab
-        background: rgba(0, 0, 0, 0.6); // Verdunkelung
-        z-index: 900; // Unterhalb deines Overlay (das hat z-index: 1000)
-        backdrop-filter: blur(2px); // optional, für leicht verschwommenen Effekt
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6); 
+        z-index: 900; 
+        backdrop-filter: blur(2px);
       }
 
     .project-overlay {
@@ -194,9 +194,10 @@ section {
             width: fit-content; 
             height: 40px;
             transition: opacity 0.3s ease;
+            
 
             button {
-                width: 103px;
+                width: auto;
                 height: 22px;
                 background: none;
                 font-family: var(--font-karla);
@@ -207,6 +208,7 @@ section {
                 white-space: nowrap;
                 border: none;
                 cursor: pointer;
+                padding-right: 4px;
             }
 
             &:hover button {
