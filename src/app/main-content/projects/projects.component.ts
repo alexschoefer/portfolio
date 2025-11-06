@@ -77,7 +77,8 @@ export class ProjectsComponent {
       imageOverlay: [
         '../../../assets/img/pokedex_mainscreen.png'
       ],
-      gitHublink: 'https://join.example.com'
+      gitHublink: 'https://join.example.com',
+      liveLink: 'test'
     }
   ]
 

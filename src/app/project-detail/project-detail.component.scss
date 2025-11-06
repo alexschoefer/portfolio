@@ -197,7 +197,7 @@ section {
             
 
             button {
-                width: auto;
+                width: 115px;
                 height: 22px;
                 background: none;
                 font-family: var(--font-karla);
@@ -208,7 +208,9 @@ section {
                 white-space: nowrap;
                 border: none;
                 cursor: pointer;
-                padding-right: 4px;
+                padding-right: 8px;
+                justify-content: center;
+                align-items: center;
             }
 
             &:hover button {
