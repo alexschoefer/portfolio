@@ -25,6 +25,7 @@ section {
   padding-inline: 96px;
   max-width: 1440px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .contact-content {
@@ -33,6 +34,7 @@ section {
   align-items: start;
   max-width: 1440px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .contact-box-container {
@@ -336,4 +338,289 @@ section {
   padding-left: 25px;
   min-height: 30px;
   align-items: center;
+}
+
+/* ====================================================== */
+/* 📱 MEDIA QUERIES – Contact Section Responsive */
+/* ====================================================== */
+
+/* === Tablet Landscape (z. B. iPad Air – ≤ 1180 px) === */
+@media (max-width: 1180px) {
+  .main-content-wrapper {
+    padding-inline: 64px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 80px;
+  }
+
+  .contact-box-container,
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .contact-headline-container h3 {
+    font-size: 22px;
+  }
+
+  .contact-headline-container h2 {
+    font-size: 48px;
+  }
+
+  .get-contact-container .problem-solver {
+    font-size: 22px;
+  }
+
+  .question-span {
+    font-size: 22px;
+  }
+
+  .contact-form-container {
+    padding: 28px;
+  }
+
+  .name-form,
+  .email-form,
+  .message-form {
+    width: 100%;
+  }
+}
+
+/* === Tablet Portrait (≤ 820 px) === */
+@media (max-width: 820px) {
+  .main-content-wrapper {
+    padding-inline: 48px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 64px;
+  }
+
+  .contact-box-container {
+    width: 100%;
+    max-width: 520px;
+    gap: 32px;
+  }
+
+  .contact-headline-container {
+    height: auto;
+    text-align: center;
+  }
+
+  .contact-headline-container h3 {
+    font-size: 20px;
+  }
+
+  .contact-headline-container h2 {
+    font-size: 40px;
+  }
+
+  .get-contact-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .get-contact-container .problem-solver {
+    width: auto;
+    font-size: 20px;
+  }
+
+  .get-contact-container span {
+    font-size: 15px;
+  }
+
+  .contact-form {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form-container {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .question-span {
+    font-size: 20px;
+  }
+
+  .send-btn-container button {
+    font-size: 16px;
+  }
+}
+
+/* === Mobile Large (≤ 600 px) === */
+@media (max-width: 600px) {
+  section {
+    padding-top: 6rem;
+  }
+
+  .main-content-wrapper {
+    padding-inline: 32px;
+  }
+
+  .contact-headline-container h3 {
+    font-size: 18px;
+  }
+
+  .contact-headline-container h2 {
+    font-size: 32px;
+  }
+
+  .get-contact-container {
+    padding-top: 16px;
+  }
+
+  .get-contact-container .problem-solver {
+    font-size: 18px;
+  }
+
+  .get-contact-container span {
+    font-size: 14px;
+  }
+
+  .contact-form-container {
+    padding: 20px;
+  }
+
+  .question-span {
+    font-size: 18px;
+  }
+
+  .name-form input,
+  .email-form input,
+  .message-form input {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .input-valdiation-message {
+    font-size: 14px;
+  }
+
+  .privacy-police-checkbox-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .privacy-police-checkbox-content span {
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .send-btn-container {
+    padding-top: 20px;
+  }
+
+  .send-btn-container button {
+    font-size: 16px;
+    height: 44px;
+    padding-inline: 20px;
+  }
+}
+
+/* === Mobile Small (≤ 480 px) === */
+@media (max-width: 480px) {
+  .main-content-wrapper {
+    padding-inline: 20px;
+  }
+
+  .contact-box-container {
+    gap: 24px;
+  }
+
+  .contact-headline-container h3 {
+    font-size: 16px;
+  }
+
+  .contact-headline-container h2 {
+    font-size: 28px;
+  }
+
+  .get-contact-container {
+    padding-top: 12px;
+  }
+
+  .get-contact-container .problem-solver {
+    font-size: 16px;
+  }
+
+  .get-contact-container span {
+    font-size: 13px;
+  }
+
+  .contact-form-container {
+    padding: 16px;
+  }
+
+  .question-span {
+    font-size: 16px;
+  }
+
+  .input-valdiation-message {
+    font-size: 13px;
+  }
+
+  .send-btn-container button {
+    font-size: 14px;
+    height: 42px;
+  }
+
+  .privacy-police-checkbox-content img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* === Mobile Mini (≤ 320 px) === */
+@media (max-width: 320px) {
+  .main-content-wrapper {
+    padding-inline: 12px;
+  }
+
+  .contact-headline-container h3 {
+    font-size: 14px;
+  }
+
+  .contact-headline-container h2 {
+    font-size: 24px;
+  }
+
+  .get-contact-container span {
+    font-size: 12px;
+  }
+
+  .contact-form-container {
+    padding: 12px;
+  }
+
+  .question-span {
+    font-size: 14px;
+  }
+
+  .name-form input,
+  .email-form input,
+  .message-form input {
+    font-size: 14px;
+  }
+
+  .send-btn-container button {
+    font-size: 13px;
+    height: 38px;
+    padding-inline: 16px;
+  }
+
+  .privacy-police-checkbox-content span {
+    font-size: 12px;
+  }
+
+  .error-message-privacy-police {
+    font-size: 12px;
+  }
 }

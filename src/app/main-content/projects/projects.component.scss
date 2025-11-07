@@ -3,164 +3,164 @@ section {
     width: 100%;
     background: #1c1c1c;
     padding-top: 9rem;
-
+  
     .main-content-wrapper {
-        margin-inline: auto;
-        padding-inline: 96px;
-        max-width: 1440px;
+      margin-inline: auto;
+      padding-inline: 96px;
+      max-width: 1440px;
+      width: 100%;
+      overflow-x: hidden;
+  
+      .portfolio-projects-wrapper {
+        max-width: 880px;
         width: 100%;
-
-        .portfolio-projects-wrapper {
-            max-width: 880px;
-            width: 100%;
-            display: flex;
-            gap: 41px;
-            flex-direction: column;
-
-            .portfolio-headline-container {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                width: 622px;
-                white-space: nowrap;
-
-                h3 {
-                    font-family: var(--font-karla);
-                    font-weight: 500;
-                    font-size: 24px;
-                    color: var(--color-main-green);
-                }
-
-                h2 {
-                    font-family: var(--font-fira);
-                    font-weight: 700;
-                    font-size: 64px;
-                    color: var(--color-main-green);
-                }
-
-                span {
-                    width: 456px;
-                    height: 44px;
-                    font-family: var(--font-karla);
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 120%;
-                    text-align: justify;
-                    color: #FFFFFF;
-                }
-            }
-
-            .portfolio-menu-container {
-                display: flex;
-                flex-direction: column;
-                max-width: 880px;
-                height: 450px;
-
-                .project {
-                    position: relative; // Damit das absolute Bild relativ dazu positioniert wird
-                    padding: 40px 32px;
-                    border-top: 1px solid var(--color-main-green);
-                    border-bottom: 1px solid var(--color-main-green);
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: space-between;
-
-                    .project-technologies {
-                        display: flex;
-                        justify-content: flex-end;
-                        gap: 8px;
-                        width: 354px;
-                        height: 22px;
-                        display: flex;
-                        font-family: var(--font-karla);
-                        font-weight: 400;
-                        font-size: 18px;
-                        line-height: 120%;
-                        color: #FFFFFF;
-
-                        span {
-                            font-family: var(--font-karla);
-                            font-weight: 400;
-                            font-size: 18px;
-                            line-height: 120%;
-                            color: var(--color-main-green);
-                        }
-                    }
-
-                    .project-name {
-                        font-family: var(--font-karla);
-                        font-weight: 700;
-                        font-style: bold;
-                        font-size: 24px;
-                        line-height: 120%;
-                        color: #FFFFFF;
-                    }
-
-                    .project-info {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 8px;
-                    }
-
-                    .project-screenshot {
-                        position: absolute;
-                        top: 0;
-                        left: 100%;
-                        margin-left: 60px; 
-                        margin-top: 15px;
-                        opacity: 0; 
-                        pointer-events: none;
-                        transition: opacity 0.3s ease, transform 0.3s ease;
-
-                        img {
-                            width: 300px; 
-                            height: auto;
-                            border-radius: 16px;
-                            object-fit: cover;
-                            z-index: 10;
-                        }
-                    }
-
-                    &:hover .project-screenshot {
-                        opacity: 1;
-                        transform: translateX(0); 
-                        z-index: 10;
-                    }
-
-                    .project-screenshot-background {
-                        position: absolute;
-                        top: 0;
-                        left: 100%;
-                        margin-left: 100px; 
-                        margin-top: 20px;
-                        opacity: 0;
-                        pointer-events: none;
-                        transition: opacity 0.3s ease, transform 0.3s ease;
-
-                        img {
-                            width: 290px;
-                            height: 175px;
-                            border-radius: 16px;
-                            object-fit: cover;
-                        }
-                    }
-
-                    &:hover .project-screenshot-background {
-                        opacity: 1;
-                        transform: translateX(0); // optional Animation
-                    }
-                }
-
-            }
+        display: flex;
+        gap: 41px;
+        flex-direction: column;
+        overflow-x: hidden;
+  
+        .portfolio-headline-container {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          width: 622px;
+          white-space: nowrap;
+  
+          h3 {
+            font-family: var(--font-karla);
+            font-weight: 500;
+            font-size: 24px;
+            color: var(--color-main-green);
+          }
+  
+          h2 {
+            font-family: var(--font-fira);
+            font-weight: 700;
+            font-size: 64px;
+            color: var(--color-main-green);
+          }
+  
+          span {
+            width: 456px;
+            height: 44px;
+            font-family: var(--font-karla);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+            text-align: justify;
+            color: #ffffff;
+          }
         }
+  
+        .portfolio-menu-container {
+          display: flex;
+          flex-direction: column;
+          max-width: 880px;
+          height: 450px;
+  
+          .project {
+            position: relative;
+            padding: 40px 32px;
+            border-top: 1px solid var(--color-main-green);
+            border-bottom: 1px solid var(--color-main-green);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+  
+            .project-technologies {
+              display: flex;
+              justify-content: flex-end;
+              gap: 8px;
+              width: 354px;
+              height: 22px;
+              font-family: var(--font-karla);
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 120%;
+              color: #ffffff;
+  
+              span {
+                font-family: var(--font-karla);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 120%;
+                color: var(--color-main-green);
+              }
+            }
+  
+            .project-name {
+              font-family: var(--font-karla);
+              font-weight: 700;
+              font-style: bold;
+              font-size: 24px;
+              line-height: 120%;
+              color: #ffffff;
+            }
+  
+            .project-info {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+            }
+  
+            .project-screenshot {
+              position: absolute;
+              top: 0;
+              left: 100%;
+              margin-left: 60px;
+              margin-top: 15px;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity 0.3s ease, transform 0.3s ease;
+  
+              img {
+                width: 300px;
+                height: auto;
+                border-radius: 16px;
+                object-fit: cover;
+                z-index: 10;
+              }
+            }
+  
+            &:hover .project-screenshot {
+              opacity: 1;
+              transform: translateX(0);
+              z-index: 10;
+            }
+  
+            .project-screenshot-background {
+              position: absolute;
+              top: 0;
+              left: 100%;
+              margin-left: 100px;
+              margin-top: 20px;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity 0.3s ease, transform 0.3s ease;
+  
+              img {
+                width: 290px;
+                height: 175px;
+                border-radius: 16px;
+                object-fit: cover;
+              }
+            }
+  
+            &:hover .project-screenshot-background {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+        }
+      }
     }
-}
-
-.project:hover {
+  }
+  
+  .project:hover {
     background-color: #3dcfb64d;
-}
-
-.project .project-name::after {
+  }
+  
+  .project .project-name::after {
     content: url(../../../assets/icons/arrow_outward.png);
     width: 12px;
     height: 12px;
@@ -168,8 +168,211 @@ section {
     vertical-align: middle;
     opacity: 0;
     transition: opacity 150ms ease-in;
-}
-
-.project:hover .project-name::after {
+  }
+  
+  .project:hover .project-name::after {
     opacity: 1;
-}
+  }
+  
+  /* ================================================= */
+  /* 📱 MEDIA QUERIES – Responsive Layouts */
+  /* ================================================= */
+  
+  /* === Tablet Landscape (≈1180 px, z. B. iPad Air) === */
+  @media (max-width: 1440px) {
+    section {
+      .main-content-wrapper {
+        padding-inline: 64px;
+      }
+  
+      .portfolio-projects-wrapper {
+        gap: 32px;
+  
+        .portfolio-headline-container {
+          width: 100%;
+          h2 {
+            font-size: 52px;
+          }
+          span {
+            width: 100%;
+            font-size: 17px;
+          }
+        }
+  
+        .portfolio-menu-container {
+          height: auto;
+  
+          .project {
+            padding: 32px 24px;
+  
+            .project-name {
+              font-size: 22px;
+            }
+  
+            .project-technologies {
+              font-size: 16px;
+            }
+  
+            .project-screenshot,
+            .project-screenshot-background {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* === Tablet Portrait (≤1024 px) === */
+  @media (max-width: 1024px) {
+    section {
+      .main-content-wrapper {
+        padding-inline: 48px;
+      }
+  
+      .portfolio-projects-wrapper {
+        align-items: center;
+        text-align: center;
+        gap: 48px;
+  
+        .portfolio-headline-container {
+          width: 100%;
+          white-space: normal;
+  
+          h2 {
+            font-size: 48px;
+          }
+          span {
+            font-size: 16px;
+            width: 100%;
+          }
+        }
+  
+        .portfolio-menu-container {
+          max-width: 100%;
+          height: auto;
+          gap: 24px;
+  
+          .project {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+  
+            .project-technologies {
+              justify-content: center;
+              font-size: 16px;
+            }
+  
+            .project-screenshot,
+            .project-screenshot-background {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* === Mobile Large (≤768 px) === */
+  @media (max-width: 768px) {
+    section {
+      padding-top: 6rem;
+  
+      .main-content-wrapper {
+        padding-inline: 32px;
+      }
+  
+      .portfolio-headline-container {
+        gap: 16px;
+  
+        h2 {
+          font-size: 40px;
+        }
+        span {
+          font-size: 15px;
+        }
+      }
+  
+      .portfolio-menu-container {
+        .project {
+          padding: 24px 0;
+  
+          .project-name {
+            font-size: 20px;
+          }
+          .project-technologies {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  
+  /* === Mobile Small (≤480 px) === */
+  @media (max-width: 480px) {
+    section {
+      .main-content-wrapper {
+        padding-inline: 20px;
+      }
+  
+      .portfolio-headline-container {
+        h2 {
+          font-size: 32px;
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+  
+      .portfolio-menu-container {
+        .project {
+          padding: 20px 0;
+  
+          .project-name {
+            font-size: 18px;
+          }
+  
+          .project-technologies {
+            font-size: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px;
+          }
+        }
+      }
+    }
+  }
+  
+  /* === Mobile Extra Small (≤320 px) === */
+  @media (max-width: 320px) {
+    section {
+      .main-content-wrapper {
+        padding-inline: 12px;
+      }
+  
+      .portfolio-headline-container {
+        h2 {
+          font-size: 26px;
+        }
+        span {
+          font-size: 13px;
+        }
+      }
+  
+      .portfolio-menu-container {
+        .project {
+          padding: 16px 0;
+  
+          .project-name {
+            font-size: 16px;
+          }
+  
+          .project-technologies {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  
