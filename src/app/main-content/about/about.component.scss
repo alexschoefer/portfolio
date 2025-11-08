@@ -190,11 +190,11 @@ section {
       }
   
       h2 {
-        font-size: 48px;
+        font-size: 56px;
       }
   
       h3 {
-        font-size: 20px;
+        font-size: 28px;
       }
   
       .about-me-content {
@@ -225,6 +225,11 @@ section {
         .about-me-wrapper {
           padding-top: 80px;
           padding-bottom: 80px;
+        }
+
+        .about-me-container {
+          justify-content: flex-start;
+          align-items: flex-start;
         }
       }
   
@@ -272,18 +277,18 @@ section {
       }
   
       h2 {
-        font-size: 30px;
+        font-size: 56px;
       }
   
       h3 {
-        font-size: 16px;
+        font-size: 18px;
       }
   
       .about-me-content {
         padding: 16px;
   
         span {
-          font-size: 14px;
+          font-size: 16px;
         }
       }
   
@@ -296,7 +301,7 @@ section {
         }
   
         span {
-          font-size: 13px;
+          font-size: 16px;
         }
       }
     }

@@ -1,5 +1,6 @@
 section {
-  height: 695px;
+  height: auto;
+  min-height: 695px;
   width: 100%;
   background: #1c1c1c;
   display: flex;
@@ -276,14 +277,14 @@ section {
         font-size: 40px;
       }
 
-      span {
-        font-size: 15px;
+      .skill-description-span {
+        font-size: 16px !important;
       }
 
       .another-skill {
-        font-size: 20px;
+        font-size: 20px !important;
         span {
-          font-size: 20px;
+          font-size: 20px !important;
         }
       }
     }
@@ -308,17 +309,26 @@ section {
 @media (max-width: 480px) {
   section {
     padding: 0 20px;
+    height: auto !important;
+    padding-bottom: 180px;
+
+    .skills-wrapper {
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      h3 {
+        font-size: 18px;
+      }
+    }
 
     .skills-set-container {
-      padding: 20px;
+      padding-inline: 16px !important;
       gap: 24px;
 
       h2 {
-        font-size: 26px !important;
-      }
-
-      span {
-        font-size: 14px;
+        font-size: 56px !important;
+        line-height: 80%;
+        white-space: nowrap;
       }
 
       .another-skill {
@@ -353,6 +363,8 @@ section {
 @media (max-width: 320px) {
   section {
     padding: 0 12px;
+    height: auto !important;
+    padding-bottom: 140px;
 
     .skills-set-container {
       padding: 16px;

@@ -1,11 +1,9 @@
 <section>
     <div class="main-content-wrapper">
       <div class="references-container">
-  
         <div class="references-headline-container">
           <h3>{{ 'REFERENCES.HEADLINE' | translate }}</h3>
         </div>
-  
         <!-- Comment Box -->
         <div class="comment-wrapper">
             <div class="comment-container" [style.transform]="'translateX(' + getTranslateX() + 'px)'">
@@ -24,7 +22,6 @@
                 </ng-container>
               </div>
         </div>
-  
         <!-- Arrow-Box -->
         <div class="arrow-container">
           <button class="arrow-btn back" (click)="preComment()">
@@ -41,7 +38,6 @@
             <img class="arrow-img" src="../../../assets/icons/arrow_forward.png" alt="arrow-forward" />
           </button>
         </div>
-  
       </div>
     </div>
   </section>

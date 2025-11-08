@@ -3,7 +3,6 @@ $font-karla: var(--font-karla);
 $font-fira: var(--font-fira);
 $contact-width: 616px;
 $contact-box-width: 568px;
-$contact-box-height: 337px;
 $headline-height: 176px;
 $input-height-default: 40px;
 $input-height-small: 22px;
@@ -38,8 +37,9 @@ section {
 }
 
 .contact-box-container {
-  width: $contact-box-width;
-  height: $contact-box-height;
+  width: 100%;
+  max-width: $contact-box-width;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -114,7 +114,6 @@ section {
 
 .contact-form form {
   width: $contact-width;
-  height: 393px;
 }
 
 .contact-form-container {
@@ -188,7 +187,7 @@ section {
   transition: opacity 150ms ease-in;
 }
 
-.input-valdiation-message {
+.input-validation-message {
   font-family: $font-karla;
   font-weight: 400;
   font-size: 18px;
@@ -224,9 +223,9 @@ section {
   opacity: 0;
 }
 
-.name-form.error .input-valdiation-message,
-.email-form.error .input-valdiation-message,
-.message-form.error .input-valdiation-message {
+.name-form.error .input-validation-message,
+.email-form.error .input-validation-message,
+.message-form.error .input-validation-message {
   opacity: 1;
 }
 
@@ -237,7 +236,6 @@ section {
   width: $contact-width;
   height: 117px;
 }
-
 
 .send-btn-container {
   display: flex;
@@ -340,11 +338,6 @@ section {
   align-items: center;
 }
 
-/* ====================================================== */
-/* 📱 MEDIA QUERIES – Contact Section Responsive */
-/* ====================================================== */
-
-/* === Tablet Landscape (z. B. iPad Air – ≤ 1180 px) === */
 @media (max-width: 1180px) {
   .main-content-wrapper {
     padding-inline: 64px;
@@ -403,7 +396,6 @@ section {
 
   .contact-box-container {
     width: 100%;
-    max-width: 520px;
     gap: 32px;
   }
 
@@ -500,7 +492,7 @@ section {
     width: 100%;
   }
 
-  .input-valdiation-message {
+  .input-validation-message {
     font-size: 14px;
   }
 
@@ -510,8 +502,8 @@ section {
   }
 
   .privacy-police-checkbox-content span {
-    font-size: 14px;
-    flex-wrap: wrap;
+    font-size: 16px !important;
+    // flex-wrap: wrap;
   }
 
   .send-btn-container {
@@ -528,31 +520,48 @@ section {
 /* === Mobile Small (≤ 480 px) === */
 @media (max-width: 480px) {
   .main-content-wrapper {
-    padding-inline: 20px;
+    padding-inline: 16px !important;
+    overflow-x: visible;
   }
 
-  .contact-box-container {
-    gap: 24px;
+  .contact-headline-container,
+  .get-contact-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    align-items: flex-start;
+    text-align: left;
+    height: auto;
   }
 
   .contact-headline-container h3 {
-    font-size: 16px;
+    font-size: 18px !important;
   }
 
   .contact-headline-container h2 {
-    font-size: 28px;
+    font-size: 56px !important;
   }
 
   .get-contact-container {
     padding-top: 12px;
+    align-items: flex-start;
+    text-align: left;
+    height: auto;
+    width: 100%;
   }
 
-  .get-contact-container .problem-solver {
-    font-size: 16px;
+  .get-contact-container .problem-solver, .get-contact-container span {
+    font-size: 16px !important;
   }
 
-  .get-contact-container span {
-    font-size: 13px;
+  .get-contact-container .contact-description {
+    display: block;
+    line-height: 120%;
+    color: #fff;
+    max-width: 358px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .contact-form-container {
@@ -560,18 +569,36 @@ section {
   }
 
   .question-span {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 
-  .input-valdiation-message {
-    font-size: 13px;
+  .input-validation-message {
+    font-size: 14px;
+  }
+
+  .send-btn-container {
+    display: flex;
+    justify-content: center; /* horizontal zentriert */
+    align-items: center;     /* vertikal zentriert */
+    width: 100%;             /* volle Breite nutzen */
+    padding-top: 20px;
   }
 
   .send-btn-container button {
+    display: inline-block;
+    margin: 0 auto;       
     font-size: 14px;
     height: 42px;
+    padding-inline: 20px;
   }
 
+  .privacy-police-checkbox-content {
+    flex-direction: row;
+    text-align: center;
+    gap: 6px;
+    width: 100%;
+  }
+  
   .privacy-police-checkbox-content img {
     width: 16px;
     height: 16px;

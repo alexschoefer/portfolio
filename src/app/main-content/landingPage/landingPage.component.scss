@@ -13,6 +13,7 @@ section {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       max-width: 1440px;
       width: 100%;
       height: 100%;
@@ -120,16 +121,15 @@ section {
     }
   
     .side-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      max-width: 1440px;
+      position: relative; 
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; 
       align-items: flex-end;
-      margin-inline: 0;
+      width: 100%;
+      max-width: 1440px; 
+      margin: 0 auto;
       padding-inline: 6rem;
+      padding-top: 150px; 
       gap: 0;
       z-index: 10;
   
@@ -179,7 +179,6 @@ section {
           font-family: var(--font-karla);
           font-size: 18px;
           font-weight: 400;
-          color: #fff;
           line-height: 120%;
   
           a {
@@ -190,6 +189,16 @@ section {
           &:hover {
             color: var(--color-main-green);
           }
+
+          .mail-text {
+            display: inline-block;
+            color: #fff;
+          }
+        
+          .mail-icon {
+            display: none; // default: verstecken
+          }
+        
         }
   
         .contact-icons {
@@ -332,16 +341,15 @@ section {
           }
   
           h1 {
-            font-size: 56px;
+            font-size: 40px;
           }
   
           .btn-title-container {
-            flex-direction: column;
-            gap: 16px;
+            gap: 10px;
   
             button {
-              width: 160px;
-              height: 40px;
+              width: 153px;
+              height: 48px;
   
               a {
                 font-size: 16px;
@@ -351,46 +359,47 @@ section {
         }
       }
   
-      .side-content {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-inline: 0;
-        gap: 24px;
-        bottom: 20px;
-  
-        .left-content-container {
-          flex-direction: row;
-          gap: 12px;
-  
-          .line-left {
-            height: 80px;
+      @media (max-width: 768px) {
+        .side-content {
+          padding-inline: 2rem;
+      
+          .left-content-container .line-left {
+            height: 120px;
           }
-        }
-  
-        .right-content-container {
-          margin-bottom: 0;
-          height: auto;
-          gap: 12px;
-  
-          .mail-contact {
-            writing-mode: horizontal-tb;
-            transform: none;
-            font-size: 14px;
-          }
-  
-          .contact-icons {
-            flex-direction: row;
-            gap: 10px;
-  
-            img {
+      
+          .right-content-container {
+            height: 256px;
+            gap: 24px;
+            margin-bottom: 40px;
+      
+            .mail-contact {
+              font-size: 14px;
+            }
+
+            .mail-contact {
+              writing-mode: horizontal-tb;
+              transform: none;
+              .mail-text {
+                display: none;
+              }
+          
+              .mail-icon {
+                display: inline-block; 
+                img {
+                  width: 24px; 
+                  height: 24px;
+                }
+              }
+            }
+      
+            .contact-icons img {
               width: 24px;
               height: 24px;
             }
-          }
-  
-          .line-right {
-            display: none;
+      
+            .line-right {
+              height: 100px;
+            }
           }
         }
       }
