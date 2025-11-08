@@ -1,5 +1,6 @@
 section {
-  height: 695px;
+  height: auto;
+  min-height: 695px;
   width: 100%;
   background: #1c1c1c;
   display: flex;
@@ -35,7 +36,7 @@ section {
       display: flex;
       flex-direction: column;
       gap: 40px;
-      background: radial-gradient(circle, #08463B4D 30%, #1C1C1C 100%);
+      background: radial-gradient(circle, #08463b4d 30%, #1c1c1c 100%);
 
       h2 {
         font-family: var(--font-fira);
@@ -106,7 +107,6 @@ section {
           text-decoration: none;
         }
 
-
         &:hover span {
           animation: slideLoop 3000ms linear infinite;
         }
@@ -150,28 +150,250 @@ section {
 }
 
 .skills img:hover {
-  transform: scale(1.2); 
+  transform: scale(1.2);
   opacity: 0.9;
 }
-
 
 @keyframes slideLoop {
   0% {
     transform: translateX(0);
   }
-
   49% {
     transform: translateX(-100%);
     opacity: 0;
   }
-
   50% {
     transform: translateX(100%);
     opacity: 0;
   }
-
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+/* ================================================= */
+/* 📱 MEDIA QUERIES – responsive Anpassungen */
+/* ================================================= */
+
+/* === Tablet Landscape (z. B. iPad Air – 1180 px) === */
+@media (max-width: 1440px) {
+  section {
+    padding: 0 64px;
+    height: auto;
+
+    .skills-layout {
+      gap: 48px;
+    }
+
+    .skills-set-container {
+      h2 {
+        font-size: 52px;
+      }
+      span {
+        font-size: 17px;
+      }
+    }
+
+    .skills-overview {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 60px;
+      padding-top: 32px;
+
+      .skills img {
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+}
+
+/* === Tablet Portrait (≤ 1024 px) === */
+@media (max-width: 1024px) {
+  section {
+    padding: 0 48px;
+    height: auto;
+
+    .skills-layout {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 64px;
+      text-align: center;
+    }
+
+    .skills-wrapper {
+      align-items: center;
+    }
+
+    .skills-set-container {
+      max-width: 100%;
+      padding: 28px;
+      gap: 32px;
+
+      h2 {
+        font-size: 48px;
+      }
+      span {
+        font-size: 16px;
+      }
+      .another-skill {
+        font-size: 22px;
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .skills-overview {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px 48px;
+
+      .skills img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .skills span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* === Mobile Large (≤ 768 px) === */
+@media (max-width: 768px) {
+  section {
+    padding: 0 32px;
+    height: auto;
+
+    .skills-layout {
+      gap: 48px;
+    }
+
+    .skills-set-container {
+      padding: 24px;
+
+      h2 {
+        font-size: 40px;
+      }
+
+      .skill-description-span {
+        font-size: 16px !important;
+      }
+
+      .another-skill {
+        font-size: 20px !important;
+        span {
+          font-size: 20px !important;
+        }
+      }
+    }
+
+    .skills-overview {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 40px;
+
+      .skills img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .skills span {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+/* === Mobile Small (≤ 480 px) === */
+@media (max-width: 480px) {
+  section {
+    padding: 0 20px;
+    height: auto !important;
+    padding-bottom: 180px;
+
+    .skills-wrapper {
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      h3 {
+        font-size: 18px;
+      }
+    }
+
+    .skills-set-container {
+      padding-inline: 16px !important;
+      gap: 24px;
+
+      h2 {
+        font-size: 56px !important;
+        line-height: 80%;
+        white-space: nowrap;
+      }
+
+      .another-skill {
+        font-size: 18px;
+        span {
+          font-size: 18px;
+        }
+      }
+
+      .btn-contact-container {
+        justify-content: center;
+      }
+    }
+
+    .skills-overview {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px 32px;
+
+      .skills img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .skills span {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+/* === Mobile Extra Small (≤ 320 px) === */
+@media (max-width: 320px) {
+  section {
+    padding: 0 12px;
+    height: auto !important;
+    padding-bottom: 140px;
+
+    .skills-set-container {
+      padding: 16px;
+      h2 {
+        font-size: 26px !important;
+      }
+      span {
+        font-size: 13px;
+      }
+      .another-skill {
+        font-size: 16px;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .skills-overview {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px 24px;
+
+      .skills img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .skills span {
+        font-size: 12px;
+      }
+    }
   }
 }

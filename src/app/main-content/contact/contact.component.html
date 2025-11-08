@@ -8,7 +8,7 @@
                 </div>
                 <div class="get-contact-container">
                     <span class="problem-solver">{{'CONTACT.SUBTITLE' | translate}}</span>
-                    <span>{{'CONTACT.DESCRIPTION' | translate}}</span>
+                    <span class="contact-description">{{'CONTACT.DESCRIPTION' | translate}}</span>
                     <span>{{'CONTACT.QUESTION_PART1' | translate}} <span class="hightlight-span">{{'CONTACT.QUESTION_PART2' | translate}}</span></span>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                             <div>
                                 <input type="text" placeholder="{{'CONTACT.CONTACT_FROM_NAME_PLACEHOLDER' | translate}}" autocomplete="off"
                                     (blur)="validateField('name')" (focus)="clearErrorMessage('name')">
-                                <span class="input-valdiation-message">{{'CONTACT.CONTACT_FROM_NAME_ERROR_MESSAGE' | translate}}</span>
+                                <span class="input-validation-message">{{'CONTACT.CONTACT_FROM_NAME_ERROR_MESSAGE' | translate}}</span>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                             <div>
                                 <input type="text" placeholder="{{'CONTACT.CONTACT_FROM_EMAIL_PLACEHOLDER' | translate}}" autocomplete="off"
                                     (blur)="validateField('email')" (focus)="clearErrorMessage('email')">
-                                <span class="input-valdiation-message">{{'CONTACT.CONTACT_FROM_EMAIL_ERROR_MESSAGE' | translate}}</span>
+                                <span class="input-validation-message">{{'CONTACT.CONTACT_FROM_EMAIL_ERROR_MESSAGE' | translate}}</span>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                             <div>
                                 <input type="text" placeholder="{{'CONTACT.CONTACT_FROM_MESSAGE_PLACEHOLDER' | translate}}" autocomplete="off"
                                     (blur)="validateField('message')" (focus)="clearErrorMessage('message')">
-                                <span class="input-valdiation-message">{{'CONTACT.CONTACT_FROM_MESSAGE_ERROR_MESSAGE' | translate}}</span>
+                                <span class="input-validation-message">{{'CONTACT.CONTACT_FROM_MESSAGE_ERROR_MESSAGE' | translate}}</span>
                             </div>
                         </div>
                     </div>

@@ -3,9 +3,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 98px;
+    height: 100%;
     width: 100%;
-    padding: 0;
     background: linear-gradient(60.22deg, #1c1c1c 15.26%, #08463b 75.28%);
 
     .menu-content {
@@ -17,6 +16,7 @@ section {
         height: 98px;
         margin-inline: auto;
         padding-inline: clamp(16px, 5vw, 96px);
+        overflow-x: hidden;
 
         .left-group {
             display: flex;

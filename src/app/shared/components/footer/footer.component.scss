@@ -10,10 +10,10 @@ section {
         padding-inline: 96px;
         max-width: 1440px;
         width: 100%;
-        height: 126px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        overflow-x: hidden;
 
         .logo-info-fullname-container {
             display: flex;
