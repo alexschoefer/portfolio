@@ -1,8 +1,8 @@
 section {
-  height: 100%;
   width: 100%;
   background: #1c1c1c;
-  padding-top: 9rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 
   .main-content-wrapper {
     margin-inline: auto;
@@ -264,7 +264,7 @@ section {
 
         .project {
           flex-direction: column;
-          align-items: center;
+          align-items: center !important;
           text-align: center;
           gap: 16px;
 
@@ -286,7 +286,6 @@ section {
 /* === Mobile Large (≤768 px) === */
 @media (max-width: 768px) {
   section {
-    padding: 0 32px;
     height: auto;
 
     .main-content-wrapper {
@@ -296,13 +295,15 @@ section {
 
     .portfolio-headline-container {
       gap: 16px;
+      align-items: center;
 
       h2 {
         font-size: 40px;
       }
 
       span {
-        font-size: 15px;
+        font-size: 15px !important;
+        text-align: center !important;
       }
     }
 
@@ -316,6 +317,7 @@ section {
 
         .project-technologies {
           font-size: 15px;
+          justify-content: center !important;
         }
       }
     }
@@ -369,6 +371,7 @@ section {
         white-space: normal;
         overflow-wrap: break-word;    
         word-break: break-word;
+        text-align: left !important;
       }
     }
 
@@ -385,7 +388,7 @@ section {
       .project-technologies {
         font-size: 16px !important;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: flex-start !important;
         gap: 3px;
       }
     }

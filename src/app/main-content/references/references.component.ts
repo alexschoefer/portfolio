@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
@@ -9,16 +9,23 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   templateUrl: './references.component.html',
   styleUrls: ['./references.component.scss']
 })
-export class ReferencesComponent {
+export class ReferencesComponent implements AfterViewInit {
   COMMENTS: Array<{ text: string; author: string }> = [];
   commentsLoaded = false;
   currentActiveComment = 1; 
-  boxWidth = 632 + 32;
   startIndex = 1;
 
   constructor(private translate: TranslateService) {
     this.loadComments();
     this.translate.onLangChange.subscribe(() => this.loadComments());
+  }
+
+  ngAfterViewInit() {
+    // Optional: re-calculate translateX on window resize
+    window.addEventListener('resize', () => {
+      // trigger change detection if needed
+      this.currentActiveComment = this.currentActiveComment; 
+    });
   }
 
   loadComments() {
@@ -47,7 +54,19 @@ export class ReferencesComponent {
     return index === this.currentActiveComment;
   }
 
-  getTranslateX() {
-    return -(this.currentActiveComment - this.startIndex) * this.boxWidth;
+  getBoxWidth(): number {
+    const commentEl = document.querySelector('.comment-current') as HTMLElement;
+    if (commentEl) {
+      const style = window.getComputedStyle(commentEl);
+      const marginRight = parseInt(style.marginRight) || 0;
+      const width = commentEl.offsetWidth + marginRight;
+      return width;
+    }
+    // Fallback: Standardbreite
+    return 632 + 32;
+  }
+
+  getTranslateX(): number {
+    return -(this.currentActiveComment - this.startIndex) * this.getBoxWidth();
   }
 }

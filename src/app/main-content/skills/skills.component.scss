@@ -6,7 +6,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 96px;
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
 
   .skills-layout {
     display: grid;
@@ -120,7 +121,7 @@ section {
     gap: 48px 72px;
     justify-items: center;
     max-width: 632px;
-    height: 428px;
+    height: auto;
     padding-top: 48px;
 
     .skills {
@@ -172,11 +173,6 @@ section {
   }
 }
 
-/* ================================================= */
-/* 📱 MEDIA QUERIES – responsive Anpassungen */
-/* ================================================= */
-
-/* === Tablet Landscape (z. B. iPad Air – 1180 px) === */
 @media (max-width: 1440px) {
   section {
     padding: 0 64px;
@@ -208,10 +204,9 @@ section {
   }
 }
 
-/* === Tablet Portrait (≤ 1024 px) === */
 @media (max-width: 1024px) {
   section {
-    padding: 0 48px;
+    // padding: 0 48px;
     height: auto;
 
     .skills-layout {
@@ -260,7 +255,6 @@ section {
   }
 }
 
-/* === Mobile Large (≤ 768 px) === */
 @media (max-width: 768px) {
   section {
     padding: 0 32px;
@@ -305,7 +299,6 @@ section {
   }
 }
 
-/* === Mobile Small (≤ 480 px) === */
 @media (max-width: 480px) {
   section {
     padding: 0 20px;
@@ -353,13 +346,12 @@ section {
       }
 
       .skills span {
-        font-size: 13px;
+        font-size: 15px;
       }
     }
   }
 }
 
-/* === Mobile Extra Small (≤ 320 px) === */
 @media (max-width: 320px) {
   section {
     padding: 0 12px;
