@@ -67,7 +67,7 @@
     "CONTACT_FROM_MESSAGE_ERROR_MESSAGE": "Was möchtest du entwickeln lassen?",
     "PRIVACY_POLICE_PART1": "Ich habe die",
     "PRIVACY_POLICE_PART2": "Datenschutzerklärung",
-    "PRIVACY_POLICE_PART3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "PRIVACY_POLICE_PART3": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "PRIVACY_POLICE_ERROR_MESSAGE": "Bitte akzeptiere die Datenschutzerklärung.",
     "BUTTON": "Sag Hallo ;)"
   },

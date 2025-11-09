@@ -67,7 +67,7 @@
     "CONTACT_FROM_MESSAGE_ERROR_MESSAGE": "What do you need to develop?",
     "PRIVACY_POLICE_PART1": "I've read the",
     "PRIVACY_POLICE_PART2": "privacy-police",
-    "PRIVACY_POLICE_PART3": "and agree to the processing of my data as outlined.",
+    "PRIVACY_POLICE_PART3": " and agree to the processing of my data as outlined.",
     "PRIVACY_POLICE_ERROR_MESSAGE": "Please accept the privacy policy.",
     "BUTTON": "Say Hello ;)"
   },
