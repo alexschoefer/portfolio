@@ -5,6 +5,15 @@
     "PROJECTS": "Projects"
   },
 
+  "MARQUEE": {
+    "ITEMS": [
+      "Available for remote work",
+      "Frontend Developer",
+      "Based in Munich",
+      "Open to work"
+    ]
+  },
+
   "ABOUT": {
     "WHO_I_AM": "Who I am",
     "HEADER": "About me",
@@ -76,9 +85,15 @@
     "HEADLINE": "What is this project about?",
     "NEXT": "next project",
     "DESCRIPTION": [
-      { "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories." },
-      { "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen." },
-      { "text": "This interactive Pokédex, built with HTML, CSS, and JavaScript, pulls data from an API to display each Pokémon’s name, image, and type." }
+      {
+        "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      {
+        "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      },
+      {
+        "text": "This interactive Pokédex, built with HTML, CSS, and JavaScript, pulls data from an API to display each Pokémon’s name, image, and type."
+      }
     ]
   }
 }

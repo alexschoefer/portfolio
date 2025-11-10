@@ -5,6 +5,15 @@
     "PROJECTS": "Projekte"
   },
 
+  "MARQUEE": {
+    "ITEMS": [
+      "Verfügbar für Remote-Arbeit",
+      "Frontend-Entwickler",
+      "Mit Sitz in München",
+      "Offen für neue Projekte"
+    ]
+  },
+
   "ABOUT": {
     "WHO_I_AM": "Wer ich bin",
     "HEADER": "Über mich",
@@ -76,9 +85,15 @@
     "HEADLINE": "Worum geht es bei diesem Projekt?",
     "NEXT": "nächstes Projekt",
     "DESCRIPTION": [
-      { "text": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu." },
-      { "text": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen." },
-      { "text": "Diese interaktive Pokédex Anwendung, die mit HTML, CSS und JavaScript erstellt wurde, ruft Daten aus einer API ab, um den Namen, das Bild und den Typ jedes Pokémon anzuzeigen." }
+      {
+        "text": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+      },
+      {
+        "text": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen."
+      },
+      {
+        "text": "Diese interaktive Pokédex Anwendung, die mit HTML, CSS und JavaScript erstellt wurde, ruft Daten aus einer API ab, um den Namen, das Bild und den Typ jedes Pokémon anzuzeigen."
+      }
     ]
   }
 }

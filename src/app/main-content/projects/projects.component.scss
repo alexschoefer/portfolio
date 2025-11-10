@@ -10,6 +10,8 @@ section {
     max-width: 1440px;
     width: 100%;
     overflow-x: hidden;
+    height: auto;
+    min-height: 700px;
 
     .portfolio-projects-wrapper {
       max-width: 880px;
@@ -61,8 +63,7 @@ section {
         .project {
           position: relative;
           padding: 40px 32px;
-          border-top: none; // ❌ kein top-border bei jedem
-          border-bottom: 1px solid var(--color-main-green); // ✅ nur unten eine Linie
+          border-bottom: 1px solid var(--color-main-green);
           cursor: pointer;
           display: flex;
           justify-content: space-between;
