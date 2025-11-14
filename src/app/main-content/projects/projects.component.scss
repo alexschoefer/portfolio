@@ -270,7 +270,7 @@ section {
           gap: 16px;
 
           .project-technologies {
-            justify-content: center;
+            justify-content: center !important;
             font-size: 16px;
           }
 
@@ -356,7 +356,7 @@ section {
       }
 
       h2 {
-        font-size: 40px;
+        font-size: 40px !important;
         line-height: 110%;
         text-align: left;
         white-space: normal; 
@@ -400,6 +400,12 @@ section {
   section {
     .main-content-wrapper {
       padding-inline: 12px;
+      height: auto;
+      max-height: 550px;
+    }
+
+    .portfolio-menu-container {
+      width: 280px;
     }
 
     .portfolio-headline-container {

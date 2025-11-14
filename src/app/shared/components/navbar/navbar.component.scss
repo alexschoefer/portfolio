@@ -348,4 +348,22 @@ section {
     .logo-container .lastNameLetter {
       font-size: 28px;
     }
+
+    .menu-navigation-mobile {
+        display: none;
+        gap: 16px;
+        left: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        height: 200px;
+        width: 180px;
+    }
+
+    a {
+        font-size: 16px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
   }

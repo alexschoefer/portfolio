@@ -127,11 +127,14 @@ section {
   max-width: 100%;
   height: auto;
   display: flex;
-  border-top: 1px solid var(--color-main-green);
   border-bottom: 1px solid var(--color-main-green);
   justify-content: flex-start;
   align-items: center;
   padding: 32px;
+}
+
+.contact-form-container:first-child {
+  border-top: 1px solid var(--color-main-green);
 }
 
 .contact-box-container,
