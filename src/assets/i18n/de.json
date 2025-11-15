@@ -95,5 +95,10 @@
         "text": "Diese interaktive Pokédex Anwendung, die mit HTML, CSS und JavaScript erstellt wurde, ruft Daten aus einer API ab, um den Namen, das Bild und den Typ jedes Pokémon anzuzeigen."
       }
     ]
+  },
+
+  "FOOTER": {
+    "LOCATION": "München Deutschland",
+    "IMPRINT": "Impressum"
   }
 }

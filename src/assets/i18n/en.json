@@ -95,5 +95,10 @@
         "text": "This interactive Pokédex, built with HTML, CSS, and JavaScript, pulls data from an API to display each Pokémon’s name, image, and type."
       }
     ]
+  },
+
+  "FOOTER": {
+    "LOCATION": "Munich Germany",
+    "IMPRINT": "Legal Notice"
   }
 }
