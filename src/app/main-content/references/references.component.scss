@@ -2,7 +2,8 @@ section {
   height: auto;
   width: 100%;
   background: #1c1c1c;
-  padding-top: 9rem;
+  padding-top: 6rem !important;
+  padding-bottom: 6rem;
   position: relative;
 
   .main-content-wrapper {
@@ -104,7 +105,7 @@ section {
   position: relative;
   flex-shrink: 0;
   width: 632px;
-  height: 274px;
+  height: auto;
   border-radius: 32px;
   border: 1px solid var(--color-main-green);
   padding: 48px 40px;
@@ -152,6 +153,7 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
+  height: auto;
 }
 
 .comment:not(.comment-current) {
@@ -200,7 +202,8 @@ section {
   }
 }
 
-/* === Tablet Landscape (≤ 1180px) === */
+/* ------------------------- Media Queries ------------------------- */
+
 @media (max-width: 1180px) {
   .main-content-wrapper {
     padding-inline: 64px;
@@ -263,7 +266,49 @@ section {
   }
 }
 
-/* === Tablet Portrait (≤ 820px) === */
+@media (max-width: 1024px) {
+  .comment-container {
+    justify-content: center;
+    transform: none;
+  }
+
+  .comment:not(.comment-current) {
+    display: none;
+  }
+
+  .comment-current {
+    margin: 0 auto;
+  }
+
+  .comment-current .quotes {
+    left: 8px !important;
+    top: 35px !important;
+    width: 48px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .comment-container {
+    display: flex;
+    gap: 32px;
+    transition: transform 0.5s ease;
+  }
+
+  .comment-current {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .comment:not(.comment-current) {
+    transform: scale(0.9);
+    opacity: 0.6;
+    z-index: 1;
+    display: block;
+  }
+}
+
+
 @media (max-width: 820px) {
 
   section {
@@ -271,7 +316,7 @@ section {
   }
 
   .main-content-wrapper {
-    padding-inline: 48px;
+    padding-inline: 0;
     gap: 32px;
   }
 
@@ -287,6 +332,16 @@ section {
     text-align: center;
   }
 
+  .comment-current .quotes {
+      position: absolute;
+      top: -8px !important;
+      left: -2px !important;
+      transform: none !important;
+      width: 36px !important;
+      height: auto;
+      z-index: 99;
+    }
+
   .comment,
   .comment-current {
     width: 100%;
@@ -294,8 +349,41 @@ section {
     padding: 32px 24px;
   }
 
-  .quotes {
-    left: 20px;
+  .comment-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    transition: transform 0.5s ease;
+    transform: none !important;
+  }
+
+  .comment:not(.comment-current) {
+    display: none;
+  }
+
+  .comment-current {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .comment-author-container {
+    justify-content: start;
+  }
+
+  .comment-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+  }
+
+  .comment-current .quotes {
+    left: 10px;
+    top: -2px;
+    position: relative;
     width: 72px;
   }
 
@@ -313,7 +401,6 @@ section {
   }
 }
 
-/* === Mobile Large (≤ 600px) === */
 @media (max-width: 600px) {
   .main-content-wrapper {
     padding-inline: 24px;
@@ -331,12 +418,13 @@ section {
   .comment,
   .comment-current {
     width: 100%;
-    padding: 28px 20px;
+    padding: 32px 28px;
   }
 
-  .quotes {
-    left: 16px;
-    width: 64px;
+  .comment-current .quotes {
+    left: -2px !important;
+    top: 2px !important;
+    width: 24px;
   }
 
   .comment-author-container {
@@ -364,7 +452,6 @@ section {
   }
 }
 
-/* === Mobile Small (≤ 480px) === */
 @media (max-width: 480px) {
   .main-content-wrapper {
     padding-inline: 12px !important;
@@ -399,25 +486,32 @@ section {
   }
 
   .comment-current {
-    width: calc(100% - 32px); /* padding berücksichtigen */
-    max-width: 358px;         /* optional, nach Design */
-    padding: 32px 16px 48px 16px;
+    max-width: 320px;
+    height: auto;
+    padding-inline: 5px;
+  }
+
+  .comment-current span {
+    font-size: 16px !important;
   }
 
   .comment-current .quotes {
     position: absolute;
-    top: -2px;
-    left: -20px; 
+    top: -8px;
+    left: -10px;
     transform: none !important;
-    width: 48px; 
+    width: 48px;
     height: auto;
-    z-index: 2;
+    z-index: 99;
   }
 
   .comment-current .quotes img {
     display: block;
     width: 100%;
     height: auto;
+    left: 10px;
+    top: -2px;
+    position: relative;
   }
 
 
@@ -465,40 +559,43 @@ section {
   }
 }
 
-/* === Mobile Extra Small (≤ 320px) === */
 @media (max-width: 320px) {
   .main-content-wrapper {
-    padding-inline: 12px;
+    padding-inline: 8px;
   }
 
   .references-container {
     width: 100%;
-    gap: 20px;
+    gap: 16px;
   }
 
   .references-headline-container h3 {
     font-size: 18px;
+    line-height: 22px;
     white-space: normal;
     text-align: center;
+    word-break: break-word;
   }
 
   .comment,
   .comment-current {
     width: 100%;
-    padding: 20px 12px;
+    max-width: 288px;
     border-radius: 20px;
+    height: auto;
   }
 
   .quotes {
-    left: 12px;
-    width: 48px;
+    left: 8px;
+    top: 0;
+    width: 40px;
   }
 
   .comment-author-container {
-    padding-top: 40px;
+    padding-top: 36px;
 
     span {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 
@@ -516,15 +613,12 @@ section {
     }
   }
 
-  /* Slider mittig */
-  .comment-wrapper {
+  .comment-wrapper,
+  .comment-container {
     justify-content: center;
     overflow-x: hidden;
-  }
-
-  .comment-container {
     gap: 12px;
-    justify-content: center;
+    padding: 10px;
   }
 
   .comment:not(.comment-current) {
@@ -536,5 +630,9 @@ section {
     transform: scale(1);
     opacity: 1;
     z-index: 2;
+  }
+
+  .comment-current span {
+    font-size: 16px !important;
   }
 }

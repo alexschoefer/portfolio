@@ -1,8 +1,8 @@
 section {
-  height: 100%;
   width: 100%;
   background: #1c1c1c;
-  padding-top: 9rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 
   .main-content-wrapper {
     margin-inline: auto;
@@ -10,6 +10,8 @@ section {
     max-width: 1440px;
     width: 100%;
     overflow-x: hidden;
+    height: auto;
+    min-height: 700px;
 
     .portfolio-projects-wrapper {
       max-width: 880px;
@@ -61,8 +63,7 @@ section {
         .project {
           position: relative;
           padding: 40px 32px;
-          border-top: none; // ❌ kein top-border bei jedem
-          border-bottom: 1px solid var(--color-main-green); // ✅ nur unten eine Linie
+          border-bottom: 1px solid var(--color-main-green);
           cursor: pointer;
           display: flex;
           justify-content: space-between;
@@ -264,12 +265,12 @@ section {
 
         .project {
           flex-direction: column;
-          align-items: center;
+          align-items: center !important;
           text-align: center;
           gap: 16px;
 
           .project-technologies {
-            justify-content: center;
+            justify-content: center !important;
             font-size: 16px;
           }
 
@@ -286,7 +287,6 @@ section {
 /* === Mobile Large (≤768 px) === */
 @media (max-width: 768px) {
   section {
-    padding: 0 32px;
     height: auto;
 
     .main-content-wrapper {
@@ -296,13 +296,15 @@ section {
 
     .portfolio-headline-container {
       gap: 16px;
+      align-items: center;
 
       h2 {
         font-size: 40px;
       }
 
       span {
-        font-size: 15px;
+        font-size: 15px !important;
+        text-align: center !important;
       }
     }
 
@@ -316,6 +318,7 @@ section {
 
         .project-technologies {
           font-size: 15px;
+          justify-content: center !important;
         }
       }
     }
@@ -353,7 +356,7 @@ section {
       }
 
       h2 {
-        font-size: 40px;
+        font-size: 40px !important;
         line-height: 110%;
         text-align: left;
         white-space: normal; 
@@ -369,6 +372,7 @@ section {
         white-space: normal;
         overflow-wrap: break-word;    
         word-break: break-word;
+        text-align: left !important;
       }
     }
 
@@ -385,7 +389,7 @@ section {
       .project-technologies {
         font-size: 16px !important;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: flex-start !important;
         gap: 3px;
       }
     }
@@ -396,6 +400,12 @@ section {
   section {
     .main-content-wrapper {
       padding-inline: 12px;
+      height: auto;
+      max-height: 550px;
+    }
+
+    .portfolio-menu-container {
+      width: 280px;
     }
 
     .portfolio-headline-container {

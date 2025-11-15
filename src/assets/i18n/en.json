@@ -5,13 +5,27 @@
     "PROJECTS": "Projects"
   },
 
+  "START-BTNS": {
+    "WORK": "Check my work",
+    "CONTACT": "Contact me"
+  },
+
+  "MARQUEE": {
+    "ITEMS": [
+      "Available for remote work",
+      "Frontend Developer",
+      "Based in Munich",
+      "Open to work"
+    ]
+  },
+
   "ABOUT": {
     "WHO_I_AM": "Who I am",
     "HEADER": "About me",
     "DESCRIPTION": "Hey there, I'm Alex! I’m an IT Process Specialist with experience in project management and technical support. I’m passionate about coding because it allows me to solve problems efficiently for automate processes.",
     "LOCATION": "I'm based in Munich. I am flexible regarding the work environment. I can work in a mobile office or remotely.",
     "MOTIVATION": "Staying curious and adaptable keeps me motivated to constantly improve my coding and IT skills.",
-    "PROBLEM_SOLVING": "My problem-solving approach combines analytical thinking, creativity, persistence, and collaboration to find practical and elegant ways to make IT operations more efficient"
+    "PROBLEM_SOLVING": "My problem-solving approach combines analytical thinking, creativity, persistence, and collaboration to find practical and elegant ways to make IT operations more efficient."
   },
 
   "SKILLS": {
@@ -67,7 +81,7 @@
     "CONTACT_FROM_MESSAGE_ERROR_MESSAGE": "What do you need to develop?",
     "PRIVACY_POLICE_PART1": "I've read the",
     "PRIVACY_POLICE_PART2": "privacy-police",
-    "PRIVACY_POLICE_PART3": "and agree to the processing of my data as outlined.",
+    "PRIVACY_POLICE_PART3": " and agree to the processing of my data as outlined.",
     "PRIVACY_POLICE_ERROR_MESSAGE": "Please accept the privacy policy.",
     "BUTTON": "Say Hello ;)"
   },
@@ -76,9 +90,20 @@
     "HEADLINE": "What is this project about?",
     "NEXT": "next project",
     "DESCRIPTION": [
-      { "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories." },
-      { "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen." },
-      { "text": "This interactive Pokédex, built with HTML, CSS, and JavaScript, pulls data from an API to display each Pokémon’s name, image, and type." }
+      {
+        "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      {
+        "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      },
+      {
+        "text": "This interactive Pokédex, built with HTML, CSS, and JavaScript, pulls data from an API to display each Pokémon’s name, image, and type."
+      }
     ]
+  },
+
+  "FOOTER": {
+    "LOCATION": "Munich Germany",
+    "IMPRINT": "Legal Notice"
   }
 }

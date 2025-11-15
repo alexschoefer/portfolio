@@ -5,6 +5,20 @@
     "PROJECTS": "Projekte"
   },
 
+  "START-BTNS": {
+    "WORK": "Meine Projekte",
+    "CONTACT": "Kontakt"
+  },
+
+  "MARQUEE": {
+    "ITEMS": [
+      "Verfügbar für Remote-Arbeit",
+      "Frontend-Entwickler",
+      "Mit Sitz in München",
+      "Offen für neue Projekte"
+    ]
+  },
+
   "ABOUT": {
     "WHO_I_AM": "Wer ich bin",
     "HEADER": "Über mich",
@@ -43,7 +57,7 @@
         "author": "B. Bardon - Team Partner"
       },
       {
-        "text": "Ich hatte das Glück, mit Simon in einem Gruppenprojekt an der Developer Akademie zusammenzuarbeiten, das viel Aufwand erforderte. Er blieb immer ruhig, gelassen und konzentriert und sorgte dafür, dass unser Team auf Erfolgskurs war.",
+        "text": "Ich hatte das Glück, mit Alex in einem Gruppenprojekt an der Developer Akademie zusammenzuarbeiten, das viel Aufwand erforderte. Er blieb immer ruhig, gelassen und konzentriert und sorgte dafür, dass unser Team auf Erfolgskurs war.",
         "author": "N. Loukataris - Team Partner"
       }
     ]
@@ -67,7 +81,7 @@
     "CONTACT_FROM_MESSAGE_ERROR_MESSAGE": "Was möchtest du entwickeln lassen?",
     "PRIVACY_POLICE_PART1": "Ich habe die",
     "PRIVACY_POLICE_PART2": "Datenschutzerklärung",
-    "PRIVACY_POLICE_PART3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "PRIVACY_POLICE_PART3": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "PRIVACY_POLICE_ERROR_MESSAGE": "Bitte akzeptiere die Datenschutzerklärung.",
     "BUTTON": "Sag Hallo ;)"
   },
@@ -76,9 +90,20 @@
     "HEADLINE": "Worum geht es bei diesem Projekt?",
     "NEXT": "nächstes Projekt",
     "DESCRIPTION": [
-      { "text": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu." },
-      { "text": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen." },
-      { "text": "Diese interaktive Pokédex Anwendung, die mit HTML, CSS und JavaScript erstellt wurde, ruft Daten aus einer API ab, um den Namen, das Bild und den Typ jedes Pokémon anzuzeigen." }
+      {
+        "text": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+      },
+      {
+        "text": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen."
+      },
+      {
+        "text": "Diese interaktive Pokédex Anwendung, die mit HTML, CSS und JavaScript erstellt wurde, ruft Daten aus einer API ab, um den Namen, das Bild und den Typ jedes Pokémon anzuzeigen."
+      }
     ]
+  },
+
+  "FOOTER": {
+    "LOCATION": "München Deutschland",
+    "IMPRINT": "Impressum"
   }
 }

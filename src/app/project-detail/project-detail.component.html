@@ -3,9 +3,7 @@
         <div class="project-close-btn-container">
             <img src="../../assets/icons/close_icon_small.png" alt="close" (click)="onClose()">
         </div>
-
         <div class="project-overlay-content">
-            <!-- Projektinfos -->
             <div class="project-container">
                 <div>
                     <h1>{{ project.projectID }}</h1>
@@ -14,23 +12,18 @@
                     <h2>{{ project.projectName }}</h2>
                 </div>
 
-                <!-- Projektbeschreibung -->
                 <div class="project-description">
                     <span>{{ 'PROJECT.HEADLINE' | translate }}</span>
                     <span class="project-description-content">{{ descriptionText }}</span>
                 </div>
 
-                <!-- Technologien -->
                 <div class="project-technologies-container">
-                    <div class="project-technologies">
-                        <ng-container *ngFor="let tech of project.technologies">
-                            <img [src]="tech.icon" [alt]="tech.name">
-                            <span>{{ tech.name }}</span>
-                        </ng-container>
+                    <div class="tech" *ngFor="let tech of project.technologies">
+                      <img [src]="tech.icon" [alt]="tech.name">
+                      <span>{{ tech.name }}</span>
                     </div>
-                </div>
-
-                <!-- Buttons -->
+                  </div>
+                  
                 <div class="project-overlay-btn-container">
                     <a [href]="project.gitHublink" target="_blank">
                         <button>
@@ -38,22 +31,21 @@
                             <img src="../../assets/icons/arrow_outward_project-overlay.png" alt="">
                         </button>
                     </a>
-                    <button *ngIf="project.liveLink">
-                        <a [href]="project.liveLink" target="_blank">
+
+                    <a [href]="project.liveLink" target="_blank">
+                        <button *ngIf="project.liveLink">
                             <span>Live Test</span>
                             <img src="../../assets/icons/arrow_outward_project-overlay.png" alt="">
-                        </a>
-                    </button>
+                        </button>
+                    </a>
                 </div>
             </div>
 
-            <!-- Projektscreenshot -->
             <div class="project-screen-container">
                 <img [src]="project.imageOverlay" [alt]="project.projectName">
             </div>
         </div>
 
-        <!-- Nächster Button -->
         <div class="next-project" (click)="onNext()">
             <button>{{ 'PROJECT.NEXT' | translate }}</button>
             <img src="../../assets/icons/arrow_forward_hover.png" alt="next">

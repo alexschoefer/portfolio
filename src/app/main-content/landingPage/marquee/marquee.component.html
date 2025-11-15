@@ -1,26 +1,20 @@
-<section>
+<section class="marquee-section">
   <div class="marquee-content-wrapper">
     <div class="marquee-track">
-      <!-- erstes Set -->
+      <!-- 1. Set -->
       <div class="marquee-items">
-        <img src="../../../../assets/icons/radio_button.png" alt="">
-        <span>Available for remote work</span>
-        <img src="../../../../assets/icons/radio_button.png" alt="">
-        <span>Frontend Developer</span>
-        <img src="../../../../assets/icons/radio_button.png" alt="">
-        <span>Based in Munich</span>
-        <img src="../../../../assets/icons/radio_button.png" alt="">
-        <span>Open to work</span>
+        <ng-container *ngFor="let item of marqueeItems">
+          <img src="assets/icons/radio_button.png" alt="dot" />
+          <span>{{ item }}</span>
+        </ng-container>
       </div>
+
+      <!-- 2. identisches Set für endlosen Loop -->
       <div class="marquee-items">
-        <img src="../../../../assets/icons/radio_button.png" alt="">
-        <span>Available for remote work</span>
-        <img src="../../../../assets/icons/radio_button.png" alt="">
-        <span>Frontend Developer</span>
-        <img src="../../../../assets/icons/radio_button.png" alt="">
-        <span>Based in Munich</span>
-        <img src="../../../../assets/icons/radio_button.png" alt="">
-        <span>Open to work</span>
+        <ng-container *ngFor="let item of marqueeItems">
+          <img src="assets/icons/radio_button.png" alt="dot" />
+          <span>{{ item }}</span>
+        </ng-container>
       </div>
     </div>
   </div>

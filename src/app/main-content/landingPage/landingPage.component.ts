@@ -2,55 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 import { MarqueeComponent } from './marquee/marquee.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
     selector: 'app-landingPage',
     standalone: true,
-    imports: [CommonModule, NavbarComponent, MarqueeComponent],
-    template: `
-            <section>
-            <div class="main-content-wrapper">
-                <div class="title-container">
-                <h2>Frontend Developer</h2>
-                <h1>Alexander Schöfer</h1>
-                <div class="btn-title-container">
-                    <button class="btn-check-work"><a href="#projects">Check my work</a></button>
-                    <button class="btn-contact"><a href="#contact">Contact me</a></button>
-                </div>
-                </div>
-
-                <div class="side-content">
-                <div class="left-content-container">
-                    <div class="navigation-arrow">
-                    <span class="arrow">&#8595;</span>
-                    </div>
-                    <div class="line-left"></div>
-                </div>
-
-                <div class="right-content-container">
-                    <div class="mail-contact">
-                    <a href="mailto:alex.schoefer@gmx.net" class="mail-text">alex.schoefer&#64;gmx.net</a>
-                        <a href="mailto:alex.schoefer@gmx.net" class="mail-icon">
-                            <img src="./assets/icons/mail-icon.png" alt="Mail Icon">
-                        </a>
-                    </div>
-                    <div class="contact-icons">
-                    <a href="https://github.com/alexschoefer">
-                        <img class="github-icon" src="../../assets/icons/Github.png" alt="github">
-                    </a>
-                    <a href="https://www.linkedin.com/in/alexander-schöfer-379352161/">
-                        <img class="linkedin-icon" src="../../assets/icons/Linkedin.png" alt="linkedin">
-                    </a>
-                    </div>
-                    <div class="line-right"></div>
-                </div>
-                </div>
-            </div>
-            </section>
-
-        `
-    ,
+    imports: [CommonModule, NavbarComponent, MarqueeComponent, TranslateModule],
+    templateUrl: './landingPage.component.html', 
     styleUrls: ['./landingPage.component.scss']
 })
 
