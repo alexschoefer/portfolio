@@ -307,9 +307,6 @@ section {
 
 .privacy-police-checkbox-content span {
   height: auto;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
   align-items: center;
   font-family: var(--font-karla);
   font-weight: 400;
@@ -317,6 +314,9 @@ section {
   line-height: 120%;
   color: #FFFFFF;
   width: auto;
+  white-space: normal;
+  word-break: break-word;
+  flex: 1;
 }
 
 .privacy-police-checkbox-content span a {

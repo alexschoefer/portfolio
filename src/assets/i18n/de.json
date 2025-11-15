@@ -5,6 +5,11 @@
     "PROJECTS": "Projekte"
   },
 
+  "START-BTNS": {
+    "WORK": "Meine Projekte",
+    "CONTACT": "Kontakt"
+  },
+
   "MARQUEE": {
     "ITEMS": [
       "Verfügbar für Remote-Arbeit",

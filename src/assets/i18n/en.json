@@ -5,6 +5,11 @@
     "PROJECTS": "Projects"
   },
 
+  "START-BTNS": {
+    "WORK": "Check my work",
+    "CONTACT": "Contact me"
+  },
+
   "MARQUEE": {
     "ITEMS": [
       "Available for remote work",
@@ -20,7 +25,7 @@
     "DESCRIPTION": "Hey there, I'm Alex! I’m an IT Process Specialist with experience in project management and technical support. I’m passionate about coding because it allows me to solve problems efficiently for automate processes.",
     "LOCATION": "I'm based in Munich. I am flexible regarding the work environment. I can work in a mobile office or remotely.",
     "MOTIVATION": "Staying curious and adaptable keeps me motivated to constantly improve my coding and IT skills.",
-    "PROBLEM_SOLVING": "My problem-solving approach combines analytical thinking, creativity, persistence, and collaboration to find practical and elegant ways to make IT operations more efficient"
+    "PROBLEM_SOLVING": "My problem-solving approach combines analytical thinking, creativity, persistence, and collaboration to find practical and elegant ways to make IT operations more efficient."
   },
 
   "SKILLS": {
