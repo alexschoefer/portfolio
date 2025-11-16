@@ -105,5 +105,45 @@
   "FOOTER": {
     "LOCATION": "München Deutschland",
     "IMPRINT": "Impressum"
-  }
+  },
+
+"IMPRINT": {
+  "HEADLINE": "Rechtlicher Hinweis",
+  "TITLE": "Impressum",
+  "SECTION_CONTACT": "Kontakt & Erreichbarkeit",
+  
+  "ACCEPTANCE_TITLE": "Annahme der Bedingungen",
+  "ACCEPTANCE_TEXT1": "Durch den Zugriff auf und die Nutzung von",
+  
+  "PRODUCT_NAME": "Portfolio",
+  
+  "ACCEPTANCE_TEXT2": "erkennen Sie die folgenden Bedingungen an und stimmen ihnen zu, einschließlich aller Aktualisierungen, die Ihnen von Zeit zu Zeit ohne vorherige Ankündigung zur Verfügung gestellt werden können.",
+  
+  "SCOPE_TITLE": "Umfang und Eigentum des Produkts",
+  "SCOPE_TEXT1": "wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp bei der",
+  "SCOPE_TEXT2": "Es dient einem Bildungszweck und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine durchgehende Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsaspekte dieses Produkts garantieren.",
+  "SCOPE_TEXT3": "\n\nDas Design von",
+  "SCOPE_TEXT4": "ist Eigentum der",
+  "SCOPE_TEXT5": "Eine unautorisierte Nutzung, Vervielfältigung, Modifikation, Verbreitung oder Reproduktion des Designs ist strengstens untersagt.",
+  
+  "PROPRIETARY_TITLE": "Eigentumsrechte",
+  "PROPRIETARY_TEXT1": "Abgesehen vom Design, das der",
+  "PROPRIETARY_TEXT2": "gehört, behalten wir, die aufgeführten Studierenden, alle Eigentumsrechte an",
+  "PROPRIETARY_TEXT3": ", einschließlich aller urheberrechtlich geschützten Materialien, Marken und anderer proprietärer Informationen.",
+  
+  "USAGE_TITLE": "Nutzung des Produkts",
+  "USAGE_TEXT1": "ist ausschließlich für rechtmäßige Zwecke vorgesehen, in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften. Jede Nutzung von",
+  "USAGE_TEXT2": "für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist strengstens untersagt. Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von",
+  
+  "DISCLAIMER_TITLE": "Haftungsausschluss und Haftungsbeschränkung",
+  "DISCLAIMER_TEXT1": "wird „wie besehen“ ohne jegliche Gewährleistung bereitgestellt, weder ausdrücklich noch stillschweigend, einschließlich, aber nicht beschränkt auf stillschweigende Gewährleistungen der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung. In keinem Fall haften wir, die aufgeführten Studierenden, oder die",
+  "DISCLAIMER_TEXT2": "für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden aufgrund entgangener Gewinne, Rufschädigung, Nutzungsausfall, Datenverlust oder anderer immaterieller Nachteile, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus der Nutzung oder Leistung von",
+  
+  "INDEMNITY_TITLE": "Freistellung",
+  "INDEMNITY_TEXT1": "Sie erklären sich damit einverstanden, uns, die aufgeführten Studierenden, die",
+  "INDEMNITY_TEXT2": "sowie unsere verbundenen Unternehmen, Partner, Führungskräfte, Direktoren, Vertreter und Mitarbeiter von und gegen jegliche Ansprüche, Forderungen, Verluste, Schäden, Kosten oder Haftungen (einschließlich angemessener Rechtskosten) schadlos zu halten, die sich aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen diesen rechtlichen Hinweis ergeben.",
+  "INDEMNITY_TEXT3": "Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter ",
+  "INDEMNITY_TEXT4": "Datum: Oktober"
+}
+
 }

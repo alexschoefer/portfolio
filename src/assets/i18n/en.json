@@ -105,5 +105,44 @@
   "FOOTER": {
     "LOCATION": "Munich Germany",
     "IMPRINT": "Legal Notice"
+  },
+
+  "IMPRINT": {
+    "HEADLINE": "Legal Notice",
+    "TITLE": "Imprint",
+    "SECTION_CONTACT": "Exploring the board",
+    
+    "ACCEPTANCE_TITLE": "Acceptance of terms",
+    "ACCEPTANCE_TEXT1": "By accessing and using",
+  
+    "PRODUCT_NAME": "Portfolio",
+  
+    "ACCEPTANCE_TEXT2": "you acknowledge and agree to the following terms and conditions, including any updates that may be provided to you from time to time without prior notice.",
+  
+    "SCOPE_TITLE": "Scope and ownership of the product",
+    "SCOPE_TEXT1": "as been developed as part of a student group project in a web development bootcamp at the",
+    "SCOPE_TEXT2": "It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product",
+    "SCOPE_TEXT3": "\n\nThe design of", 
+    "SCOPE_TEXT4": "is owned by",  
+    "SCOPE_TEXT5": "Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+  
+    "PROPRIETARY_TITLE": "Proprietary rights",
+    "PROPRIETARY_TEXT1": "Aside from the design owned by the",
+    "PROPRIETARY_TEXT2": " we, the listed students, we retain all proprietary rights in",
+    "PROPRIETARY_TEXT3": ", including any copyrighted material, trademarks, and other proprietary information.",
+  
+    "USAGE_TITLE": "Use of the product",
+    "USAGE_TEXT1": "is intended to be used for lawful purpose only, in accordance with all applicable laws and regulations. Any use of ",
+    "USAGE_TEXT2": "for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of",
+  
+    "DISCLAIMER_TITLE": "Disclaimer of warranties and limitation of liability",
+    "DISCLAIMER_TEXT1": "is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the",
+    "DISCLAIMER_TEXT2": "be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of",
+
+    "INDEMNITY_TITLE": "Indemnity",
+    "INDEMNITY_TEXT1": "You agree to indemnify, defend and hold harmless us, the listed students, the ",
+    "INDEMNITY_TEXT2": "and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.",
+    "INDEMNITY_TEXT3": "For any questions or notices, please contact us at",
+    "INDEMNITY_TEXT4": "Date: October "
   }
 }
