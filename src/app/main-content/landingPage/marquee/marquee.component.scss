@@ -2,13 +2,9 @@
   display: block;
 }
 
-/* Angular component host */
-
 .marquee-section {
   position: absolute;
-  /* relativ zu .side-content */
   bottom: 0;
-  /* am unteren Rand von .side-content */
   left: 0;
   right: 0;
   height: 62px;
@@ -16,11 +12,7 @@
   width: 100%;
   overflow: hidden;
   pointer-events: none;
-  /* damit die Side-Content-Buttons weiter klickbar bleiben */
   z-index: 8;
-  /* kleiner als Title (z.B. title z-index:20), anpassen falls nötig */
-
-  /* visuelle Stile */
   background: #363c3b;
   transform: rotate(-3deg);
   transform-origin: bottom left;
@@ -28,14 +20,11 @@
   opacity: 0.65;
 }
 
-/* wrapper innerhalb des Marquee-Component */
 .marquee-content-wrapper {
   position: absolute;
   bottom: 0;
   left: -10%;
-  /* leicht überschieben, damit Diagonale sauber startet */
   width: 120%;
-  /* breit genug für schräge Darstellung */
   height: 100%;
   display: flex;
   align-items: center;
@@ -70,7 +59,6 @@
   }
 }
 
-/* Endlos-Loop: 2 identische Sets im HTML (wie du schon hast) */
 @keyframes scroll-marquee {
   0% {
     transform: translateX(0);

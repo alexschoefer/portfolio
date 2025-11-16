@@ -166,6 +166,10 @@ section {
       }
     }
 
+    .side-content app-marquee {
+      pointer-events: none;
+    }
+
     .right-content-container {
       display: flex;
       flex-direction: column;
@@ -174,6 +178,9 @@ section {
       height: 480px;
       pointer-events: auto;
       margin-bottom: 70px;
+      z-index: 30;
+      position: relative;
+      cursor: pointer;
 
       .mail-contact {
         writing-mode: vertical-rl;
@@ -186,9 +193,10 @@ section {
         a {
           text-decoration: none;
           color: inherit;
+          cursor: pointer;
         }
 
-        &:hover {
+        a:hover {
           color: var(--color-main-green);
         }
 
@@ -220,6 +228,16 @@ section {
         height: 186px;
         background-color: #ffffff;
       }
+    }
+
+    .right-content-container .contact-icons a:hover .github-icon {
+      content:url(../../../assets/icons/GitHub_Hover.png);
+      cursor: pointer;
+    }
+
+    .right-content-container .contact-icons a:hover .linkedin-icon {
+      content:url(../../../assets/icons/Linkedin_Hover.png);
+      cursor: pointer;
     }
   }
 }
