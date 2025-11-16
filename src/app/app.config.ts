@@ -7,16 +7,23 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    // Optimiertes Change Detection Handling
     provideZoneChangeDetection({ eventCoalescing: true }),
+
+    // HttpClient global verfügbar machen
     provideHttpClient(),
+
+    // Router Provider
     provideRouter(routes),
+
+    // ngx-translate Setup
     provideTranslateService({
       loader: provideTranslateHttpLoader({
         prefix: '/assets/i18n/',
-        suffix: '.json'
+        suffix: '.json',
       }),
       fallbackLang: 'en',
-      lang: 'en'
-    })
+      lang: 'en',
+    }),
   ],
 };
