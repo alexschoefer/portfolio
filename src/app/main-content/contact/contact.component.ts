@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { NgForm } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -14,97 +13,102 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  name = '';
-  email = '';
-  message = '';
+  contactData = {
+    name: '',
+    email: '',
+    message: ''
+  };
 
-  privacyAccepted: boolean = false;
-  privacyTouched: boolean = false;
-  showPrivacyError: boolean = false;
-
+  // Fehleranzeigen
   showNameError = false;
   showEmailError = false;
   showMessageError = false;
+  showPrivacyError = false;
 
+  privacyAccepted = false;
+  privacyTouched = false;
+
+  mailTest = true; // Testmodus
+
+  post = {
+    endPoint: 'https://alexander-schoefer.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: { 'Content-Type': 'text/plain', responseType: 'text' },
+    },
+  };
+
+  /** Feldvalidierung beim Blur */
   validateField(field: 'name' | 'email' | 'message') {
     if (field === 'name') {
       this.showNameError = !this.contactData.name.trim();
-    }
-
-    if (field === 'email') {
-      this.showEmailError = !this.contactData.email.trim() || !this.isValidEmail(this.email);
-    }
-
-    if (field === 'message') {
-      this.showMessageError = !this.contactData.message.trim();
+    } else if (field === 'email') {
+      this.showEmailError = !this.contactData.email.trim() || !this.isValidEmail(this.contactData.email);
+    } else if (field === 'message') {
+      this.showMessageError = !this.contactData.message.trim() || this.contactData.message.trim().length < 10;
     }
   }
 
+  /** E-Mail Validierung */
   isValidEmail(email: string) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     return emailRegex.test(email.trim());
   }
 
+  /** Fehler zurücksetzen beim Fokus */
   clearErrorMessage(field: 'name' | 'email' | 'message') {
     if (field === 'name') this.showNameError = false;
     if (field === 'email') this.showEmailError = false;
     if (field === 'message') this.showMessageError = false;
   }
 
-  togglePrivacy() {
-    this.privacyAccepted = !this.privacyAccepted;
-  }
-
+  /** Checkbox geklickt */
   onPrivacyToggle() {
-
-    if (!this.privacyTouched) {
-      this.privacyTouched = true;
-    }
-
-    if (!this.privacyAccepted && this.privacyTouched) {
-      this.showPrivacyError = true;
-    } else {
-      this.showPrivacyError = false;
-    }
+    this.privacyTouched = true;
+    this.showPrivacyError = !this.privacyAccepted;
   }
 
-  contactData = {
-    name: "",
-    email: "",
-    message: ""
+  /** Prüft, ob alles korrekt ist */
+  isFormValid(): boolean {
+    const nameValid = !!this.contactData.name && this.contactData.name.trim() !== '';
+    const emailValid = !!this.contactData.email && this.isValidEmail(this.contactData.email);
+    const messageValid = !!this.contactData.message && this.contactData.message.trim().length >= 10;
+    const privacyValid = this.privacyAccepted;
+
+    return nameValid && emailValid && messageValid && privacyValid;
   }
 
-  mailTest = true;
 
-  post = {
-    endPoint: 'https://alexander-schoefer.de/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
-
+  /** Formular abschicken */
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
+    // Alle Felder prüfen
+    this.showNameError = !this.contactData.name.trim();
+    this.showEmailError = !this.contactData.email.trim() || !this.isValidEmail(this.contactData.email);
+    this.showMessageError = !this.contactData.message.trim() || this.contactData.message.trim().length < 10;
+    this.showPrivacyError = !this.privacyAccepted;
 
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    // Wenn was ungültig → abbrechen
+    if (!this.isFormValid()) return;
 
+    if (this.mailTest) {
+      console.log('Testmodus – keine Email gesendet!', this.contactData);
       ngForm.resetForm();
+      this.privacyAccepted = false;
+      this.privacyTouched = false;
+      return;
     }
+
+    // Echte Mail senden
+    this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+      .subscribe({
+        next: () => {
+          ngForm.resetForm();
+          this.privacyAccepted = false;
+          this.privacyTouched = false;
+        },
+        error: (err) => console.error(err)
+      });
   }
 }

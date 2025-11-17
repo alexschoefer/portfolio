@@ -53,15 +53,15 @@
                                     ? '../../../assets/icons/check_box.png' 
                                     : '../../../assets/icons/check_box_outline_blank.png'" alt="Privacy Checkbox">
                             </label>
-                            <span>{{'CONTACT.PRIVACY_POLICE_PART1' | translate}} <a href="privacy-police">{{'CONTACT.PRIVACY_POLICE_PART2' | translate}}</a>{{'CONTACT.PRIVACY_POLICE_PART3' | translate}}</span>
+                            <span>{{'CONTACT.PRIVACY_POLICE_PART1' | translate}} <a href="#privacy-police">{{'CONTACT.PRIVACY_POLICE_PART2' | translate}}</a>{{'CONTACT.PRIVACY_POLICE_PART3' | translate}}</span>
                         </div>
                         <div class="error-message-privacy-police-container">
                             <span class="error-message-privacy-police" [class.show]="showPrivacyError">
                                 {{'CONTACT.PRIVACY_POLICE_ERROR_MESSAGE' | translate}}
                             </span>
                           </div>
-                        <div class="send-btn-container">
-                            <button [disabled]="!privacyAccepted">{{'CONTACT.BUTTON' | translate}}</button>
+                          <div class="send-btn-container">
+                            <button type="submit" [disabled]="!isFormValid()">{{'CONTACT.BUTTON' | translate}}</button>
                         </div>
                     </div>
                 </form>
