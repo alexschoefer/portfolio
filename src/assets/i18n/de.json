@@ -79,6 +79,7 @@
     "CONTACT_FROM_MESSAGE": "Wie kann ich dir helfen?",
     "CONTACT_FROM_MESSAGE_PLACEHOLDER": "Hallo Alex, ich interessiere mich für...",
     "CONTACT_FROM_MESSAGE_ERROR_MESSAGE": "Was möchtest du entwickeln lassen?",
+    "CONTACT_FROM_MESSAGE_SUCCESS_MESSAGE": "Vielen Dank für deine Kontaktaufnahme! Die E-Mail wurde erfolgreich verschickt.",
     "PRIVACY_POLICE_PART1": "Ich habe die",
     "PRIVACY_POLICE_PART2": "Datenschutzerklärung",
     "PRIVACY_POLICE_PART3": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",

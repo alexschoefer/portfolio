@@ -9,7 +9,8 @@
                 <div class="get-contact-container">
                     <span class="problem-solver">{{'CONTACT.SUBTITLE' | translate}}</span>
                     <span class="contact-description">{{'CONTACT.DESCRIPTION' | translate}}</span>
-                    <span>{{'CONTACT.QUESTION_PART1' | translate}} <span class="hightlight-span">{{'CONTACT.QUESTION_PART2' | translate}}</span></span>
+                    <span>{{'CONTACT.QUESTION_PART1' | translate}} <span
+                            class="hightlight-span">{{'CONTACT.QUESTION_PART2' | translate}}</span></span>
                 </div>
             </div>
             <div class="contact-form">
@@ -18,9 +19,12 @@
                         <div class="name-form" [class.error]="showNameError">
                             <span class="question-span">{{'CONTACT.CONTACT_FROM_NAME' | translate}}</span>
                             <div>
-                                <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="{{'CONTACT.CONTACT_FROM_NAME_PLACEHOLDER' | translate}}" autocomplete="off"
-                                    (blur)="validateField('name')" (focus)="clearErrorMessage('name')">
-                                <span class="input-validation-message">{{'CONTACT.CONTACT_FROM_NAME_ERROR_MESSAGE' | translate}}</span>
+                                <input [(ngModel)]="contactData.name" name="name" type="text"
+                                    placeholder="{{'CONTACT.CONTACT_FROM_NAME_PLACEHOLDER' | translate}}"
+                                    autocomplete="off" (blur)="validateField('name')"
+                                    (focus)="clearErrorMessage('name')">
+                                <span class="input-validation-message">{{'CONTACT.CONTACT_FROM_NAME_ERROR_MESSAGE' |
+                                    translate}}</span>
                             </div>
                         </div>
                     </div>
@@ -28,9 +32,12 @@
                         <div class="email-form" [class.error]="showEmailError">
                             <span class="question-span">{{'CONTACT.CONTACT_FROM_EMAIL' | translate}}</span>
                             <div>
-                                <input [(ngModel)]="contactData.email" name="email" type="text" placeholder="{{'CONTACT.CONTACT_FROM_EMAIL_PLACEHOLDER' | translate}}" autocomplete="off"
-                                    (blur)="validateField('email')" (focus)="clearErrorMessage('email')">
-                                <span class="input-validation-message">{{'CONTACT.CONTACT_FROM_EMAIL_ERROR_MESSAGE' | translate}}</span>
+                                <input [(ngModel)]="contactData.email" name="email" type="text"
+                                    placeholder="{{'CONTACT.CONTACT_FROM_EMAIL_PLACEHOLDER' | translate}}"
+                                    autocomplete="off" (blur)="validateField('email')"
+                                    (focus)="clearErrorMessage('email')">
+                                <span class="input-validation-message">{{'CONTACT.CONTACT_FROM_EMAIL_ERROR_MESSAGE' |
+                                    translate}}</span>
                             </div>
                         </div>
                     </div>
@@ -38,9 +45,12 @@
                         <div class="message-form" [class.error]="showMessageError">
                             <span class="question-span">{{'CONTACT.CONTACT_FROM_MESSAGE' | translate}}</span>
                             <div>
-                                <input [(ngModel)]="contactData.message" minlength="10" name="message" type="text" placeholder="{{'CONTACT.CONTACT_FROM_MESSAGE_PLACEHOLDER' | translate}}" autocomplete="off"
-                                    (blur)="validateField('message')" (focus)="clearErrorMessage('message')">
-                                <span class="input-validation-message">{{'CONTACT.CONTACT_FROM_MESSAGE_ERROR_MESSAGE' | translate}}</span>
+                                <input [(ngModel)]="contactData.message" minlength="10" name="message" type="text"
+                                    placeholder="{{'CONTACT.CONTACT_FROM_MESSAGE_PLACEHOLDER' | translate}}"
+                                    autocomplete="off" (blur)="validateField('message')"
+                                    (focus)="clearErrorMessage('message')">
+                                <span class="input-validation-message">{{'CONTACT.CONTACT_FROM_MESSAGE_ERROR_MESSAGE' |
+                                    translate}}</span>
                             </div>
                         </div>
                     </div>
@@ -50,17 +60,24 @@
                                 <input type="checkbox" class="checkbox" name="acceptPrivacy"
                                     [(ngModel)]="privacyAccepted" (change)="onPrivacyToggle()">
                                 <img [src]="privacyAccepted 
-                                    ? '../../../assets/icons/check_box.png' 
-                                    : '../../../assets/icons/check_box_outline_blank.png'" alt="Privacy Checkbox">
+                                    ? './assets/icons/check_box.png' 
+                                    : './assets/icons/check_box_outline_blank.png'" alt="Privacy Checkbox">
                             </label>
-                            <span>{{'CONTACT.PRIVACY_POLICE_PART1' | translate}} <a href="#privacy-police">{{'CONTACT.PRIVACY_POLICE_PART2' | translate}}</a>{{'CONTACT.PRIVACY_POLICE_PART3' | translate}}</span>
+                            <span>{{'CONTACT.PRIVACY_POLICE_PART1' | translate}} <a
+                                    href="#privacy-police">{{'CONTACT.PRIVACY_POLICE_PART2' |
+                                    translate}}</a>{{'CONTACT.PRIVACY_POLICE_PART3' | translate}}</span>
                         </div>
                         <div class="error-message-privacy-police-container">
                             <span class="error-message-privacy-police" [class.show]="showPrivacyError">
                                 {{'CONTACT.PRIVACY_POLICE_ERROR_MESSAGE' | translate}}
                             </span>
-                          </div>
-                          <div class="send-btn-container">
+                        </div>
+                        <div class="success-message-privacy-police-container">
+                            <span class="form-success-message" [class.show]="mailSent">
+                                {{'CONTACT.CONTACT_FROM_MESSAGE_SUCCESS_MESSAGE' | translate}}
+                            </span>
+                        </div>
+                        <div class="send-btn-container">
                             <button type="submit" [disabled]="!isFormValid()">{{'CONTACT.BUTTON' | translate}}</button>
                         </div>
                     </div>

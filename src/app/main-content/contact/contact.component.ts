@@ -31,6 +31,7 @@ export class ContactComponent {
   privacyTouched = false;
 
   mailTest = true; // Testmodus
+  mailSent: boolean = false;
 
   post = {
     endPoint: 'https://alexander-schoefer.de/sendMail.php',
@@ -92,8 +93,12 @@ export class ContactComponent {
     // Wenn was ungültig → abbrechen
     if (!this.isFormValid()) return;
 
+    console.log(this.mailSent);
     if (this.mailTest) {
       console.log('Testmodus – keine Email gesendet!', this.contactData);
+      this.mailSent = true;
+      console.log(this.mailSent);
+      
       ngForm.resetForm();
       this.privacyAccepted = false;
       this.privacyTouched = false;
