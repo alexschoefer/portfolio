@@ -47,7 +47,7 @@ export class ProjectsComponent {
       imageOverlay: [
         './assets/img/join_mainscreen.png'
       ],
-      gitHublink: 'https://join.example.com'
+      gitHublink: 'https://github.com/alexschoefer/Join_470.git'
     },
     {
       projectID: '02',
@@ -62,7 +62,7 @@ export class ProjectsComponent {
       imageOverlay: [
         './assets/img/project-screenshot-el_pollo_overlay.png'
       ],
-      gitHublink: 'https://join.example.com'
+      gitHublink: 'https://github.com/alexschoefer/el-pollo-loco.git'
     },
     {
       projectID: '03',
@@ -77,7 +77,7 @@ export class ProjectsComponent {
       imageOverlay: [
         './assets/img/pokedex_mainscreen.png'
       ],
-      gitHublink: 'https://join.example.com',
+      gitHublink: 'https://github.com/alexschoefer/Pokedex.git',
       liveLink: 'test'
     }
   ]
