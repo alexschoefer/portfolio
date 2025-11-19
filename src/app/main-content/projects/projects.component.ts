@@ -75,7 +75,7 @@ export class ProjectsComponent {
         './assets/img/join_mainscreen.png'
       ],
       gitHublink: 'https://github.com/alexschoefer/Join_470.git',
-      liveLink: 'test'
+      liveLink: 'https://join.alexander-schoefer.de/index.html'
     },
     {
       projectID: '02',
@@ -107,7 +107,7 @@ export class ProjectsComponent {
         './assets/img/pokedex_mainscreen.png'
       ],
       gitHublink: 'https://github.com/alexschoefer/Pokedex.git',
-      liveLink: 'test'
+      liveLink: 'https://pokedex.alexander-schoefer.de/index.html'
     }
   ];
 }
