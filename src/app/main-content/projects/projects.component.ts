@@ -38,46 +38,46 @@ export class ProjectsComponent {
       projectName: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       technologies: [
-        { name: 'HTML', icon: '../../../assets/icons/html-icon.png' },
-        { name: 'CSS', icon: '../../../assets/icons/css-icon.png' },
-        { name: 'JavaScript', icon: '../../../assets/icons/javascript-icon.png' },
-        { name: 'Firebase', icon: '../../../assets/icons/firebase-icon.png' },
+        { name: 'HTML', icon: './assets/icons/html-icon.png' },
+        { name: 'CSS', icon: './assets/icons/css-icon.png' },
+        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png' },
+        { name: 'Firebase', icon: './assets/icons/firebase-icon.png' },
       ],
-      image: '../../../assets/img/join_mainscreen.png',
+      image: './assets/img/join_mainscreen.png',
       imageOverlay: [
-        '../../../assets/img/join_mainscreen.png'
+        './assets/img/join_mainscreen.png'
       ],
-      gitHublink: 'https://join.example.com'
+      gitHublink: 'https://github.com/alexschoefer/Join_470.git'
     },
     {
       projectID: '02',
       projectName: 'El Pollo Loco',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       technologies: [
-        { name: 'HTML', icon: '../../../assets/icons/html-icon.png' },
-        { name: 'CSS', icon: '../../../assets/icons/css-icon.png' },
-        { name: 'JavaScript', icon: '../../../assets/icons/javascript-icon.png' },
+        { name: 'HTML', icon: './assets/icons/html-icon.png' },
+        { name: 'CSS', icon: './assets/icons/css-icon.png' },
+        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png' },
       ],
-      image: '../../../assets/img/el_pollo_loco_mainscreen.png',
+      image: './assets/img/el_pollo_loco_mainscreen.png',
       imageOverlay: [
-        '../../../assets/img/project-screenshot-el_pollo_overlay.png'
+        './assets/img/project-screenshot-el_pollo_overlay.png'
       ],
-      gitHublink: 'https://join.example.com'
+      gitHublink: 'https://github.com/alexschoefer/el-pollo-loco.git'
     },
     {
       projectID: '03',
       projectName: 'Pokedex',
       description: 'This interactive Pokédex, built with HTML, CSS, and JavaScript, pulls data from an API to display each Pokémon’s name, image, and type.',
       technologies: [
-        { name: 'HTML', icon: '../../../assets/icons/html-icon.png' },
-        { name: 'CSS', icon: '../../../assets/icons/css-icon.png' },
-        { name: 'JavaScript', icon: '../../../assets/icons/javascript-icon.png' },
+        { name: 'HTML', icon: './assets/icons/html-icon.png' },
+        { name: 'CSS', icon: './assets/icons/css-icon.png' },
+        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png' },
       ],
-      image: '../../../assets/img/pokedex_mainscreen.png',
+      image: './assets/img/pokedex_mainscreen.png',
       imageOverlay: [
-        '../../../assets/img/pokedex_mainscreen.png'
+        './assets/img/pokedex_mainscreen.png'
       ],
-      gitHublink: 'https://join.example.com',
+      gitHublink: 'https://github.com/alexschoefer/Pokedex.git',
       liveLink: 'test'
     }
   ]

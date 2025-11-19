@@ -329,7 +329,7 @@ section {
   text-decoration: none;
 }
 
-.error-message-privacy-police {
+.error-message-privacy-police, .form-success-message {
   font-family: var(--font-karla);
   font-weight: 400;
   font-size: 14px;
@@ -344,7 +344,12 @@ section {
   visibility: visible;
 }
 
-.error-message-privacy-police-container {
+.form-success-message.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.error-message-privacy-police-container, .success-message-privacy-police-container {
   display: flex;
   width: 616px;
   max-width: 100%;

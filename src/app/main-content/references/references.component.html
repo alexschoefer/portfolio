@@ -11,7 +11,7 @@
                   <div *ngFor="let comment of COMMENTS; let i = index" class="comment"
                        [ngClass]="{'comment-current': isCurrent(i)}">
                     <div *ngIf="isCurrent(i)" class="quotes">
-                      <img src="../../../assets/icons/quotes.png" alt="quotes">
+                      <img src="./assets/icons/quotes.png" alt="quotes">
                     </div>
                     <span>{{ comment.text }}</span>
                     <div *ngIf="isCurrent(i)" class="comment-author-container">
@@ -26,7 +26,7 @@
         <!-- Arrow-Box -->
         <div class="arrow-container">
           <button class="arrow-btn back" (click)="preComment()">
-            <img class="arrow-img" src="../../../assets/icons/arrow_back.png" alt="arrow-back" />
+            <img class="arrow-img" src="./assets/icons/arrow_back.png" alt="arrow-back" />
           </button>
   
           <ng-container *ngIf="commentsLoaded">
@@ -36,7 +36,7 @@
           </ng-container>
   
           <button class="arrow-btn forward" (click)="nextComment()">
-            <img class="arrow-img" src="../../../assets/icons/arrow_forward.png" alt="arrow-forward" />
+            <img class="arrow-img" src="./assets/icons/arrow_forward.png" alt="arrow-forward" />
           </button>
         </div>
   

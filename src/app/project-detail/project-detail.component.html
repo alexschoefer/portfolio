@@ -1,7 +1,7 @@
 <section *ngIf="project && descriptionLoaded">
     <div class="project-overlay">
         <div class="project-close-btn-container">
-            <img src="../../assets/icons/close_icon_small.png" alt="close" (click)="onClose()">
+            <img src="./assets/icons/close_icon_small.png" alt="close" (click)="onClose()">
         </div>
         <div class="project-overlay-content">
             <div class="project-container">
@@ -28,14 +28,14 @@
                     <a [href]="project.gitHublink" target="_blank">
                         <button>
                             <span>GitHub</span>
-                            <img src="../../assets/icons/arrow_outward_project-overlay.png" alt="">
+                            <img src="./assets/icons/arrow_outward_project-overlay.png" alt="">
                         </button>
                     </a>
 
                     <a [href]="project.liveLink" target="_blank">
                         <button *ngIf="project.liveLink">
                             <span>Live Test</span>
-                            <img src="../../assets/icons/arrow_outward_project-overlay.png" alt="">
+                            <img src="./assets/icons/arrow_outward_project-overlay.png" alt="">
                         </button>
                     </a>
                 </div>
@@ -48,7 +48,7 @@
 
         <div class="next-project" (click)="onNext()">
             <button>{{ 'PROJECT.NEXT' | translate }}</button>
-            <img src="../../assets/icons/arrow_forward_hover.png" alt="next">
+            <img src="./assets/icons/arrow_forward_hover.png" alt="next">
         </div>
     </div>
 </section>
