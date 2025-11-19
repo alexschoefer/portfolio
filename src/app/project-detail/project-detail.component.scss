@@ -428,7 +428,7 @@ section {
   }
 }
 
-@media(max-width: 375px) {
+@media(max-width: 390px) {
   section .project-overlay {
     width: 350px;
     padding: 3rem 2rem;
@@ -438,7 +438,7 @@ section {
 
   section .project-overlay {
     .project-overlay-content {
-      height: auto !important;
+      height: 660px;
     }
 
     .project-screen-container {
@@ -494,6 +494,7 @@ section {
     gap: 16px !important;
     width: 280px !important;
     height: 48px !important;
+    margin-top: 80px;
 
     button {
       gap: 6px !important;

@@ -184,7 +184,6 @@ section {
   opacity: 1;
 }
 
-/* === Tablet Landscape (≈1180 px, z. B. iPad Air) === */
 @media (max-width: 1440px) {
   section {
     .main-content-wrapper {
@@ -231,7 +230,6 @@ section {
   }
 }
 
-/* === Tablet Portrait (≤1024 px) === */
 @media (max-width: 1024px) {
   section {
     .main-content-wrapper {
@@ -284,7 +282,6 @@ section {
   }
 }
 
-/* === Mobile Large (≤768 px) === */
 @media (max-width: 768px) {
   section {
     height: auto;
@@ -325,7 +322,6 @@ section {
   }
 }
 
-/* === Mobile Small (≤480 px) === */
 @media (max-width: 480px) {
     section#projects {
       padding-top: 6rem !important;
@@ -395,7 +391,6 @@ section {
     }
   }
 
-/* === Mobile Extra Small (≤320 px) === */
 @media (max-width: 320px) {
   section {
     .main-content-wrapper {

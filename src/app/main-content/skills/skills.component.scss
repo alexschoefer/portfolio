@@ -268,7 +268,7 @@ section {
       padding: 24px;
 
       h2 {
-        font-size: 40px;
+        font-size: 40px !important;
       }
 
       .skill-description-span {
@@ -317,9 +317,10 @@ section {
     .skills-set-container {
       padding-inline: 16px !important;
       gap: 24px;
+      max-width: 380px !important;
 
       h2 {
-        font-size: 56px !important;
+        font-size: 48px !important;
         line-height: 80%;
         white-space: nowrap;
       }
