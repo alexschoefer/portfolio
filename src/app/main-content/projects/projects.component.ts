@@ -3,6 +3,10 @@ import { ProjectDetailComponent } from '../../project-detail/project-detail.comp
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
+/**
+ * Displays a list of projects and allows users to open a detailed project view.
+ * Supports switching between projects and prevents page scrolling while a project detail is open.
+ */
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -12,26 +16,49 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ProjectsComponent {
 
+  /**
+   * The currently selected project. When `null`, no project detail is shown.
+   */
   selectedProject: any = null;
+
+  /**
+   * Index of the currently selected project in the `projects` array.
+   * Defaults to `-1` when no project is selected.
+   */
   currentIndex: number = -1;
 
+  /**
+   * Opens the project detail view for the given project and prevents background scrolling.
+   * @param project - The project object to display.
+   * @param index - The index of the project in the project list.
+   */
   openProject(project: any, index: number) {
     this.selectedProject = project;
     this.currentIndex = index;
     document.body.classList.add('no-scroll');
   }
 
+  /**
+   * Closes the project detail view and re-enables page scrolling.
+   */
   closeProject() {
     this.selectedProject = null;
     document.body.classList.remove('no-scroll');
   }
 
+  /**
+   * Navigates to the next project in the list.
+   * Wraps around to the first project when the end of the list is reached.
+   */
   nextProject() {
     if (this.projects.length === 0) return;
     this.currentIndex = (this.currentIndex + 1) % this.projects.length;
     this.selectedProject = this.projects[this.currentIndex];
   }
 
+  /**
+   * List of available projects displayed in the component.
+   */
   projects = [
     {
       projectID: '01',
@@ -47,7 +74,8 @@ export class ProjectsComponent {
       imageOverlay: [
         './assets/img/join_mainscreen.png'
       ],
-      gitHublink: 'https://github.com/alexschoefer/Join_470.git'
+      gitHublink: 'https://github.com/alexschoefer/Join_470.git',
+      liveLink: 'test'
     },
     {
       projectID: '02',
@@ -62,7 +90,8 @@ export class ProjectsComponent {
       imageOverlay: [
         './assets/img/project-screenshot-el_pollo_overlay.png'
       ],
-      gitHublink: 'https://github.com/alexschoefer/el-pollo-loco.git'
+      gitHublink: 'https://github.com/alexschoefer/el-pollo-loco.git',
+      liveLink: 'test'
     },
     {
       projectID: '03',
@@ -80,7 +109,5 @@ export class ProjectsComponent {
       gitHublink: 'https://github.com/alexschoefer/Pokedex.git',
       liveLink: 'test'
     }
-  ]
-
-
+  ];
 }
