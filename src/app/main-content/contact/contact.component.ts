@@ -34,7 +34,7 @@ export class ContactComponent {
   showPrivacyError = false;
   privacyAccepted = false;
   privacyTouched = false;
-  mailTest = true;
+  mailTest = false;
   mailSent: boolean = false;
 
   /**
