@@ -91,7 +91,7 @@ export class ProjectsComponent {
         './assets/img/project-screenshot-el_pollo_overlay.png'
       ],
       gitHublink: 'https://github.com/alexschoefer/el-pollo-loco.git',
-      liveLink: 'test'
+      liveLink: 'https://elpolloloco.alexander-schoefer.de/index.html'
     },
     {
       projectID: '03',

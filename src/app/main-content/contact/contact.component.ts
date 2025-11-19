@@ -34,7 +34,7 @@ export class ContactComponent {
   showPrivacyError = false;
   privacyAccepted = false;
   privacyTouched = false;
-  // mailTest = true;
+  mailTest = true;
   mailSent: boolean = false;
 
   /**
@@ -50,7 +50,7 @@ export class ContactComponent {
 
   /**
    * Validates a specific form field when it loses focus (blur event).
-   * @param field - The field to validate (`name`, `email`, or `message`)
+   * @param field - The field to validate
    */
   validateField(field: 'name' | 'email' | 'message') {
     if (field === 'name') {
@@ -74,7 +74,7 @@ export class ContactComponent {
 
   /**
    * Resets the error state of a field when it gains focus.
-   * @param field - The field to clear (`name`, `email`, or `message`)
+   * @param field - The field to clear
    */
   clearErrorMessage(field: 'name' | 'email' | 'message') {
     if (field === 'name') this.showNameError = false;
@@ -109,7 +109,6 @@ export class ContactComponent {
    * @param ngForm - The Angular form reference
    */
   onSubmit(ngForm: NgForm) {
-    // Validate all fields before submit
     this.showNameError = !this.contactData.name.trim();
     this.showEmailError = !this.contactData.email.trim() || !this.isValidEmail(this.contactData.email);
     this.showMessageError = !this.contactData.message.trim() || this.contactData.message.trim().length < 10;
@@ -134,6 +133,7 @@ export class ContactComponent {
       .subscribe({
         next: () => {
           ngForm.resetForm();
+          this.mailSent = true;
           this.privacyAccepted = false;
           this.privacyTouched = false;
         },
