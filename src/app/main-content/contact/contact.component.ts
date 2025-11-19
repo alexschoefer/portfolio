@@ -34,7 +34,7 @@ export class ContactComponent {
   showPrivacyError = false;
   privacyAccepted = false;
   privacyTouched = false;
-  mailTest = true;
+  // mailTest = true;
   mailSent: boolean = false;
 
   /**
@@ -117,19 +117,17 @@ export class ContactComponent {
 
     if (!this.isFormValid()) return;
 
-    console.log(this.mailSent);
-
     // Test mode - no actual request
-    if (this.mailTest) {
-      console.log('Test mode – email not sent!', this.contactData);
-      this.mailSent = true;
-      console.log(this.mailSent);
+    // if (this.mailTest) {
+    //   console.log('Test mode – email not sent!', this.contactData);
+    //   this.mailSent = true;
+    //   console.log(this.mailSent);
 
-      ngForm.resetForm();
-      this.privacyAccepted = false;
-      this.privacyTouched = false;
-      return;
-    }
+    //   ngForm.resetForm();
+    //   this.privacyAccepted = false;
+    //   this.privacyTouched = false;
+    //   return;
+    // }
 
     // Real email request
     this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
