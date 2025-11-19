@@ -129,15 +129,18 @@ export class ContactComponent {
     // }
 
     // Real email request
-    this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
-      .subscribe({
-        next: () => {
-          ngForm.resetForm();
-          this.mailSent = true;
-          this.privacyAccepted = false;
-          this.privacyTouched = false;
-        },
-        error: (err) => console.error(err)
-      });
+    this.http.post(this.post.endPoint, this.contactData, {
+      headers: { 'Content-Type': 'application/json' },
+      responseType: 'text'
+    })
+    .subscribe({
+      next: () => {
+        ngForm.resetForm();
+        this.mailSent = true;
+        this.privacyAccepted = false;
+        this.privacyTouched = false;
+      },
+      error: (err) => console.error(err)
+    });
   }
 }
