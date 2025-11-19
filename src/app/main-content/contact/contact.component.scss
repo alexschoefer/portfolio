@@ -684,7 +684,6 @@ section {
   }
 }
 
-/* === Mobile XS (≤ 375px) === */
 @media (max-width: 375px) {
   .main-content-wrapper {
     padding-inline: 8px !important;
@@ -721,7 +720,6 @@ section {
     overflow: visible;
   }
 
-  /* --- Checkbox & Privacy Text --- */
   .privacy-police-container {
     width: 100% !important;
     max-width: 100% !important;
@@ -757,7 +755,6 @@ section {
     text-decoration: none;
   }
 
-  /* --- Buttons & Inputs --- */
   .send-btn-container button {
     display: block;
     margin: 0 auto;
@@ -798,7 +795,6 @@ section {
   }
 }
 
-/* === Mobile XXS (≤ 320px) === */
 @media (max-width: 320px) {
   .main-content-wrapper {
     padding-inline: 12px !important;

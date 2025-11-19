@@ -188,7 +188,6 @@ section {
     }
 }
 
-/* === Tablet (max 991px) === */
 @media (max-width: 991px) {
     section {
         padding: 0 24px;
@@ -211,7 +210,6 @@ section {
         }
     }
 
-    /* Hamburger sichtbar machen */
     .burger-menu {
         display: flex;
         flex-direction: column;
@@ -313,7 +311,6 @@ section {
     }
 }
 
-/* === TABLET UND DARUNTER === */
 @media (max-width: 1020px) {
     section {
       height: auto;
@@ -342,7 +339,6 @@ section {
     }
   }
   
-  /* === MOBILE === */
   @media (max-width: 480px) {
     .logo-container .firstNameLetter,
     .logo-container .lastNameLetter {
