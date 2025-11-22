@@ -1,9 +1,10 @@
 section {
-    height: 100%;
     width: 100%;
+    height: auto;
     background: #1c1c1c;
     padding-top: 6rem;
     padding-bottom: 6rem;
+    position: relative;
 
     .main-content-wrapper {
         margin-inline: auto;
@@ -36,6 +37,10 @@ section {
                     justify-content: center;
                     gap: 0;
                     line-height: 1;
+
+                    a {
+                        text-decoration: none;
+                    }
                 }
 
                 .firstNameLetter,
@@ -75,6 +80,10 @@ section {
                         font-size: 24px;
                         color: #FFFFFF;
                         line-height: 120%;
+                    }
+
+                    a {
+                        text-decoration: none;
                     }
                 }
 
