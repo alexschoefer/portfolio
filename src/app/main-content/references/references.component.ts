@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
@@ -30,6 +30,22 @@ export class ReferencesComponent {
    * Starts at index 1 after loading.
    */
   currentActiveComment = 1;
+
+  translateX = 0;
+
+  ngAfterViewInit() {
+    // Nach dem ersten Rendern Position setzen
+    this.updateTranslate();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateTranslate();
+  }
+
+  updateTranslate() {
+    this.translateX = this.getTranslateX();
+  }
 
   /**
    * Horizontal gap in pixels between two comment elements.
@@ -96,23 +112,16 @@ export class ReferencesComponent {
    */
   getTranslateX() {
     const screenWidth = window.innerWidth;
-
-    if (screenWidth < 1025) {
-      return 0;
-    }
-
-    const containerWidth =
-      this.COMMENTS.length * this.commentWidth +
-      (this.COMMENTS.length - 1) * this.gap;
-
+  
+    if (screenWidth < 1140) return 0; // Slider deaktiviert
+  
+    const activeIndex = this.currentActiveComment;
+    const totalComments = this.COMMENTS.length;
+  
     const wrapperCenter = screenWidth / 2;
-    const commentCenter = this.commentWidth / 2;
-
-    const translateX =
-      -this.currentActiveComment * (this.commentWidth + this.gap) +
-      wrapperCenter -
-      commentCenter;
-
-    return translateX;
+    const activeCommentCenter = activeIndex * (this.commentWidth + this.gap) + this.commentWidth / 2;
+  
+    return wrapperCenter - activeCommentCenter;
   }
+  
 }
