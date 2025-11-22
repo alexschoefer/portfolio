@@ -1,25 +1,24 @@
 section {
     background: #1c1c1c;
+    // padding-top: 9rem;
+    padding-bottom: 6rem;
   
     .main-content-wrapper {
       margin-inline: auto;
       padding-inline: 96px;
       max-width: 1440px;
       width: 100%;
-      overflow-x: hidden;
   
       .about-me-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 6px;
-        padding-top: 160px;
-        padding-bottom: 160px;
-        overflow-x: hidden;
       }
   
       .photo-container {
-        transform: translateY(-98px);
+        width: fit-content;
+        position: relative;
   
         .profil-photo {
           position: absolute;
@@ -29,18 +28,25 @@ section {
           width: 520px;
           height: 520px;
           z-index: 2;
+          border-radius: 30px;
+          cursor: pointer;
+          transition: transform 0.3s ease; 
         }
   
         img {
-          max-width: 100%;
-          height: auto;
+          width: 100%;
+          height: 100%;
           display: block;
         }
   
         .background-profil-img {
           width: 520px;
           height: 520px;
-          transform: translateY(10%);
+          border-radius: 30px;
+        }
+
+        &:hover .profil-photo {
+          transform: translateX(calc(-50% + 20px)) translateY(-20px);
         }
       }
   
@@ -116,8 +122,8 @@ section {
   
         .about-me-wrapper {
           gap: 24px;
-          padding-top: 120px;
-          padding-bottom: 120px;
+          // padding-top: 120px;
+          // padding-bottom: 120px;
         }
   
         .photo-container {
@@ -162,8 +168,8 @@ section {
           grid-template-columns: 1fr;
           justify-items: center;
           gap: 64px;
-          padding-top: 100px;
-          padding-bottom: 100px;
+          // padding-top: 100px;
+          // padding-bottom: 100px;
         }
   
         .photo-container {
@@ -329,12 +335,12 @@ section {
       .about-me-content {
         padding: 12px;
         span {
-          font-size: 13px;
+          font-size: 15px;
         }
       }
   
       .highlight-container .highlight-content span {
-        font-size: 12px;
+        font-size: 15px;
       }
     }
   }

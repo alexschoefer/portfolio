@@ -285,6 +285,7 @@ section {
 @media (max-width: 768px) {
   section {
     height: auto;
+    padding-bottom: 4rem;
 
     .main-content-wrapper {
       padding-inline: 32px;
@@ -324,8 +325,6 @@ section {
 
 @media (max-width: 480px) {
     section#projects {
-      padding-top: 6rem !important;
-      padding-bottom: 6rem;
       height: auto !important;  
     }
 

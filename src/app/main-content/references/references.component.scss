@@ -2,7 +2,6 @@ section {
   height: auto;
   width: 100%;
   background: #1c1c1c;
-  padding-top: 6rem !important;
   padding-bottom: 6rem;
   position: relative;
 
@@ -86,6 +85,7 @@ section {
   width: 632px;
   max-width: 632px;
   border-radius: 32px;
+  max-height: 320px;
   border: 1px solid var(--color-main-green);
   padding: 48px 40px;
   margin-left: auto;
@@ -108,7 +108,7 @@ section {
   flex-shrink: 0;
   max-width: 632px;
   height: 100%;
-  max-height: 320px;
+  min-height: 320px;
   border-radius: 32px;
   border: 1px solid var(--color-main-green);
   padding: 48px 40px;
@@ -159,7 +159,8 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 320px;
+  min-height: 320px;
+  height: 100%;
 }
 
 .comment:not(.comment-current) {
@@ -322,7 +323,7 @@ section {
 @media (max-width: 820px) {
 
   section {
-    padding-top: 0;
+    padding-top: 4rem;
   }
 
   .main-content-wrapper {
@@ -342,14 +343,14 @@ section {
   }
 
   .comment-current .quotes {
-      position: absolute;
-      top: -8px !important;
-      left: -2px !important;
-      transform: none !important;
-      width: 36px !important;
-      height: auto;
-      z-index: 99;
-    }
+    position: absolute;
+    top: -8px !important;
+    left: -2px !important;
+    transform: none !important;
+    width: 36px !important;
+    height: auto;
+    z-index: 99;
+  }
 
   .comment,
   .comment-current {
@@ -399,7 +400,7 @@ section {
     padding-top: 72px;
 
     span {
-      font-size: 15px;
+      font-size: 18px;
     }
   }
 
@@ -493,7 +494,6 @@ section {
 
   .comment {
     width: 100%;
-    padding: 24px 16px;
     border-radius: 24px;
   }
 
