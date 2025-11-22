@@ -78,7 +78,7 @@
                             </span>
                         </div>
                         <div class="send-btn-container">
-                            <button type="submit" [disabled]="!isFormValid()">{{'CONTACT.BUTTON' | translate}}</button>
+                            <button type="submit" [disabled]="!isFormValid()" [class.active]="isFormValid()">{{'CONTACT.BUTTON' | translate}}</button>
                         </div>
                     </div>
                 </form>

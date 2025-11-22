@@ -22,7 +22,12 @@ export class NavbarComponent {
   constructor(private translate: TranslateService) {
     translate.addLangs(['en', 'de']);
     translate.setDefaultLang('en');
-    this.translate.use('en');
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage && ['en', 'de'].includes(savedLanguage)) {
+      this.translate.use(savedLanguage);
+    } else {
+      this.translate.use('en');
+    }
   }
 
   /**
@@ -37,7 +42,9 @@ export class NavbarComponent {
    * @param lang - The selected language as 'EN' or 'DE'
    */
   toggleLanguage(lang: 'EN' | 'DE') {
-    this.translate.use(lang.toLowerCase());
+    const langCode = lang.toLowerCase();
+    this.translate.use(langCode);
+    localStorage.setItem('language', langCode);
   }
 
   /**
