@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -15,9 +15,10 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit, OnDestroy {
+  private observer?: IntersectionObserver;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private elementRef: ElementRef) { }
 
   /**
    * Stores the values entered into the contact form.
@@ -142,5 +143,25 @@ export class ContactComponent {
       },
       error: (err) => console.error(err)
     });
+  }
+
+  ngAfterViewInit(): void {
+    const sectionEl = this.elementRef.nativeElement.querySelector('#contact');
+    if (!sectionEl) return;
+
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sectionEl.classList.add('contact-visible'); // Klasse für Animation
+          this.observer?.unobserve(sectionEl);       // nur einmal
+        }
+      });
+    }, { threshold: 0.3 });
+
+    this.observer.observe(sectionEl);
+  }
+
+  ngOnDestroy(): void {
+    this.observer?.disconnect();
   }
 }

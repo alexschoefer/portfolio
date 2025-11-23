@@ -1,347 +1,372 @@
 section {
-    background: #1c1c1c;
-    // padding-top: 9rem;
-    padding-bottom: 6rem;
-  
-    .main-content-wrapper {
-      margin-inline: auto;
-      padding-inline: 96px;
-      max-width: 1440px;
-      width: 100%;
-  
-      .about-me-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 6px;
-      }
-  
-      .photo-container {
-        width: fit-content;
-        position: relative;
-  
-        .profil-photo {
-          position: absolute;
-          bottom: 0px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 520px;
-          height: 520px;
-          z-index: 2;
-          border-radius: 30px;
-          cursor: pointer;
-          transition: transform 0.3s ease; 
-        }
-  
-        img {
-          width: 100%;
-          height: 100%;
-          display: block;
-        }
-  
-        .background-profil-img {
-          width: 520px;
-          height: 520px;
-          border-radius: 30px;
-        }
+  background: #1c1c1c;
+  // padding-top: 9rem;
+  padding-bottom: 6rem;
 
-        &:hover .profil-photo {
-          transform: translateX(calc(-50% + 20px)) translateY(-20px);
-        }
+  .main-content-wrapper {
+    margin-inline: auto;
+    padding-inline: 96px;
+    max-width: 1440px;
+    width: 100%;
+
+    .about-me-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .photo-container {
+      width: fit-content;
+      position: relative;
+
+      .profil-photo {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 520px;
+        height: 520px;
+        z-index: 2;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
       }
-  
-      .about-me-container {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        transform: translateY(100px);
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .background-profil-img {
+        width: 520px;
+        height: 520px;
+        border-radius: 30px;
+      }
+
+      &:hover .profil-photo {
+        transform: translateX(calc(-50% + 20px)) translateY(-20px);
       }
     }
-  
-    h3 {
+
+    .about-me-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      transform: translateY(100px);
+    }
+  }
+
+  h3 {
+    font-family: var(--font-karla);
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--color-main-green);
+  }
+
+  h2 {
+    font-family: var(--font-fira);
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--color-main-green);
+  }
+
+  .about-me-content {
+    border: 1px solid var(--color-main-green);
+    border-radius: 30px;
+    background: radial-gradient(circle, #08463b4d 30%, #1c1c1c 100%);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    span {
       font-family: var(--font-karla);
-      font-weight: 500;
-      font-size: 24px;
-      color: var(--color-main-green);
-    }
-  
-    h2 {
-      font-family: var(--font-fira);
-      font-weight: 700;
-      font-size: 64px;
-      color: var(--color-main-green);
-    }
-  
-    .about-me-content {
-      border: 1px solid var(--color-main-green);
-      border-radius: 30px;
-      background: radial-gradient(circle, #08463b4d 30%, #1c1c1c 100%);
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-  
-      span {
-        font-family: var(--font-karla);
-        font-size: 18px;
-        line-height: 140%;
-        color: #fff;
-        text-align: justify;
-      }
-    }
-  
-    .highlight-container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-  
-      .highlight-content {
-        display: flex;
-        align-items: flex-start;
-        gap: 16px;
-  
-        img {
-          width: 24px;
-          height: 24px;
-        }
-  
-        span {
-          color: #fff;
-          font-family: var(--font-karla);
-          font-size: 16px;
-          line-height: 140%;
-        }
-      }
+      font-size: 18px;
+      line-height: 140%;
+      color: #fff;
+      text-align: justify;
     }
   }
-  
-  @media (max-width: 1440px) {
-    section {
-      .main-content-wrapper {
-        padding-inline: 64px;
-  
-        .about-me-wrapper {
-          gap: 24px;
-          // padding-top: 120px;
-          // padding-bottom: 120px;
-        }
-  
-        .photo-container {
-          transform: translateY(-60px);
-  
-          .profil-photo,
-          .background-profil-img {
-            width: 420px;
-            height: 420px;
-          }
-        }
-  
-        .about-me-container {
-          transform: translateY(60px);
-        }
-      }
-  
-      h2 {
-        font-size: 52px;
-      }
-  
-      h3 {
-        font-size: 22px;
-      }
-  
-      .about-me-content {
-        padding: 28px;
-  
-        span {
-          font-size: 17px;
-        }
-      }
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    section {
-      .main-content-wrapper {
-        padding-inline: 48px;
-  
-        .about-me-wrapper {
-          grid-template-columns: 1fr;
-          justify-items: center;
-          gap: 64px;
-          // padding-top: 100px;
-          // padding-bottom: 100px;
-        }
-  
-        .photo-container {
-          transform: translateY(0);
-  
-          .profil-photo,
-          .background-profil-img {
-            width: 380px;
-            height: 380px;
-          }
-        }
-  
-        .about-me-container {
-          align-items: center;
-          text-align: center;
-          transform: translateY(0);
-        }
-      }
-  
-      h2 {
-        font-size: 56px;
-      }
-  
-      h3 {
-        font-size: 28px;
-      }
-  
-      .about-me-content {
-        padding: 24px;
-        gap: 24px;
-  
-        span {
-          font-size: 16px;
-        }
-      }
-    }
-  }
-  
-  @media (max-width: 768px) {
-    section {
-      .main-content-wrapper {
-        padding-inline: 32px;
-  
-        .photo-container {
-          .profil-photo,
-          .background-profil-img {
-            width: 300px;
-            height: 300px;
-          }
-        }
-  
-        .about-me-wrapper {
-          padding-top: 80px;
-          padding-bottom: 80px;
-        }
 
-        .about-me-container {
-          justify-content: flex-start;
-          align-items: center;
+  .highlight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .highlight-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      span {
+        color: #fff;
+        font-family: var(--font-karla);
+        font-size: 16px;
+        line-height: 140%;
+      }
+    }
+  }
+}
+
+#about .photo-container {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+#about .about-me-container {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+#about.about-visible .photo-container {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+#about.about-visible .about-me-container {
+  opacity: 1;
+  transform: translateY(80px); 
+}
+
+@media (max-width: 1440px) {
+  section {
+    .main-content-wrapper {
+      padding-inline: 64px;
+
+      .about-me-wrapper {
+        gap: 24px;
+        // padding-top: 120px;
+        // padding-bottom: 120px;
+      }
+
+      .photo-container {
+        transform: translateY(-60px);
+
+        .profil-photo,
+        .background-profil-img {
+          width: 420px;
+          height: 420px;
         }
       }
-  
-      h2 {
-        font-size: 38px;
+
+      .about-me-container {
+        transform: translateY(60px);
       }
-  
-      h3 {
-        font-size: 24px !important;
+    }
+
+    h2 {
+      font-size: 52px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    .about-me-content {
+      padding: 28px;
+
+      span {
+        font-size: 17px;
       }
-  
-      .about-me-content {
-        padding: 20px;
-  
-        span {
-          font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  section {
+    .main-content-wrapper {
+      padding-inline: 48px;
+
+      .about-me-wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 64px;
+        // padding-top: 100px;
+        // padding-bottom: 100px;
+      }
+
+      .photo-container {
+        transform: translateY(0);
+
+        .profil-photo,
+        .background-profil-img {
+          width: 380px;
+          height: 380px;
         }
       }
-  
-      .highlight-container .highlight-content span {
+
+      .about-me-container {
+        align-items: center;
+        text-align: center;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      font-size: 56px;
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+
+    .about-me-content {
+      padding: 24px;
+      gap: 24px;
+
+      span {
         font-size: 16px;
       }
     }
   }
-  
-  @media (max-width: 480px) {
-    section {
-      .main-content-wrapper {
-        padding-inline: 20px;
-  
-        .photo-container {
-          .profil-photo,
-          .background-profil-img {
-            width: 240px;
-            height: 240px;
-          }
-        }
-  
-        .about-me-wrapper {
-          gap: 48px;
-          padding-top: 60px;
-          padding-bottom: 60px;
-        }
-      }
-  
-      h2 {
-        font-size: 48px !important;
-      }
-  
-      h3 {
-        font-size: 18px !important;
-      }
-  
-      .about-me-content {
-        padding: 16px;
+}
 
-        span {
-          font-size: 16px;
+@media (max-width: 768px) {
+  section {
+    .main-content-wrapper {
+      padding-inline: 32px;
+
+      .photo-container {
+
+        .profil-photo,
+        .background-profil-img {
+          width: 300px;
+          height: 300px;
         }
+      }
+
+      .about-me-wrapper {
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
 
       .about-me-container {
         justify-content: flex-start;
-        align-items: flex-start !important;
-      }
-  
-      .highlight-container .highlight-content {
-        gap: 10px;
-  
-        img {
-          width: 20px;
-          height: 20px;
-        }
-  
-        span {
-          font-size: 16px;
-        }
+        align-items: center;
       }
     }
+
+    h2 {
+      font-size: 38px;
+    }
+
+    h3 {
+      font-size: 24px !important;
+    }
+
+    .about-me-content {
+      padding: 20px;
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    .highlight-container .highlight-content span {
+      font-size: 16px;
+    }
   }
-  
-  @media (max-width: 320px) {
-    section {
-      .main-content-wrapper {
-        padding-inline: 12px;
-  
-        .photo-container {
-          .profil-photo,
-          .background-profil-img {
-            width: 200px;
-            height: 200px;
-          }
+}
+
+@media (max-width: 480px) {
+  section {
+    .main-content-wrapper {
+      padding-inline: 20px;
+
+      .photo-container {
+
+        .profil-photo,
+        .background-profil-img {
+          width: 240px;
+          height: 240px;
         }
       }
-  
-      h2 {
-        font-size: 26px;
+
+      .about-me-wrapper {
+        gap: 48px;
+        padding-top: 60px;
+        padding-bottom: 60px;
       }
-  
-      h3 {
-        font-size: 18px;
+    }
+
+    h2 {
+      font-size: 48px !important;
+    }
+
+    h3 {
+      font-size: 18px !important;
+    }
+
+    .about-me-content {
+      padding: 16px;
+
+      span {
+        font-size: 16px;
       }
-  
-      .about-me-content {
-        padding: 12px;
-        span {
-          font-size: 16px;
-        }
+    }
+
+    .about-me-container {
+      justify-content: flex-start;
+      align-items: flex-start !important;
+    }
+
+    .highlight-container .highlight-content {
+      gap: 10px;
+
+      img {
+        width: 20px;
+        height: 20px;
       }
-  
-      .highlight-container .highlight-content span {
+
+      span {
         font-size: 16px;
       }
     }
   }
-  
+}
+
+@media (max-width: 320px) {
+  section {
+    .main-content-wrapper {
+      padding-inline: 12px;
+
+      .photo-container {
+
+        .profil-photo,
+        .background-profil-img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    .about-me-content {
+      padding: 12px;
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    .highlight-container .highlight-content span {
+      font-size: 16px;
+    }
+  }
+}
