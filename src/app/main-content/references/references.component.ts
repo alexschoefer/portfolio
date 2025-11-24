@@ -4,7 +4,8 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 /**
  * Displays translated reference comments in a horizontal carousel.
- * Comments reload when the active language changes.
+ * Shows three comments at a time (previous, current, next) and updates
+ * the carousel when the active language changes. Handles window resize events.
  */
 @Component({
   selector: 'app-references',
@@ -16,7 +17,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 export class ReferencesComponent {
 
   /**
-   * List of comments loaded from the translation JSON.
+   * Array of translated comments loaded from translation files.
    */
   COMMENTS: Array<{ text: string; author: string }> = [];
 
@@ -26,45 +27,42 @@ export class ReferencesComponent {
   commentsLoaded = false;
 
   /**
-   * Index of the currently active comment in the carousel.
-   * Starts at index 1 after loading.
+   * Index of the currently active (center) comment in the carousel.
    */
   currentActiveComment = 1;
 
-  translateX = 0;
-
-  ngAfterViewInit() {
-    // Nach dem ersten Rendern Position setzen
-    this.updateTranslate();
-  }
-
-  @HostListener('window:resize')
-  onResize() {
-    this.updateTranslate();
-  }
-
-  updateTranslate() {
-    this.translateX = this.getTranslateX();
-  }
+  /**
+   * Flag indicating that a window resize is in progress.
+   */
+  resizing = false;
 
   /**
-   * Horizontal gap in pixels between two comment elements.
+   * Timeout ID for debouncing resize events.
    */
-  gap = 32;
-
-  /**
-   * Width in pixels of a single comment container (desktop layout).
-   */
-  commentWidth = 632;
+  resizeTimeout: any;
 
   constructor(private translate: TranslateService) {
     this.loadComments();
+    // Reload comments when language changes
     this.translate.onLangChange.subscribe(() => this.loadComments());
   }
 
   /**
-   * Loads the comments from translation files using the key `REFERENCES.COMMENTS`.
-   * Validates that the result is an array.
+   * Returns the three visible comments in the carousel:
+   * previous, current, and next.
+   */
+  get visibleComments() {
+    const total = this.COMMENTS.length;
+    if (total === 0) return [];
+    const left = this.COMMENTS[(this.currentActiveComment - 1 + total) % total];
+    const center = this.COMMENTS[this.currentActiveComment];
+    const right = this.COMMENTS[(this.currentActiveComment + 1) % total];
+    return [left, center, right];
+  }
+
+  /**
+   * Loads translated comments from the translation service.
+   * Ensures the response is an array, otherwise logs an error.
    */
   loadComments() {
     this.translate.get('REFERENCES.COMMENTS').subscribe((res: any) => {
@@ -81,47 +79,32 @@ export class ReferencesComponent {
   }
 
   /**
-   * Moves to the next comment in the carousel.
-   * Wraps around when reaching the last one.
+   * Advances the carousel to the next comment.
+   * Wraps around to the first comment when reaching the end.
    */
   nextComment() {
     this.currentActiveComment = (this.currentActiveComment + 1) % this.COMMENTS.length;
   }
 
   /**
-   * Moves to the previous comment in the carousel.
-   * Wraps around when reaching the first one.
+   * Moves the carousel to the previous comment.
+   * Wraps around to the last comment when reaching the beginning.
    */
   preComment() {
     this.currentActiveComment = (this.currentActiveComment - 1 + this.COMMENTS.length) % this.COMMENTS.length;
   }
 
   /**
-   * Checks if a given comment index matches the currently active comment.
-   * @param index - The index of a comment
-   * @returns True if it's currently active
+   * Handles window resize events.
+   * Sets a `resizing` flag and debounces updates to avoid rapid state changes.
    */
-  isCurrent(index: number) {
-    return index === this.currentActiveComment;
-  }
+  @HostListener('window:resize')
+  onResize() {
+    this.resizing = true;
+    if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
 
-  /**
-   * Calculates the horizontal translation value for centering the active comment in a desktop carousel layout.
-   * Returns 0 on smaller screens (mobile/tablet) to disable horizontal movement.
-   * @returns Horizontal transform translateX value in pixels
-   */
-  getTranslateX() {
-    const screenWidth = window.innerWidth;
-  
-    if (screenWidth < 1140) return 0; // Slider deaktiviert
-  
-    const activeIndex = this.currentActiveComment;
-    const totalComments = this.COMMENTS.length;
-  
-    const wrapperCenter = screenWidth / 2;
-    const activeCommentCenter = activeIndex * (this.commentWidth + this.gap) + this.commentWidth / 2;
-  
-    return wrapperCenter - activeCommentCenter;
+    this.resizeTimeout = setTimeout(() => {
+      this.resizing = false;
+    }, 1000);
   }
-  
 }

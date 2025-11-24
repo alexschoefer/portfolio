@@ -3,6 +3,7 @@ section {
   width: 100%;
   background: #1c1c1c;
   padding-bottom: 6rem;
+  padding-top: 6rem;
   position: relative;
 
   .main-content-wrapper {
@@ -89,8 +90,6 @@ section {
   padding: 48px 40px;
   height: 100%;
   border: 1px solid var(--color-main-green);
-  margin-left: auto;
-  margin-right: auto;
   background-color: #3dcfb61a;
   opacity: 0.6;
   transition: transform 0.4s ease, opacity 0.4s ease;
@@ -107,20 +106,15 @@ section {
 .comment-current {
   position: relative;
   flex-shrink: 0;
-  max-width: 632px;
-  height: 100%;
-  min-height: 320px;
+  width: 632px;
+  height: 320px;
   border-radius: 32px;
   border: 1px solid var(--color-main-green);
   padding: 48px 40px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #3dcfb64d;
   z-index: 2;
   opacity: 1;
   transform: scale(1);
-  transition: transform 0.4s ease, opacity 0.4s ease;
-
 
   span {
     font-family: var(--font-karla);
@@ -144,38 +138,29 @@ section {
 
 .comment-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 100%; 
+  min-height: 320px;
   gap: 32px;
-  transition: transform 0.5s ease;
-  transform: translateX(0);
+  transition: transform 0.4s ease;
+  will-change: transform;
 }
 
 .comment-wrapper {
   width: 100%;
-  max-width: 1440px;
-  overflow-x: hidden;
-  overflow-y: visible;
   display: flex;
   justify-content: center;
-  align-items: center;
+  overflow-x: hidden;
   position: relative;
   min-height: 320px;
-  height: 100%;
 }
 
-.comment:not(.comment-current) {
-  transform: scale(0.9);
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.quotes {
+.comment-current .quotes {
   position: absolute;
-  top: calc(50% - 105px);
-  left: calc(50% - 365px);
-  transform: translateY(-50%);
-  max-width: 90px;
+  top: -2px;
+  left: -50px;
+  max-width: 85px;
   width: 100%;
   height: 64px;
   z-index: 999;
@@ -185,6 +170,16 @@ section {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.comment.side-comment {
+  transform: scale(0.9);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.comment-wrapper.resizing .comment-container {
+  transition: none !important;
 }
 
 .comment-author-container {
@@ -215,95 +210,10 @@ section {
 
 /* Media Queries */
 
-@media (max-width: 1180px) {
-  .main-content-wrapper {
-    padding-inline: 64px;
-    gap: 40px;
-  }
-
-  .references-container {
-    width: 100%;
-    max-width: 100%;
-    gap: 40px;
-  }
-
-  .references-headline-container {
-    width: 100%;
-
-    h3 {
-      font-size: 28px;
-      white-space: normal;
-      text-align: center;
-    }
-  }
-
-  .comment,
-  .comment-current {
-    width: 100%;
-    max-width: 520px;
-    height: 100%;
-    padding: 40px 32px;
-  }
-
-  .quotes {
-    left: 24px;
-    top: 24px;
-    width: 80px;
-  }
-
-  .comment-author-container {
-    padding-top: 80px;
-
-    span {
-      font-size: 18px;
-    }
-
-    div {
-      width: 120px;
-    }
-  }
-
-  .arrow-container {
-    gap: 16px;
-
-    .arrow-img {
-      width: 32px;
-      height: 32px;
-    }
-
-    .point {
-      width: 7px;
-      height: 7px;
-    }
-  }
-}
-
-@media (min-width: 1125px) {
-  .comment-container {
-    display: flex;
-    gap: 32px;
-    transition: transform 0.5s ease;
-    transform: translateX(0);
-  }
-
-  .comment-current {
-    transform: scale(1);
-    opacity: 1;
-    z-index: 2;
-  }
-
-  .comment:not(.comment-current) {
-    transform: scale(0.9);
-    opacity: 0.6;
-    z-index: 1;
-    display: block;
-  }
-}
-
 @media (max-width: 1124px) {
   .comment-container {
     justify-content: center;
-    transform: none;
+    transform: translateX(0);
   }
 
   .comment:not(.comment-current) {
