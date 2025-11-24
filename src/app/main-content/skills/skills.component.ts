@@ -1,5 +1,7 @@
 import { Component, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 
 /**
  * Displays a skills section and triggers a CSS animation
@@ -13,38 +15,24 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
-export class SkillsComponent implements AfterViewInit, OnDestroy {
-
-  /** IntersectionObserver instance for detecting viewport entry */
-  private observer?: IntersectionObserver;
-
-  constructor(private elementRef: ElementRef) {}
-
+export class SkillsComponent implements AfterViewInit {
+  
   /**
-   * Initializes the IntersectionObserver after the view has been rendered.
-   * Observes the `#skills` section and adds the `skills-visible` class
-   * when it becomes visible in the viewport
+   * Initializes the AOS (Animate On Scroll) library once the view has fully rendered.
+   * 
+   * This ensures that scroll-based animations are properly set up and triggered
+   * when the component's elements enter the viewport.
+   *
+   * - `duration`: Sets the animation duration in milliseconds
+   * - `easing`: Defines the transition timing function
+   * - `once`: Ensures animations occur only once per element
    */
+
   ngAfterViewInit(): void {
-    const sectionEl = this.elementRef.nativeElement.querySelector('#skills');
-
-    this.observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          sectionEl.classList.add('skills-visible');
-          this.observer?.unobserve(sectionEl); 
-        }
-      });
-    }, { threshold: 0.3 });
-
-    if (sectionEl) this.observer.observe(sectionEl);
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out',
+      once: true
+    });
   }
-
-  /**
-   * Disconnects the IntersectionObserver when the component is destroyed
-   * to prevent memory leaks.
-   */
-  ngOnDestroy(): void {
-    this.observer?.disconnect();
-  }
-}
+ }

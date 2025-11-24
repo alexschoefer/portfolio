@@ -1,15 +1,14 @@
 section {
   position: relative;
-  min-height: 844px;
-  height: 100vh;
+  height: calc(100vh - 98px); 
   width: 100%;
-  background: linear-gradient(50.22deg, #1c1c1c 36.26%, #08463b 93.28%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  // padding-top: 6rem;
-  padding-bottom: 6rem;
+  align-items: center;   
+  background: linear-gradient(50.22deg, #1c1c1c 36.26%, #08463b 93.28%);
+  padding: 0;
+  box-sizing: border-box;
 
   .main-content-wrapper {
     display: flex;
@@ -18,16 +17,17 @@ section {
     flex-direction: column;
     max-width: 1440px;
     width: 100%;
-    height: auto;
+    height: 100%;
+    position: relative;
 
     .title-container {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       flex-direction: column;
       align-items: center;
       position: relative;
       white-space: nowrap;
-      top: 290px;
+      top: auto;
       width: 100%;
       height: 216px;
       gap: 40px;
@@ -130,7 +130,7 @@ section {
     max-width: 1440px;
     margin: 0 auto;
     padding-inline: 6rem;
-    padding-top: 150px;
+    // padding-top: 150px;
     gap: 0;
     z-index: 10;
 
@@ -276,7 +276,7 @@ section {
         }
 
         h1 {
-          font-size: 110px;
+          font-size: 85px;
         }
       }
     }
@@ -311,9 +311,10 @@ section {
 
 @media (max-width: 1024px) {
   section {
+    height: calc(100vh - 75px);
+
     .main-content-wrapper {
       .title-container {
-        top: 280px;
         width: 100%;
         gap: 24px;
 
@@ -341,7 +342,7 @@ section {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   section {
     flex-direction: column;
 
@@ -380,13 +381,12 @@ section {
     }
 
     .side-content {
-      margin-top: 3rem;
+      margin-top: 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
       gap: 16px;
-      padding-top: 150px !important;
 
       .left-content-container .line-left {
         height: 120px;
@@ -469,27 +469,6 @@ section {
 
 @media(max-width: 425px) {
 
-  section {
-    .main-content-wrapper {
-      .title-container {
-        top: 200px;
-        width: 90%;
-        text-align: center;
-        gap: 20px;
-
-        h2 {
-          font-size: 20px;
-        }
-
-        h1 {
-          font-size: 38px !important;
-        }
-      }
-    }
-  }
-}
-
-@media(max-width: 375px) {
   section {
     padding-inline: 3px;
 

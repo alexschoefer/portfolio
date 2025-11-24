@@ -1,6 +1,8 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 
 /**
  * Displays translated reference comments in a horizontal carousel.
@@ -14,7 +16,26 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   templateUrl: './references.component.html',
   styleUrls: ['./references.component.scss']
 })
-export class ReferencesComponent {
+export class ReferencesComponent implements AfterViewInit {
+
+  /**
+   * Initializes the AOS (Animate On Scroll) library once the view has fully rendered.
+   * 
+   * This ensures that scroll-based animations are properly set up and triggered
+   * when the component's elements enter the viewport.
+   *
+   * - `duration`: Sets the animation duration in milliseconds
+   * - `easing`: Defines the transition timing function
+   * - `once`: Ensures animations occur only once per element
+   */
+
+  ngAfterViewInit(): void {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out',
+      once: true
+    });
+  }
 
   /**
    * Array of translated comments loaded from translation files.

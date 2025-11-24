@@ -38,6 +38,8 @@ section {
                 justify-content: center;
                 gap: 0;
                 line-height: 1;
+                width: 100%;
+                height: auto;
             }
 
             .firstNameLetter,
@@ -187,10 +189,10 @@ section {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1019px) {
     section {
         padding: 0 24px;
-        height: auto;
+        height: 90px;
         width: 100%;
     }
 
@@ -312,7 +314,7 @@ section {
 
 @media (max-width: 1020px) {
     section {
-      height: auto;
+      height: 75px;
       width: 100%;
     }
   
@@ -341,7 +343,7 @@ section {
   @media (max-width: 480px) {
     .logo-container .firstNameLetter,
     .logo-container .lastNameLetter {
-      font-size: 28px;
+      font-size: 24px;
     }
 
     .menu-navigation-mobile {

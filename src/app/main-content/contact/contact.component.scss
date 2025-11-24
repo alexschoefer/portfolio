@@ -3,7 +3,6 @@ $input-height-default: 40px;
 $input-height-small: 22px;
 
 section {
-  min-height: 100vh;
   width: 100%;
   background: #1c1c1c;
   padding-top: 6rem;
@@ -40,16 +39,16 @@ section {
   gap: 40px;
 }
 
-#contact .contact-box-container {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
+// #contact .contact-box-container {
+//   opacity: 0;
+//   transform: translateY(30px);
+//   transition: opacity 1s ease-out, transform 1s ease-out;
+// }
 
-#contact.contact-visible .contact-box-container {
-  opacity: 1;
-  transform: translateY(0);
-}
+// #contact.contact-visible .contact-box-container {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
 
 .contact-headline-container {
   width: 100%;

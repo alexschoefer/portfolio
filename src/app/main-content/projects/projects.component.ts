@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ProjectDetailComponent } from '../../project-detail/project-detail.component';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 
 /**
  * Displays a list of projects and allows users to open a detailed project view.
@@ -12,9 +14,28 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [ProjectDetailComponent, CommonModule, TranslateModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
+
+  /**
+   * Initializes the AOS (Animate On Scroll) library once the view has fully rendered.
+   * 
+   * This ensures that scroll-based animations are properly set up and triggered
+   * when the component's elements enter the viewport.
+   *
+   * - `duration`: Sets the animation duration in milliseconds
+   * - `easing`: Defines the transition timing function
+   * - `once`: Ensures animations occur only once per element
+   */
+
+  ngAfterViewInit(): void {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out',
+      once: true
+    });
+  }
 
   /**
    * The currently selected project. When `null`, no project detail is shown.

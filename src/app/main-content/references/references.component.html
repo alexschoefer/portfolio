@@ -6,7 +6,7 @@
         <h3>{{ 'REFERENCES.HEADLINE' | translate }}</h3>
       </div>
 
-      <div class="comment-wrapper" [class.resizing]="resizing">
+      <div class="comment-wrapper" [class.resizing]="resizing" data-aos="zoom-in-up">
         <div class="comment-container" *ngIf="commentsLoaded">
           <!-- linker Kommentar -->
           <div class="comment side-comment" *ngIf="visibleComments[0]">

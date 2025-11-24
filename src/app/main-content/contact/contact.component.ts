@@ -1,8 +1,10 @@
-import { Component, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 
 /**
  * Contact form component allowing users to send a message via email.
@@ -15,10 +17,29 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements AfterViewInit, OnDestroy {
+export class ContactComponent implements AfterViewInit {
   private observer?: IntersectionObserver;
 
-  constructor(private http: HttpClient, private elementRef: ElementRef) { }
+  /**
+   * Initializes the AOS (Animate On Scroll) library once the view has fully rendered.
+   * 
+   * This ensures that scroll-based animations are properly set up and triggered
+   * when the component's elements enter the viewport.
+   *
+   * - `duration`: Sets the animation duration in milliseconds
+   * - `easing`: Defines the transition timing function
+   * - `once`: Ensures animations occur only once per element
+   */
+
+  ngAfterViewInit(): void {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out',
+      once: true
+    });
+  }
+
+  constructor(private http: HttpClient) { }
 
   /**
    * Stores the values entered into the contact form.
@@ -134,34 +155,14 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
       headers: { 'Content-Type': 'application/json' },
       responseType: 'text'
     })
-    .subscribe({
-      next: () => {
-        ngForm.resetForm();
-        this.mailSent = true;
-        this.privacyAccepted = false;
-        this.privacyTouched = false;
-      },
-      error: (err) => console.error(err)
-    });
-  }
-
-  ngAfterViewInit(): void {
-    const sectionEl = this.elementRef.nativeElement.querySelector('#contact');
-    if (!sectionEl) return;
-
-    this.observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          sectionEl.classList.add('contact-visible'); // Klasse für Animation
-          this.observer?.unobserve(sectionEl);       // nur einmal
-        }
+      .subscribe({
+        next: () => {
+          ngForm.resetForm();
+          this.mailSent = true;
+          this.privacyAccepted = false;
+          this.privacyTouched = false;
+        },
+        error: (err) => console.error(err)
       });
-    }, { threshold: 0.3 });
-
-    this.observer.observe(sectionEl);
-  }
-
-  ngOnDestroy(): void {
-    this.observer?.disconnect();
   }
 }

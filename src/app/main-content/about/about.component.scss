@@ -1,6 +1,6 @@
 section {
   background: #1c1c1c;
-  // padding-top: 9rem;
+  padding-top: 6rem;
   padding-bottom: 6rem;
 
   .main-content-wrapper {
@@ -113,28 +113,6 @@ section {
       }
     }
   }
-}
-
-#about .photo-container {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
-
-#about .about-me-container {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
-
-#about.about-visible .photo-container {
-  opacity: 1;
-  transform: translateY(0); 
-}
-
-#about.about-visible .about-me-container {
-  opacity: 1;
-  transform: translateY(80px); 
 }
 
 @media (max-width: 1440px) {
