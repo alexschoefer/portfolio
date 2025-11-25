@@ -181,6 +181,30 @@ section {
     }
 }
 
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+    z-index: 900; 
+  }
+  
+  .menu-overlay.active {
+    background: rgba(0,0,0,0.8); 
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .menu-navigation-mobile {
+    position: fixed;
+    z-index: 1000;
+  }
+
 @media (min-width: 1020px) {
 
     .burger-menu,
@@ -249,8 +273,8 @@ section {
         background: linear-gradient(60.22deg, #1c1c1c 15.26%, #08463b 75.28%);
         position: absolute;
         border: 1px solid var(--color-main-green);
-        top: 98px;
-        right: 16px;
+        top: 75px;
+        right: 15px;
         left: auto;
         padding: 40px 77px 40px 77px;
         text-align: center;
@@ -266,6 +290,7 @@ section {
             font-weight: 500;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-family: var(--font-fira);
 
             &:hover {
                 color: var(--color-main-green);
@@ -358,9 +383,11 @@ section {
         width: 180px;
     }
 
-    a {
-        font-size: 16px;
-        text-decoration: none;
-        transition: color 0.3s ease;
+    .menu-navigation-mobile {
+        a {
+            font-size: 16px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
     }
   }

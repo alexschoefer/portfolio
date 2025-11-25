@@ -1,7 +1,7 @@
 <section>
     <div class="menu-content">
         <div class="left-group">
-            <!-- Sprachumschalter -->
+
             <div class="language-selection">
                 <button class="btn-language-en" [class.active]="currentLang === 'en'" (click)="toggleLanguage('EN')">
                     EN
@@ -37,6 +37,8 @@
             <span></span>
             <span></span>
         </div>
+
+        <div class="menu-overlay" [class.active]="menuOpen" (click)="toggleMenu()"></div>
 
         <!-- Mobile Navigation -->
         <nav class="menu-navigation-mobile" [class.active]="menuOpen">
