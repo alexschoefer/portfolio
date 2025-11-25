@@ -550,7 +550,6 @@ section {
 
   .privacy-police-checkbox-content {
     flex-direction: column;
-    text-align: center;
   }
 
   .privacy-police-checkbox-content span {
@@ -655,7 +654,6 @@ section {
   .privacy-police-checkbox-content {
     flex-direction: row;
     justify-content: center !important;
-    align-items: center;
     text-align: center;
     gap: 6px;
     width: 100%;
@@ -757,8 +755,7 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 4px;
+    gap: 6px;
     width: 100%;
   }
 

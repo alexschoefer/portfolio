@@ -415,8 +415,19 @@ section {
     }
   }
 
+  .project-container {
+    h1 {
+      font-size: 52px !important;
+    }
+
+    h2 {
+      font-size: 32px !important;
+    }
+  }
+
   .project-technologies-container {
     width: 300px !important;
+    margin-top: 20px !important;
   }
 
   .project-close-btn-container {

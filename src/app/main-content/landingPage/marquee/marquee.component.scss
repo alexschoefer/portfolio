@@ -117,6 +117,12 @@
   }
 
   .marquee-section {
-    bottom: 20px;
+    bottom: 5px;
+  }
+}
+
+@media(max-width: 375px) {
+  .marquee-section {
+    height: 48px;
   }
 }
