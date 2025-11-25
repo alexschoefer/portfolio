@@ -115,6 +115,12 @@ section {
   }
 }
 
+@media(min-width: 2560px) {
+  section {
+    padding-bottom: 9rem;
+  }
+}
+
 @media (max-width: 1440px) {
   section {
     .main-content-wrapper {
@@ -122,8 +128,6 @@ section {
 
       .about-me-wrapper {
         gap: 24px;
-        // padding-top: 120px;
-        // padding-bottom: 120px;
       }
 
       .photo-container {
