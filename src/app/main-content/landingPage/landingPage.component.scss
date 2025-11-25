@@ -311,9 +311,9 @@ section {
   section {
     .main-content-wrapper {
       .title-container {
-        top: 200px;
+        top: 100px;
         width: 100%;
-        gap: 24px;
+        gap: 18px;
 
         h2 {
           font-size: 28px;
@@ -330,6 +330,8 @@ section {
       display: flex;
       width: 100%;
       gap: 16px;
+      padding-inline: 2rem;
+
 
       .left-content-container .line-left {
         height: 300px;
