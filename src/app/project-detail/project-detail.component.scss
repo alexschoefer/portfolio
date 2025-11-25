@@ -91,11 +91,13 @@ section {
 
         .project-technologies-container {
           width: 480px;
-          height: 24px;
           display: flex;
+          flex-wrap: wrap;
           gap: 16px;
           justify-content: flex-start;
           align-items: center;
+          height: auto;
+          margin-top: 10px;
 
           .tech {
             display: flex;
@@ -121,8 +123,9 @@ section {
         .project-overlay-btn-container {
           display: flex;
           gap: 32px;
-          width: 304px;
+          width: 310px;
           height: 48px;
+          padding-bottom: 10px;
 
           button {
             display: flex;
@@ -247,8 +250,8 @@ section {
 
 @media (max-width: 1180px) {
   section .project-overlay {
-    width: 850px;
-    height: auto;
+    width: 650px;
+    height: 650px;
     padding: 4rem 3rem;
 
     .project-overlay-content {
@@ -292,7 +295,7 @@ section {
             }
 
             span {
-              font-size: 15px;
+              font-size: 16px;
             }
           }
         }
@@ -309,10 +312,6 @@ section {
 
 @media (max-width: 1024px) {
 
-  section {
-    height: 100%;
-  }
-
   section .project-overlay {
     .project-overlay-content {
       display: flex !important;
@@ -321,8 +320,8 @@ section {
       justify-content: flex-start;
       text-align: center;
       gap: 5px;
-      height: 750px;
-      margin-bottom: 10px;
+      height: 660px;
+      margin-bottom: 20px;
     }
 
     .project-screen-container {
@@ -332,7 +331,7 @@ section {
       justify-content: center;
 
       img {
-        width: 650px;
+        width: 320px !important;
         height: auto;
         border-radius: 20px;
       }
@@ -367,17 +366,18 @@ section {
         order: 6;
       }
     }
-  }
 
-  .project-overlay {
-    height: auto;
+    .next-project {
+      bottom: -280px;
+      padding-bottom: 5px;
+    }
   }
 }
 
 @media (max-width: 768px) {
   section .project-overlay {
     width: 700px;
-    height: auto;
+    // height: auto;
     padding: 4rem 3rem;
   }
 
@@ -397,8 +397,8 @@ section {
 
 @media(max-width: 425px) {
   section .project-overlay {
-    width: 400px;
-    height: auto;
+    width: 380px;
+    // height: auto;
     padding: 3rem 2rem;
     margin-bottom: 15px !important;
   }
@@ -424,7 +424,8 @@ section {
   }
 
   .next-project {
-    bottom: 10px !important;
+    bottom: -280px;
+    padding-bottom: 5px;
   }
 }
 
@@ -438,7 +439,7 @@ section {
 
   section .project-overlay {
     .project-overlay-content {
-      height: 660px;
+      height: auto;
     }
 
     .project-screen-container {
@@ -473,7 +474,7 @@ section {
 
     .project-description {
       span {
-        font-size: 15px !important;
+        font-size: 16px !important;
       }
     }
 
@@ -504,7 +505,7 @@ section {
       padding-right: 16px !important;
 
       span {
-        font-size: 15px !important;
+        font-size: 16px !important;
       }
     }
   }
@@ -512,9 +513,9 @@ section {
 
 @media (max-width: 320px) {
   section .project-overlay {
-    padding: 1.5rem 0.75rem;
-    height: 700px;
-    width: 280px !important;
+    // padding: 1.5rem 0.75rem;
+    height: 650px;
+    width: 290px !important;
 
     .project-container {
 
@@ -527,12 +528,10 @@ section {
       }
 
       .project-description {
-        span {
-          font-size: 15px;
-        }
 
         .project-description-content {
-          font-size: 13px;
+          font-size: 16px;
+          height: auto;
         }
       }
 
@@ -540,6 +539,7 @@ section {
         gap: 6px;
         justify-content: center !important;
         margin-top: 35px;
+
         button {
           height: 40px;
 
@@ -551,12 +551,7 @@ section {
     }
 
     .project-technologies-container {
-      display: flex !important;
-      flex-wrap: wrap !important;
-      gap: 10px !important;
-      justify-content: center !important;
-      width: 100% !important;
-      margin-bottom: 5px;
+      margin-top: 50px !important;
     }
 
     .project-technologies img {
@@ -577,10 +572,10 @@ section {
   }
 
   .next-project {
-    bottom: 8px !important;
+    bottom: 10px;
+  }
 
     button {
-      font-size: 15px !important;
+      font-size: 16px !important;
     }
-  }
 }
