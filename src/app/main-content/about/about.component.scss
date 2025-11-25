@@ -257,6 +257,9 @@ section {
 
 @media (max-width: 480px) {
   section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
     .main-content-wrapper {
       padding-inline: 20px;
 
@@ -314,6 +317,7 @@ section {
 
 @media (max-width: 320px) {
   section {
+
     .main-content-wrapper {
       padding-inline: 12px;
 

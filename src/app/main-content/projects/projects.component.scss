@@ -325,7 +325,8 @@ section {
 
 @media (max-width: 480px) {
     section#projects {
-      height: auto !important;  
+      height: auto !important;
+      padding-bottom: 1rem;  
     }
 
     section#projects .main-content-wrapper {
