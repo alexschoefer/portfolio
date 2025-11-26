@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
+import * as AOS from 'aos';
+import 'aos/dist/aos.css';
 
 /**
  * Contact form component allowing users to send a message via email.
@@ -15,7 +17,27 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit {
+  private observer?: IntersectionObserver;
+
+  /**
+   * Initializes the AOS (Animate On Scroll) library once the view has fully rendered.
+   * 
+   * This ensures that scroll-based animations are properly set up and triggered
+   * when the component's elements enter the viewport.
+   *
+   * - `duration`: Sets the animation duration in milliseconds
+   * - `easing`: Defines the transition timing function
+   * - `once`: Ensures animations occur only once per element
+   */
+
+  ngAfterViewInit(): void {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out',
+      once: true
+    });
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -133,14 +155,14 @@ export class ContactComponent {
       headers: { 'Content-Type': 'application/json' },
       responseType: 'text'
     })
-    .subscribe({
-      next: () => {
-        ngForm.resetForm();
-        this.mailSent = true;
-        this.privacyAccepted = false;
-        this.privacyTouched = false;
-      },
-      error: (err) => console.error(err)
-    });
+      .subscribe({
+        next: () => {
+          ngForm.resetForm();
+          this.mailSent = true;
+          this.privacyAccepted = false;
+          this.privacyTouched = false;
+        },
+        error: (err) => console.error(err)
+      });
   }
 }

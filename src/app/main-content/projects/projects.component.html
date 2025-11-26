@@ -1,10 +1,11 @@
 <section id="projects" [class.overlay-active]="selectedProject">
-    <div class="main-content-wrapper">
+    <div class="main-content-wrapper" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <div class="portfolio-projects-wrapper">
             <div class="portfolio-headline-container">
                 <h3>{{'PORTFOLIO.TITLE' | translate}}</h3>
                 <h2>{{'PORTFOLIO.HEADER' | translate}}</h2>
-                <span>{{'PORTFOLIO.DESCRIPTION_PART1' | translate}} <br> {{'PORTFOLIO.DESCRIPTION_PART2' | translate}} </span>
+                <span>{{'PORTFOLIO.DESCRIPTION_PART1' | translate}} <br> {{'PORTFOLIO.DESCRIPTION_PART2' | translate}}
+                </span>
             </div>
             <div class="portfolio-menu-container">
                 <div class="project" *ngFor="let project of projects; let i = index" (click)="openProject(project, i)">
@@ -28,6 +29,6 @@
 
     <div class="overlay-backdrop" *ngIf="selectedProject" (click)="closeProject()"></div>
     <!-- Project-Overlay-Componente -->
-    <app-project-detail *ngIf="selectedProject" [project]="selectedProject"
-    (close)="closeProject()" (next)="nextProject()"></app-project-detail>
+    <app-project-detail *ngIf="selectedProject" [project]="selectedProject" (close)="closeProject()"
+        (next)="nextProject()"></app-project-detail>
 </section>

@@ -52,5 +52,11 @@ export class NavbarComponent {
    */
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+  
+    if (this.menuOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
   }
 }

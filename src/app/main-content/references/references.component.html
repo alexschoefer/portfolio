@@ -1,46 +1,62 @@
 <section>
-    <div class="main-content-wrapper">
-      <div class="references-container">
-        <div class="references-headline-container">
-          <h3>{{ 'REFERENCES.HEADLINE' | translate }}</h3>
-        </div>
-        <!-- Comment Box -->
-        <div class="comment-wrapper">
-            <div class="comment-container" [style.transform]="'translateX(' + getTranslateX() + 'px)'">
-                <ng-container *ngIf="commentsLoaded">
-                  <div *ngFor="let comment of COMMENTS; let i = index" class="comment"
-                       [ngClass]="{'comment-current': isCurrent(i)}">
-                    <div *ngIf="isCurrent(i)" class="quotes">
-                      <img src="./assets/icons/quotes.png" alt="quotes">
-                    </div>
-                    <span>{{ comment.text }}</span>
-                    <div *ngIf="isCurrent(i)" class="comment-author-container">
-                      <div class="comment-line"></div>
-                      <span>{{ comment.author }}</span>
-                    </div>
-                  </div>
-                </ng-container>
-              </div>
-        </div>
+  <div class="main-content-wrapper">
+    <div class="references-container">
 
-        <!-- Arrow-Box -->
-        <div class="arrow-container">
-          <button class="arrow-btn back" (click)="preComment()">
-            <img class="arrow-img" src="./assets/icons/arrow_back.png" alt="arrow-back" />
-          </button>
-  
-          <ng-container *ngIf="commentsLoaded">
-            <div *ngFor="let comment of COMMENTS; let i = index" class="point"
-                 [ngClass]="{'active-point': currentActiveComment === i}">
-            </div>
-          </ng-container>
-  
-          <button class="arrow-btn forward" (click)="nextComment()">
-            <img class="arrow-img" src="./assets/icons/arrow_forward.png" alt="arrow-forward" />
-          </button>
-        </div>
-  
+      <div class="references-headline-container">
+        <h3>{{ 'REFERENCES.HEADLINE' | translate }}</h3>
       </div>
+
+      <div class="comment-wrapper" [class.resizing]="resizing" data-aos="zoom-in-up">
+        <div class="comment-container" *ngIf="commentsLoaded">
+          <!-- linker Kommentar -->
+          <div class="comment side-comment" *ngIf="visibleComments[0]">
+            <span>{{ visibleComments[0].text }}</span>
+            <div class="comment-author-container">
+              <div class="comment-line"></div>
+              <span>{{ visibleComments[0].author }}</span>
+            </div>
+          </div>
+      
+          <!-- mittlerer Kommentar -->
+          <div class="comment comment-current" *ngIf="visibleComments[1]">
+            <div class="quotes">
+              <img src="./assets/icons/quotes.png" alt="quotes">
+            </div>
+            <span>{{ visibleComments[1].text }}</span>
+            <div class="comment-author-container">
+              <div class="comment-line"></div>
+              <span>{{ visibleComments[1].author }}</span>
+            </div>
+          </div>
+      
+          <!-- rechter Kommentar -->
+          <div class="comment side-comment" *ngIf="visibleComments[2]">
+            <span>{{ visibleComments[2].text }}</span>
+            <div class="comment-author-container">
+              <div class="comment-line"></div>
+              <span>{{ visibleComments[2].author }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrow-Box -->
+      <div class="arrow-container">
+        <button class="arrow-btn back" (click)="preComment()">
+          <img class="arrow-img" src="./assets/icons/arrow_back.png" alt="arrow-back" />
+        </button>
+
+        <ng-container *ngIf="commentsLoaded">
+          <div *ngFor="let comment of COMMENTS; let i = index" class="point"
+               [ngClass]="{'active-point': currentActiveComment === i}">
+          </div>
+        </ng-container>
+
+        <button class="arrow-btn forward" (click)="nextComment()">
+          <img class="arrow-img" src="./assets/icons/arrow_forward.png" alt="arrow-forward" />
+        </button>
+      </div>
+
     </div>
-  </section>
-  
+  </div>
+</section>
