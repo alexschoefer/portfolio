@@ -344,6 +344,10 @@ section {
   text-decoration: none;
 }
 
+.privacy-police-checkbox-content span a:hover {
+  text-decoration: underline;
+}
+
 .error-message-privacy-police {
   font-family: var(--font-karla);
   font-weight: 400;

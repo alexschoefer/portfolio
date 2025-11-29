@@ -59,41 +59,45 @@ section {
         margin-top: 40px;
         z-index: 20;
 
-        button {
-          padding: 0 24px;
-          overflow: hidden;
-          border: 1px solid #fff;
-          background: transparent;
-          border-radius: 100px;
+        .btn {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
           height: 48px;
+          padding: 0 24px;
+          border: 1px solid #fff;
+          border-radius: 100px;
+          background: transparent;
+          max-width: 172px;
+          width: 100%;
           cursor: pointer;
-
-          a {
-            display: inline-block;
-            position: relative;
-            animation: none;
+          text-decoration: none;
+          overflow: hidden;
+          transition: border 100ms ease-out;
+        
+          &:hover {
+            border-color: var(--color-main-green);
+          }
+        
+          .btn-label {
             font-family: var(--font-karla);
-            font-weight: 400;
             font-size: 18px;
-            line-height: 120%;
+            font-weight: 400;
             color: #fff;
             white-space: nowrap;
-            transition: border 100ms ease-out, color 100ms ease-out;
-            text-decoration: none;
+            display: inline-block;
+            transition: color 100ms ease-out;
+            pointer-events: none;
           }
-
-          &:hover {
-            border: 1px solid var(--color-main-green);
+        
+          &:hover .btn-label {
             color: var(--color-main-green);
-          }
-
-          &:hover a {
             animation: slideLoop 3000ms linear infinite;
           }
-        }
 
-        .btn-check-work {
-          width: 172px;
+          .btn-check-work {
+            width: 172px;
+          }
         }
       }
     }
@@ -506,11 +510,11 @@ section {
         .btn-title-container {
           gap: 6px;
 
-          button {
-            width: auto !important;
+          .btn {
+            width: 140px;
             height: 48px;
 
-            a {
+            .btn-label {
               font-size: 16px;
             }
           }

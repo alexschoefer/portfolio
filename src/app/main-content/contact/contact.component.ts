@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import * as AOS from 'aos';
 import 'aos/dist/aos.css';
+import { RouterLink } from '@angular/router';
 
 /**
  * Contact form component allowing users to send a message via email.
@@ -13,7 +14,7 @@ import 'aos/dist/aos.css';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [CommonModule, FormsModule, TranslateModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
