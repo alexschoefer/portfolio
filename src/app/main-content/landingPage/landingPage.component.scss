@@ -59,41 +59,45 @@ section {
         margin-top: 40px;
         z-index: 20;
 
-        button {
-          padding: 0 24px;
-          overflow: hidden;
-          border: 1px solid #fff;
-          background: transparent;
-          border-radius: 100px;
+        .btn {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
           height: 48px;
+          padding: 0 24px;
+          border: 1px solid #fff;
+          border-radius: 100px;
+          background: transparent;
+          max-width: 172px;
+          width: 100%;
           cursor: pointer;
-
-          a {
-            display: inline-block;
-            position: relative;
-            animation: none;
+          text-decoration: none;
+          overflow: hidden;
+          transition: border 100ms ease-out;
+        
+          &:hover {
+            border-color: var(--color-main-green);
+          }
+        
+          .btn-label {
             font-family: var(--font-karla);
-            font-weight: 400;
             font-size: 18px;
-            line-height: 120%;
+            font-weight: 400;
             color: #fff;
             white-space: nowrap;
-            transition: border 100ms ease-out, color 100ms ease-out;
-            text-decoration: none;
+            display: inline-block;
+            transition: color 100ms ease-out;
+            pointer-events: none;
           }
-
-          &:hover {
-            border: 1px solid var(--color-main-green);
+        
+          &:hover .btn-label {
             color: var(--color-main-green);
-          }
-
-          &:hover a {
             animation: slideLoop 3000ms linear infinite;
           }
-        }
 
-        .btn-check-work {
-          width: 172px;
+          .btn-check-work {
+            width: 172px;
+          }
         }
       }
     }
@@ -310,6 +314,7 @@ section {
 @media (max-width: 1024px) {
   section {
     min-height: calc(100vh - 75px);
+
     .main-content-wrapper {
       .title-container {
         top: 100px;
@@ -417,7 +422,7 @@ section {
           height: 24px;
         }
 
-       .contact-icons .mail-icon {
+        .contact-icons .mail-icon {
           display: inline-block;
 
           img {
@@ -467,6 +472,7 @@ section {
     .main-content-wrapper {
       .side-content {
         padding-inline: 1rem;
+
         .left-content-container .line-left {
           height: 180px;
         }
@@ -479,7 +485,7 @@ section {
   }
 }
 
-@media(max-width: 425px) {
+@media(max-width: 475px) {
 
   section {
     .side-content {
@@ -490,6 +496,7 @@ section {
       .title-container {
         align-items: center;
         justify-content: center;
+        top: 100px;
 
         h2 {
           font-size: 24px !important;
@@ -499,17 +506,17 @@ section {
           font-size: 32px !important;
           line-height: 110%;
         }
-      }
 
-      .btn-title-container {
-        gap: 6px;
+        .btn-title-container {
+          gap: 6px;
 
-        button {
-          width: auto !important;
-          height: 48px;
+          .btn {
+            width: 140px;
+            height: 48px;
 
-          a {
-            font-size: 16px;
+            .btn-label {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -520,19 +527,28 @@ section {
     .main-content-wrapper {
       .side-content {
         padding-inline: 1rem;
+
         .left-content-container .line-left {
-          height: 100px;
+          height: 120px;
         }
 
         .right-content-container .line-right {
-          height: 85px;
+          height: 100px;
         }
       }
     }
   }
 }
 
-@media(max-width: 375px) {
+@media(max-width: 375px) and (max-height: 600px) {
+
+  section {
+    .main-content-wrapper {
+      .title-container {
+        top: 100px;
+      }
+    }
+  }
 
   .btn-title-container {
     gap: 6px !important;
