@@ -230,7 +230,7 @@ section {
             width: 100%;
 
             .headline-container h1 {
-                font-size: 28px;
+                font-size: 26px;
             }
         }
 
@@ -258,19 +258,21 @@ section {
             .headline-container h1 {
                 font-size: 24px;
             }
-        }
 
-        .privacy-police-content {
-            gap: 14px;
-
-            .privacy-police-point {
-                h2 {
-                    font-size: 16px;
-                }
-
-                span,
-                ul li {
-                    font-size: 16px;
+            .privacy-police-wrapper {
+                .privacy-police-content {
+                    gap: 14px;
+        
+                    .privacy-police-point {
+                        h2 {
+                            font-size: 22px;
+                        }
+        
+                        span,
+                        ul li {
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
         }
