@@ -31,7 +31,7 @@ export class ProjectsComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     AOS.init({
-      duration: 1000,
+      duration: 800,
       easing: 'ease-out',
       once: true
     });
