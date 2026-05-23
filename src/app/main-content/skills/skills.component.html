@@ -21,51 +21,100 @@
             </div>
 
             <div class="skills-overview" data-aos="flip-right">
-                    <div class="skills">
-                        <img src="./assets/icons/HTML.png" alt="">
-                        <span>HTML</span>
+                    <div class="skills-overview-frontend" *ngIf="showFrontend" data-aos="flip-right">
+                        <div class="skills">
+                            <img src="./assets/icons/HTML.png" alt="">
+                            <span>HTML</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/CSS.png" alt="">
+                            <span>CSS</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Javascript.png" alt="">
+                            <span>Javascript</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Material-Design.png" alt="">
+                            <span>Material Design</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Typescript.png" alt="">
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Angular.png" alt="">
+                            <span>Angular</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Firebase.png" alt="">
+                            <span>Firebase</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/git.png" alt="">
+                            <span>Git</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Api.png" alt="">
+                            <span>REST-API</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/scrum.png" alt="">
+                            <span>Scrum</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Growth mindset.png" alt="">
+                            <span>Growth mindset</span>
+                        </div>
+
                     </div>
-                    <div class="skills">
-                        <img src="./assets/icons/CSS.png" alt="">
-                        <span>CSS</span>
+                    <div class="skills-overview-backend" *ngIf="!showFrontend" data-aos="flip-right">
+                        <div class="skills">
+                            <img src="./assets/icons/Python.png" alt="">
+                            <span>Python</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Django.png" alt="">
+                            <span>Django</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Docker.png" alt="">
+                            <span>Docker</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Linux.png" alt="">
+                            <span>Linux</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/PostgreSQL.png" alt="">
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/Redis.png" alt="">
+                            <span>Redis</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/SQL.png" alt="">
+                            <span>SQL</span>
+                        </div>
+                        <div class="skills">
+                            <img src="./assets/icons/postman-dark.png" alt="">
+                            <span>Postman</span>
+                        </div>
                     </div>
-                    <div class="skills">
-                        <img src="./assets/icons/Javascript.png" alt="">
-                        <span>Javascript</span>
-                    </div>
-                    <div class="skills">
-                        <img src="./assets/icons/Material-Design.png" alt="">
-                        <span>Material Design</span>
-                    </div>
-                    <div class="skills">
-                        <img src="./assets/icons/Typescript.png" alt="">
-                        <span>TypeScript</span>
-                    </div>
-                    <div class="skills">
-                        <img src="./assets/icons/Angular.png" alt="">
-                        <span>Angular</span>
-                    </div>
-                    <div class="skills">
-                        <img src="./assets/icons/Firebase.png" alt="">
-                        <span>Firebase</span>
-                    </div>
-                    <div class="skills">
-                        <img src="./assets/icons/git.png" alt="">
-                        <span>Git</span>
-                    </div>
-                    <div class="skills">
-                        <img src="./assets/icons/Api.png" alt="">
-                        <span>REST-API</span>
-                    </div>
-                    <div class="skills">
-                        <img src="./assets/icons/scrum.png" alt="">
-                        <span>Scrum</span>
-                    </div>
-                    <div class="skills">
-                        <img src="./assets/icons/Growth mindset.png" alt="">
-                        <span>Growth mindset</span>
+                    <div class="skills-overview-btn-container">
+                        <button class="btn-skills" (click)="showFrontend = true">
+                            Frontend
+                        </button>
+                    
+                        <button class="btn-skills" (click)="showFrontend = false">
+                            Backend
+                        </button>
                     </div>
             </div>
+          
+
+            
         </div>
     </div>
 
