@@ -1,5 +1,6 @@
 import { Component, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 import * as AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -11,22 +12,18 @@ import 'aos/dist/aos.css';
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent implements AfterViewInit {
-  
-  /**
-   * Initializes the AOS (Animate On Scroll) library once the view has fully rendered.
-   * 
-   * This ensures that scroll-based animations are properly set up and triggered
-   * when the component's elements enter the viewport.
-   *
-   * - `duration`: Sets the animation duration in milliseconds
-   * - `easing`: Defines the transition timing function
-   * - `once`: Ensures animations occur only once per element
-   */
+
+/**
+ * Indicates whether to show frontend or backend skills. This is used to toggle between the two skill sets in the template. 
+ * The default value is true, meaning frontend skills are shown by default.
+ */
+
+  showFrontend = true;
 
   ngAfterViewInit(): void {
     AOS.init({
@@ -35,4 +32,14 @@ export class SkillsComponent implements AfterViewInit {
       once: true
     });
   }
- }
+
+  toggleSkills(showFrontend: boolean): void {
+    this.showFrontend = showFrontend;
+
+    setTimeout(() => {
+      AOS.refresh();
+    });
+  }
+
+
+}

@@ -21,7 +21,7 @@
             </div>
 
             <div class="skills-overview" data-aos="flip-right">
-                    <div class="skills-overview-frontend" data-aos="flip-right">
+                    <div class="skills-overview-frontend" *ngIf="showFrontend" data-aos="flip-right">
                         <div class="skills">
                             <img src="./assets/icons/HTML.png" alt="">
                             <span>HTML</span>
@@ -68,7 +68,7 @@
                         </div>
 
                     </div>
-                    <div class="skills-overview-backend display-none" data-aos="flip-right">
+                    <div class="skills-overview-backend" *ngIf="!showFrontend" data-aos="flip-right">
                         <div class="skills">
                             <img src="./assets/icons/Python.png" alt="">
                             <span>Python</span>
@@ -97,10 +97,19 @@
                             <img src="./assets/icons/SQL.png" alt="">
                             <span>SQL</span>
                         </div>
+                        <div class="skills">
+                            <img src="./assets/icons/postman-dark.png" alt="">
+                            <span>Postman</span>
+                        </div>
                     </div>
-                    <div>
-                        <button>Frontend</button>
-                        <button>Backend</button>
+                    <div class="skills-overview-btn-container">
+                        <button class="btn-skills" (click)="showFrontend = true">
+                            Frontend
+                        </button>
+                    
+                        <button class="btn-skills" (click)="showFrontend = false">
+                            Backend
+                        </button>
                     </div>
             </div>
           
