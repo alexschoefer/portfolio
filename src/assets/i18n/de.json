@@ -92,14 +92,21 @@
     "NEXT": "nächstes Projekt",
     "DESCRIPTION": [
       {
-        "text": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
-      },
-      {
         "text": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen."
       },
       {
-        "text": "Diese interaktive Pokédex Anwendung, die mit HTML, CSS und JavaScript erstellt wurde, ruft Daten aus einer API ab, um den Namen, das Bild und den Typ jedes Pokémon anzuzeigen."
+        "text": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+      },
+      {
+        "text": "Coderr ist ein Backend-System für eine Entwicklerplattform, die Kunden und Entwickler miteinander verbindet. Das Backend wurde mit Django und dem Django REST Framework entwickelt."
+      },
+      {
+        "text": "KanMind ist eine Backend API für ein Projektmanagement Tool mit Django und Django REST Framework. Sie ermöglicht die Verwaltung von Boards, Aufgaben und Kommentaren inklusive Authentifizierung und rollenbasierter Zugriffskontrolle."
+      },
+      {
+        "text": "Eine Full-Stack-Videostreaming-Plattform, die von Netflix inspiriert ist. Der Schwerpunkt liegt auf der Entwicklung eines robusten Backends mit dem Django REST Framework bei gleichzeitiger Integration von Videoverarbeitungsabläufen mithilfe von FFmpeg."
       }
+
     ]
   },
 

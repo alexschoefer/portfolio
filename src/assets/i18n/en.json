@@ -92,10 +92,10 @@
     "NEXT": "next project",
     "DESCRIPTION": [
       {
-        "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+        "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
       },
       {
-        "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+        "text": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
       },
       {
         "text": "Coderr is a backend system for a developer platform that connects clients and developers. The backend is built using Django and Django REST Framework."
