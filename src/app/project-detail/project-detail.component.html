@@ -18,26 +18,35 @@
                 </div>
 
                 <div class="project-technologies-container">
-                    <div class="tech" *ngFor="let tech of project.technologies">
-                      <img [src]="tech.icon" [alt]="tech.name">
-                      <span>{{ tech.name }}</span>
+                    <div class="tech-group">
+                        <div class="tech" *ngFor="let tech of getFrontendTech(project)">
+                            <img [src]="tech.icon" [alt]="tech.name">
+                            <span>{{ tech.name }}</span>
+                        </div>
                     </div>
-                  </div>
-                  
+                    <div class="tech-group">
+                        <div class="tech" *ngFor="let tech of getBackendTech(project)">
+                            <img [src]="tech.icon" [alt]="tech.name">
+                            <span>{{ tech.name }}</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-overlay-btn-container">
                     <a [href]="project.gitHublink" target="_blank">
                         <button>
-                            <span>GitHub</span>
+                            <span>{{ project.gitHubButton }}</span>
                             <img src="./assets/icons/arrow_outward_project-overlay.png" alt="">
                         </button>
                     </a>
 
                     <a [href]="project.liveLink" target="_blank">
                         <button *ngIf="project.liveLink">
-                            <span>Live Test</span>
+                            <span>{{ project.liveTestButton }}</span>
                             <img src="./assets/icons/arrow_outward_project-overlay.png" alt="">
                         </button>
                     </a>
+
                 </div>
             </div>
 

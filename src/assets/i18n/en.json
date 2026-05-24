@@ -98,7 +98,13 @@
         "text": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
       },
       {
-        "text": "This interactive Pokédex, built with HTML, CSS, and JavaScript, pulls data from an API to display each Pokémon’s name, image, and type."
+        "text": "Coderr is a backend system for a developer platform that connects clients and developers. The backend is built using Django and Django REST Framework."
+      },
+      {
+        "text": "KanMind is a backend API for a project management tool built with Django and Django REST Framework. It enables users to manage boards, tasks, and comments while implementing role-based access control and authentication."
+      },
+      {
+        "text": "A full-stack video streaming platform inspired by Netflix. It focuses on building a robust backend with Django REST Framework while integrating video processing workflows using FFmpeg."
       }
     ]
   },

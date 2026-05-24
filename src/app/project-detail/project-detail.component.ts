@@ -85,4 +85,22 @@ export class ProjectDetailComponent {
   onNext() {
     this.next.emit();
   }
+
+  /**
+   * 
+   * @param project The project object containing a list of technologies with their types.
+   * @returns 
+   */
+  getFrontendTech(project: any) {
+    return project.technologies.filter((t: any) => t.type === 'frontend');
+  }
+  
+  /**
+   * 
+   * @param project The project object containing a list of technologies with their types.
+   * @returns 
+   */
+  getBackendTech(project: any) {
+    return project.technologies.filter((t: any) => t.type === 'backend');
+  }
 }
