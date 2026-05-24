@@ -31,10 +31,10 @@
   "SKILLS": {
     "TITLE": "Technologies",
     "SUBTITLE": "Skill Set",
-    "DESCRIPTION": "As a fullstack developer, I work with technologies such as Angular, TypeScript, Python, Django, PostgreSQL, Redis, and Docker. I enjoy building modern web applications ranging from responsive user interfaces to scalable backend systems, and I’m always motivated to expand my knowledge and explore new technologies.",
+    "DESCRIPTION": "As a fullstack developer, I build modern web applications ranging from responsive user interfaces to scalable backend systems. I enjoy working with modern technologies and value clean, maintainable code as well as a great user experience.",
     "ANOTHER_SKILL_PART1": "You need",
     "ANOTHER_SKILL_PART2": "another skill?",
-    "CONTACT_HINT": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "CONTACT_HINT": "Let's develop modern web applications together.",
     "BUTTON": "Let’s Talk"
   },
 
