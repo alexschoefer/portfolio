@@ -103,18 +103,15 @@
                         </div>
                     </div>
                     <div class="skills-overview-btn-container">
-                        <button class="btn-skills" (click)="showFrontend = true">
+                        <button class="btn-skills" (click)="showFrontend = true" [class.active]="showFrontend">
                             Frontend
                         </button>
                     
-                        <button class="btn-skills" (click)="showFrontend = false">
+                        <button class="btn-skills" (click)="showFrontend = false" [class.active]="!showFrontend">
                             Backend
                         </button>
                     </div>
-            </div>
-          
-
-            
+            </div>            
         </div>
     </div>
 

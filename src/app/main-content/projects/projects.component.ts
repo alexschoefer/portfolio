@@ -83,52 +83,105 @@ export class ProjectsComponent implements AfterViewInit {
   projects = [
     {
       projectID: '01',
-      projectName: 'Join',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      technologies: [
-        { name: 'HTML', icon: './assets/icons/html-icon.png' },
-        { name: 'CSS', icon: './assets/icons/css-icon.png' },
-        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png' },
-        { name: 'Firebase', icon: './assets/icons/firebase-icon.png' },
-      ],
-      image: './assets/img/join_mainscreen.png',
-      imageOverlay: [
-        './assets/img/join_mainscreen.png'
-      ],
-      gitHublink: 'https://github.com/alexschoefer/Join_470.git',
-      liveLink: 'https://join.alexander-schoefer.de/index.html'
-    },
-    {
-      projectID: '02',
       projectName: 'El Pollo Loco',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       technologies: [
-        { name: 'HTML', icon: './assets/icons/html-icon.png' },
-        { name: 'CSS', icon: './assets/icons/css-icon.png' },
-        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png' },
+        { name: 'HTML', icon: './assets/icons/html-icon.png', type: 'frontend' },
+        { name: 'CSS', icon: './assets/icons/css-icon.png', type: 'frontend' },
+        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png', type: 'frontend' },
       ],
       image: './assets/img/el_pollo_loco_mainscreen.png',
       imageOverlay: [
         './assets/img/project-screenshot-el_pollo_overlay.png'
       ],
+      gitHubButton: 'GitHub',
+      liveTestButton: 'Live Test',
       gitHublink: 'https://github.com/alexschoefer/el-pollo-loco.git',
       liveLink: 'https://elpolloloco.alexander-schoefer.de/index.html'
     },
     {
-      projectID: '03',
-      projectName: 'Pokedex',
-      description: 'This interactive Pokédex, built with HTML, CSS, and JavaScript, pulls data from an API to display each Pokémon’s name, image, and type.',
+      projectID: '02',
+      projectName: 'Join',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       technologies: [
-        { name: 'HTML', icon: './assets/icons/html-icon.png' },
-        { name: 'CSS', icon: './assets/icons/css-icon.png' },
-        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png' },
+        { name: 'HTML', icon: './assets/icons/html-icon.png', type: 'frontend' },
+        { name: 'CSS', icon: './assets/icons/css-icon.png', type: 'frontend' },
+        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png', type: 'frontend' },
+        { name: 'Firebase', icon: './assets/icons/firebase-icon.png', type: 'frontend' },
       ],
-      image: './assets/img/pokedex_mainscreen.png',
+      image: './assets/img/join_mainscreen.png',
       imageOverlay: [
-        './assets/img/pokedex_mainscreen.png'
+        './assets/img/join_mainscreen.png'
       ],
-      gitHublink: 'https://github.com/alexschoefer/Pokedex.git',
-      liveLink: 'https://pokedex.alexander-schoefer.de/index.html'
+      gitHubButton: 'GitHub',
+      liveTestButton: 'Live Test',
+      gitHublink: 'https://github.com/alexschoefer/Join_470.git',
+      liveLink: 'https://join.alexander-schoefer.de/index.html'
+    },
+    {
+      projectID: '03',
+      projectName: 'Coderr',
+      description: 'Coderr is a backend system for a developer platform that connects clients and developers. The backend is built using Django and Django REST Framework',
+      technologies: [
+        { name: 'HTML', icon: './assets/icons/html-icon.png', type: 'frontend' },
+        { name: 'CSS', icon: './assets/icons/css-icon.png', type: 'frontend' },
+        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png', type: 'frontend' },
+
+        { name: 'Python', icon: './assets/icons/Python.png', type: 'backend' },
+        { name: 'Django', icon: './assets/icons/Django.png', type: 'backend' },
+      ],
+      image: './assets/img/coderr_mainscreen.png',
+      imageOverlay: [
+        './assets/img/coderr_overlay.png'
+      ],
+      gitHubButton: 'GitHub',
+      liveTestButton: 'Live Test',
+      gitHublink: 'https://github.com/alexschoefer/Coderr.git',
+      liveLink: 'https://coderr.alexander-schoefer.de/index.html'
+    },
+    {
+      projectID: '04',
+      projectName: 'KanMind',
+      description: 'KanMind is a backend API for a project management tool built with Django and Django REST Framework. The API enables users to manage boards, tasks, and comments while enforcing role-based access control and authentication.',
+      technologies: [
+        { name: 'HTML', icon: './assets/icons/html-icon.png', type: 'frontend' },
+        { name: 'CSS', icon: './assets/icons/css-icon.png', type: 'frontend' },
+        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png', type: 'frontend' },
+
+        { name: 'Python', icon: './assets/icons/Python.png', type: 'backend' },
+        { name: 'Django', icon: './assets/icons/Django.png', type: 'backend' },
+      ],
+      image: './assets/img/kanmind_mainscreen.png',
+      imageOverlay: [
+        './assets/img/kanmind_overlay.png'
+      ],
+      gitHubButton: 'GitHub Frontend',
+      liveTestButton: 'GitHub Backend',
+      gitHublink: 'https://github.com/Developer-Akademie-Backendkurs/project.KanMind.git',
+      liveLink: 'https://github.com/alexschoefer/KanMind.git'
+    },
+    {
+      projectID: '05',
+      projectName: 'Videoflix',
+      description: 'A full-stack video streaming platform inspired by Netflix. It focuses on building a robust backend with Django REST Framework while integrating video processing workflows using FFmpeg.',
+      technologies: [
+        { name: 'HTML', icon: './assets/icons/html-icon.png', type: 'frontend' },
+        { name: 'CSS', icon: './assets/icons/css-icon.png', type: 'frontend' },
+        { name: 'JavaScript', icon: './assets/icons/javascript-icon.png', type: 'frontend' },
+
+        { name: 'Python', icon: './assets/icons/Python.png', type: 'backend' },
+        { name: 'Django', icon: './assets/icons/Django.png', type: 'backend' },
+        { name: 'PostgreSQL', icon: './assets/icons/PostgreSQL.png', type: 'backend' },
+        { name: 'Redis', icon: './assets/icons/Redis.png', type: 'backend' },
+      ],
+      image: './assets/img/videoflix_mainscreen.png',
+      imageOverlay: [
+        './assets/img/videoflix_overlay.png'
+      ],
+      gitHubButton: 'GitHub Frontend',
+      liveTestButton: 'GitHub Backend',
+      gitHublink: 'https://github.com/Developer-Akademie-Backendkurs/project.Videoflix.git',
+      liveLink: 'https://github.com/alexschoefer/Videoflix.git'
     }
   ];
 }

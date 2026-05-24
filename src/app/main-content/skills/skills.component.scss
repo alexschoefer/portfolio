@@ -52,7 +52,7 @@ section {
         font-weight: 400;
         font-size: 18px;
         line-height: 120%;
-        text-align: justify;
+        text-align: center;
         color: #fff;
       }
 
@@ -74,7 +74,7 @@ section {
 
       .btn-contact-container {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         width: auto;
         gap: 10px;
         height: 48px;
@@ -143,6 +143,12 @@ section {
       white-space: nowrap;
       display: inline-block;
       transition: color 100ms ease-out;
+    }
+
+    .btn-skills.active {
+      border-color: var(--color-main-green);
+      color: var(--color-main-green);
+      transform: scale(1.05);
     }
 
   }

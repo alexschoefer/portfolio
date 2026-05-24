@@ -31,10 +31,10 @@
   "SKILLS": {
     "TITLE": "Technologien",
     "SUBTITLE": "Fähigkeiten",
-    "DESCRIPTION": "Ich habe praktische Erfahrung mit Frontend-Technologien wie HTML, CSS, JavaScript, Angular, Firebase, Git und der Arbeit mit REST-APIs. Ich entwickle gerne responsive und benutzerfreundliche Oberflächen und entdecke dabei ständig neue Tools und Frameworks. Die schnelllebige Welt der Webentwicklung motiviert mich, stets dazuzulernen und mich anzupassen.",
-    "ANOTHER_SKILL_PART1": "Du brauchst",
+    "DESCRIPTION": "Als Fullstack Entwickler entwickle ich moderne Webanwendungen von responsiven Benutzeroberflächen bis hin zu skalierbaren Backend Systemen. Ich arbeite gerne mit modernen Technologien und lege Wert auf sauberen, wartbaren Code sowie eine gute User Experience.",
+    "ANOTHER_SKILL_PART1": "Brauchst du",
     "ANOTHER_SKILL_PART2": "eine weitere Fähigkeit?",
-    "CONTACT_HINT": "Kontaktiere mich gerne. Ich freue mich darauf, mein Wissen zu erweitern.",
+    "CONTACT_HINT": "Lass uns gemeinsam moderne Webanwendungen entwickeln.",
     "BUTTON": "Lass uns reden"
   },
 
@@ -92,14 +92,21 @@
     "NEXT": "nächstes Projekt",
     "DESCRIPTION": [
       {
-        "text": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
-      },
-      {
         "text": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen."
       },
       {
-        "text": "Diese interaktive Pokédex Anwendung, die mit HTML, CSS und JavaScript erstellt wurde, ruft Daten aus einer API ab, um den Namen, das Bild und den Typ jedes Pokémon anzuzeigen."
+        "text": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+      },
+      {
+        "text": "Coderr ist ein Backend-System für eine Entwicklerplattform, die Kunden und Entwickler miteinander verbindet. Das Backend wurde mit Django und dem Django REST Framework entwickelt."
+      },
+      {
+        "text": "KanMind ist eine Backend API für ein Projektmanagement Tool mit Django und Django REST Framework. Sie ermöglicht die Verwaltung von Boards, Aufgaben und Kommentaren inklusive Authentifizierung und rollenbasierter Zugriffskontrolle."
+      },
+      {
+        "text": "Eine Full-Stack-Videostreaming-Plattform, die von Netflix inspiriert ist. Der Schwerpunkt liegt auf der Entwicklung eines robusten Backends mit dem Django REST Framework bei gleichzeitiger Integration von Videoverarbeitungsabläufen mithilfe von FFmpeg."
       }
+
     ]
   },
 

@@ -19,7 +19,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 660px;
+    height: 690px;
     width: 1248px;
     border-radius: 30px;
     border: 1px solid var(--color-main-green);
@@ -95,27 +95,33 @@ section {
           flex-wrap: wrap;
           gap: 16px;
           justify-content: flex-start;
-          align-items: center;
+          flex-direction: column;
           height: auto;
-          margin-top: 10px;
+          margin-top: 25px;
 
-          .tech {
+          .tech-group {
             display: flex;
-            gap: 10px;
-            align-items: center;
-            height: auto;
+            flex-wrap: wrap;
+            gap: 16px;
 
-            img {
-              width: 24px;
-              height: 24px;
-            }
+            .tech {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              height: auto;
 
-            span {
-              font-family: var(--font-karla);
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 120%;
-              color: #FFFFFF;
+              img {
+                width: 24px;
+                height: 24px;
+              }
+
+              span {
+                font-family: var(--font-karla);
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 120%;
+                color: #FFFFFF;
+              }
             }
           }
         }
@@ -178,11 +184,13 @@ section {
         margin: 40px 48px 32px 48px;
         display: flex;
         justify-content: center;
-        width: 350px;
+        width: 450px;
         height: 320px;
 
         img {
           border-radius: 30px;
+          border: 2px solid var(--color-main-green);
+          margin: 10px 0;
         }
       }
     }
@@ -401,6 +409,7 @@ section {
   section .project-overlay {
     width: 850px;
     height: 590px;
+
     .project-overlay-content {
       gap: 2px;
       margin-bottom: 15px;
@@ -635,7 +644,7 @@ section {
   }
 }
 
-@media(max-width: 375px) and (max-height: 700px){
+@media(max-width: 375px) and (max-height: 700px) {
   section .project-overlay {
     width: 300px;
 
