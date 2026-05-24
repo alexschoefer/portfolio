@@ -132,7 +132,7 @@ export class ProjectsComponent implements AfterViewInit {
       ],
       image: './assets/img/coderr_mainscreen.png',
       imageOverlay: [
-        './assets/img/coderr_mainscreen.png'
+        './assets/img/coderr_overlay.png'
       ],
       gitHubButton: 'GitHub',
       liveTestButton: 'Live Test',
@@ -153,7 +153,7 @@ export class ProjectsComponent implements AfterViewInit {
       ],
       image: './assets/img/kanmind_mainscreen.png',
       imageOverlay: [
-        './assets/img/kanmind_mainscreen.png'
+        './assets/img/kanmind_overlay.png'
       ],
       gitHubButton: 'GitHub Frontend',
       liveTestButton: 'GitHub Backend',
@@ -176,7 +176,7 @@ export class ProjectsComponent implements AfterViewInit {
       ],
       image: './assets/img/videoflix_mainscreen.png',
       imageOverlay: [
-        './assets/img/videoflix_mainscreen.png'
+        './assets/img/videoflix_overlay.png'
       ],
       gitHubButton: 'GitHub Frontend',
       liveTestButton: 'GitHub Backend',

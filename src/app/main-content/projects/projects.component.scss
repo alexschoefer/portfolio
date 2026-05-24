@@ -120,12 +120,14 @@ section {
             pointer-events: none;
             transition: opacity 0.3s ease, transform 0.3s ease;
 
+
             img {
               width: 300px;
               height: auto;
               border-radius: 16px;
               object-fit: cover;
               z-index: 10;
+              border: 2px solid var(--color-main-green);
             }
           }
 
