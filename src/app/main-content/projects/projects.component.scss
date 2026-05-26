@@ -57,7 +57,7 @@ section {
       .portfolio-menu-container {
         display: flex;
         flex-direction: column;
-        max-width: 880px;
+        max-width: 950px;
         height: auto;
 
         .project {
@@ -273,6 +273,7 @@ section {
             .project-technologies {
               justify-content: center !important;
               font-size: 16px;
+              flex-wrap: wrap;
             }
 
             .project-screenshot,

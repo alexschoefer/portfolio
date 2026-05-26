@@ -2,7 +2,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 100%;
   overflow-x: hidden;
 
   &.overlay-active::before {
@@ -76,7 +76,8 @@ section {
             letter-spacing: 0;
             color: #FFFFFF;
             width: 480px;
-            height: 90px;
+            // height: 90px;
+            height: 100%;
           }
 
           span {
@@ -90,13 +91,14 @@ section {
         }
 
         .project-technologies-container {
-          width: 480px;
+          // width: 480px;
+          width: 100%;
           display: flex;
           flex-wrap: wrap;
           gap: 16px;
           justify-content: flex-start;
           flex-direction: column;
-          height: auto;
+          height: 100%;
           margin-top: 25px;
 
           .tech-group {
@@ -129,7 +131,7 @@ section {
         .project-overlay-btn-container {
           display: flex;
           gap: 32px;
-          width: 310px;
+          width: 100%;
           height: 48px;
           padding-bottom: 10px;
 
@@ -261,7 +263,7 @@ section {
 
 @media(max-width: 1260px) {
   section .project-overlay {
-    width: 1050px;
+    width: 1150px;
     height: 650px;
     padding: 4rem 3rem;
 
@@ -280,13 +282,13 @@ section {
 
 @media (max-width: 1180px) {
   section .project-overlay {
-    // width: 850px;
+    width: 1000px;
     // height: 650px;
     padding: 4rem 3rem;
 
     .project-overlay-content {
       grid-template-columns: 1fr 1fr;
-      column-gap: 40px;
+      column-gap: 60px;
 
       .project-container {
         width: 100%;
@@ -399,15 +401,15 @@ section {
     }
 
     .next-project {
-      bottom: -280px;
-      padding-bottom: 5px;
+      bottom: -350px;
+      padding-bottom: 2px;
     }
   }
 }
 
 @media (max-width: 1024px) and (max-height: 600px) {
   section .project-overlay {
-    width: 850px;
+    width: 100%;
     height: 590px;
 
     .project-overlay-content {
@@ -419,9 +421,10 @@ section {
 
 @media (max-width: 768px) {
   section .project-overlay {
-    width: 550px;
-    // height: auto;
-    padding: 4rem 3rem;
+    width: 100%;
+    // height: 100%;
+    // padding: 6rem 4rem;
+    align-items: center;
   }
 
   .project-screen-container {
@@ -440,12 +443,13 @@ section {
 
 @media(max-width: 600px) {
   section .project-overlay {
-    width: 500px;
+    width: 100%;
 
     .project-overlay-content {
       .project-container {
         .project-technologies-container {
-          margin-top: 20px;
+          margin-top: 80px;
+          justify-content: center !important;
         }
       }
     }
@@ -454,7 +458,7 @@ section {
 
 @media(max-width: 520px) {
   section .project-overlay {
-    width: 450px;
+    width: 100%;
     // height: auto;
     padding: 3rem 2rem;
     margin-bottom: 15px !important;
@@ -469,6 +473,7 @@ section {
   }
 
   .project-container {
+
     h1 {
       font-size: 52px !important;
     }
@@ -476,34 +481,32 @@ section {
     h2 {
       font-size: 32px !important;
     }
-  }
 
-  .project-technologies-container {
-    width: 300px !important;
-    margin-top: 20px !important;
-  }
+    .project-technologies-container {
+      width: 100%;
+      margin-top: 55px !important;
+    }
 
-  .project-close-btn-container {
-    padding-right: 10px !important;
-  }
+    .project-close-btn-container {
+      padding-right: 10px !important;
+    }
 
-  .next-project {
-    bottom: -280px;
-    padding-bottom: 5px;
-    order: 7;
+    .next-project {
+      bottom: -380px;
+      padding-bottom: 5px;
+      order: 7;
+    }
   }
 }
 
 @media(max-width: 480px) {
-  section .project-overlay {
-    width: 400px;
-    padding: 3rem 2rem;
-    margin-bottom: 8px !important;
-  }
 
   section .project-overlay {
     .project-overlay-content {
       height: auto;
+      width: 100%;
+      padding: 3rem 2rem;
+      margin-bottom: 8px !important;
     }
 
     .project-screen-container {
@@ -517,7 +520,7 @@ section {
 
     .project-container {
       h1 {
-        font-size: 56px !important;
+        font-size: 50px !important;
       }
 
       h2 {
@@ -527,7 +530,8 @@ section {
 
     .project-container {
       gap: 8px !important;
-      height: auto !important;
+      // height: auto !important;
+      height: 100%;
     }
 
     .project-screen-container {
@@ -543,7 +547,7 @@ section {
     }
 
     .project-technologies-container {
-      width: 200px !important;
+      width: 100%;
       white-space: nowrap;
       flex-wrap: wrap !important;
       height: auto;
@@ -557,9 +561,11 @@ section {
   .project-overlay-btn-container {
     display: flex;
     gap: 16px !important;
-    width: 280px !important;
+    width: 100%;
     height: 48px !important;
-    margin-top: 80px;
+    margin-top: 55px;
+    flex-direction: column !important;
+    align-items: center !important;
 
     button {
       gap: 6px !important;
@@ -577,7 +583,8 @@ section {
 
 @media (max-width: 425px) {
   section .project-overlay {
-    width: 350px;
+    width: 100%;
+    padding: 2rem 1rem;
 
     .project-overlay-content {
       .project-container {
@@ -594,7 +601,8 @@ section {
 
           .project-description-content {
             font-size: 16px;
-            height: 180px;
+            // height: 180px;
+            height: 100%;
           }
         }
 
