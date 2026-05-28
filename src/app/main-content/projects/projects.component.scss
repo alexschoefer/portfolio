@@ -392,6 +392,7 @@ section {
       flex-wrap: wrap;
       justify-content: flex-start !important;
       gap: 3px;
+      height: 100%;
     }
   }
 
@@ -407,7 +408,7 @@ section {
     .main-content-wrapper {
       padding-inline: 12px;
       height: auto;
-      max-height: 550px;
+      height: 100%;
     }
 
     .portfolio-menu-container {
