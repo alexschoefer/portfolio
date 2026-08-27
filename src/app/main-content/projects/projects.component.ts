@@ -134,10 +134,10 @@ export class ProjectsComponent implements AfterViewInit {
       imageOverlay: [
         './assets/img/coderr_overlay.png'
       ],
-      gitHubButton: 'GitHub',
-      liveTestButton: 'Live Test',
-      gitHublink: 'https://github.com/alexschoefer/Coderr.git',
-      liveLink: 'https://coderr.alexander-schoefer.de/index.html'
+      gitHubButton: 'GitHub Frontend',
+      liveTestButton: 'GitHub Backend',
+      gitHublink: 'https://github.com/Developer-Akademie-Backendkurs/project.Coderr.git',
+      liveLink: 'https://github.com/alexschoefer/Coderr.git'
     },
     {
       projectID: '04',
